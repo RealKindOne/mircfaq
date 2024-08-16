@@ -104,7 +104,6 @@
       <li> <a href="faq6.html#section6-26">6-26: How do I make myself invisible to other users? </a>
       <li> <a href="faq6.html#section6-27">6-27: How does the new sound command in mIRC work?</a>
       <li> <a href="faq6.html#section6-28">6-28: How does the WWW support in mIRC work?</a>
-      <li> <a href="faq6.html#section6-29">6-29: What is the built-in finger server for?</a>
       <li> <a href="faq6.html#section6-30">6-30: How can I easily serve my collection of shareware to others, using mIRC? </a>
       <li> <a href="faq6.html#section6-31">6-31: How do I use mIRC's built in support for Text To Speech? </a>
       <li> <a href="faq6.html#section6-32">6-32: What is a Firewall ? How can I use it?</a>
@@ -372,13 +371,6 @@
       You can also send one or more URL's to the channels you are on (or to any private conversation you are in) by the URL window popup menu.  (Popup menus are activated by the right mouse button !!)  You can store URL's for future reference and set them in any order you want by the use of markers.  Newly found items are appended to the end of your URL list with the '?' marker. When the marker for a URL is changed to something else it is sorted into the permanent list. In the URL options dialog box you can set mIRC to delete '?' marked items on exit.  Also a new string is created which represents the page your Netscape currently shows.  You can use this $url in popup menu definitions and in remote definitions. <p>
       To get the hang of it first enable the URL catcher in the File/Options/URL Catcher/ menu.  Also fill in the place where your www browser can be found.  From that moment on mIRC will find and store all www addresses passing by on the channels you are in.  You can see this going on if you open the URL window (use the URL button on the Toolbar or the /url command).  Then if you want to view an URL in your www browser just highlight it in the URL window and select 'view' from the URL window popup menu (right mouse button). Alternatively you can set mIRC to react to a double click on an URL in the URL window.
       <p>Once you start to use the URL catcher you'll get the grip of it... Have fun !
-      <p><a href="#table">Return to the table of contents.</a><p>
-      <hr>
-
-      <h2 class="topic"><a name="section6-29">6-29 What is the built in finger server for ?? </a></h2><p>
-      Lets first explain that there are 2 sorts of fingering on IRC.  First there is the IRC finger that almost all clients can handle. This is a CTCP command with the syntax '/ctcp nickname finger'. The reply you will get to this CTCP command is usually a one liner set by the user you do the finger on.  In mIRC you can set this reply under File/Options/Action_Lists/ at the Ctcp_finger_reply line.  Some other clients use the alias '/finger nickname' to shortcut this CTCP finger command but thats not the official way... <p>
-      The other finger command comes from the finger system familiar to UNIX users.  On UNIX systems you can finger the address of another user to find out some more about that person.  Normally this fingering will give you the persons home address, telephone number or other usefull info.  This info is given to you by a central finger server and you need a finger client to get it.  mIRC already has a finger -client- built in for a long time under Tools/Finger.  If you specify a users address, mIRC will try to get some info on the person at the other end.  The '/finger {nickname|users_address}' command is doing the same thing.  (If you specify a nickname mIRC will try to find out that users address and finger it.) Mind the syntax difference from the IRC finger command !! <p>
-      In the newest mIRC, a finger server is built in to enable you to provide finger info even if your school, provider or company doesn't maintain a central finger server.  Under Misc/Options/Servers/ you can enable this Finger server.  You also have to provide a text file with the info you want to give.  This file should meet a certain syntax as explained in mIRC's help file.  A last remark; dont be surprised if you find that the UNIX finger is hardly used on IRC !
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 

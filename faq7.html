@@ -338,7 +338,7 @@
       $time The time on your PC.<br>
       $away Tells you if you're set away or not.<br>
       $ticks Returns the number of ticks since your O/S was first started.<br>
-      $idle Returns same idle time as that returned by ctcp userinfo and finger.<br>
+      $idle Returns same idle time as that returned by ctcp userinfo.<br>
       $online Returns the number of seconds elapsed on your online timer. <br>
       $version Returns mIRCs version number. <br>
       $ctime The number of seconds elapsed since 00:00:00 GMT, January 1, 1970.<br>
@@ -553,13 +553,13 @@
       A last remark; A user level can now even be a word, for example:
       mircop:*!*@*.student.utwente.nl
       You can use this with events like  on mircop:JOIN:#mirc:/mode $chan +o $nick
-      <p>mIRC keeps an internal database of the people on the channels you are on. This database is used to speed up the performance of commands like /ban, /guser and /ruser a  whole lot.  These commands normally will make mIRC do a /whois on the person you issue the command on. The internal list stores info like nick!user@address for all users that are on the same *channels* as you. Whenever a /guser, /ruser, /ban, /finger, /ignore or /dns command is issued, the internal list is searched first to find the nick's address. If no match is found, the normal /whois stuff is done.  This will speed up your bans a lot...especially when you're lagged... The 'Internal Address list' is activated under 'Tools/Remote/Options'. Switch it ON!<br>
+      <p>mIRC keeps an internal database of the people on the channels you are on. This database is used to speed up the performance of commands like /ban, /guser and /ruser a  whole lot.  These commands normally will make mIRC do a /whois on the person you issue the command on. The internal list stores info like nick!user@address for all users that are on the same *channels* as you. Whenever a /guser, /ruser, /ban, /ignore or /dns command is issued, the internal list is searched first to find the nick's address. If no match is found, the normal /whois stuff is done.  This will speed up your bans a lot...especially when you're lagged... The 'Internal Address list' is activated under 'Tools/Remote/Options'. Switch it ON!<br>
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-3-2">7-3-2 Remote Scripts - CTCP Commands</a></h2><p>
       In mIRC select Tools/Remote/ to open the mIRC Editor. Here you can set up how your mIRC reacts to things happening around you on IRC. Two distinct groups of reactions are possible; reactions to CTCP Commands and reactions to Events. In this paragraph the CTCP Commands are discussed.
       <p><strong>Introduction</strong> - Remote Commands refers to a very specific type of commands: CTCP commands. CTCP stands for Client To Client Protocol. The Remote CTCP Command lines you can define in mIRC do one thing and one thing only -- they allow you to make mIRC to respond to CTCP commands sent by other users the way -you- wish.
-      <p>There are a lot of ctcp commands defined according to the IRC RFC's (standards). The usual ones are version, ping, time, userinfo, clientinfo and finger. Every IRC client will respond in a standard way if one of these commands is send to it. These ctcp commands are sent by or to you in the format:
+      <p>There are a lot of ctcp commands defined according to the IRC RFC's (standards). The usual ones are version, ping, time, userinfo, and clientinfo. Every IRC client will respond in a standard way if one of these commands is send to it. These ctcp commands are sent by or to you in the format:
       <p>/ctcp {yournick} {command with parameter(s) if any}
       <p>Consider the simple example of a ping.  The other user would type:
       <p>/ctcp {yournick} ping
