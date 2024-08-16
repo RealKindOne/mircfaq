@@ -131,12 +131,12 @@
       <p>(You don't have to understand exactly what that means to mIRC at this point, just what it will do.  I'll explain the alias syntax shortly.)
       <p>Give it a try by placing the line "/j /join $1" in the Aliases list under Tools/Aliases (if it isn't already there).  Then try it out on the command line (where you normally type) with a simple command like:
       <br>"/j #test".
-      <p>You'll see that "/j #test" now does exactly the same thing as "/join #test" -- it joins you to a channel named #test.  This construction is called an alias.  
+      <p>You'll see that "/j #test" now does exactly the same thing as "/join #test" -- it joins you to a channel named #test.  This construction is called an alias.
 
       <p><strong>Alias Syntax.</strong>
       <p>Aliases use the following format: "/{aliasname} /{command}"
       <p>In other words, first your "shortcut" name (like "/j" in the example above), then a space, and then the actual command your shortcut is pointing to (like "/join" in the example above).
-      <p>But it doesn't stop there.   Aliases also use a number of special STRINGS.  There are three pre-defined strings (#, $me and $! ) which always mean the same thing to mIRC (new predefined strings are the $read [-l#] &lt;filename.txt> and $url .... I'll discuss them later too.), and then several variable strings (such as $1, $3-5, $$1, $?, #$1, #$$1, and even #$?).  
+      <p>But it doesn't stop there.   Aliases also use a number of special STRINGS.  There are three pre-defined strings (#, $me and $! ) which always mean the same thing to mIRC (new predefined strings are the $read [-l#] &lt;filename.txt> and $url .... I'll discuss them later too.), and then several variable strings (such as $1, $3-5, $$1, $?, #$1, #$$1, and even #$?).
       <p>Don't worry, we'll explain all of these in good time.
       <p>Right now, let's concentrate on $1.  After all, that's the string we used in our example above:
       <p>/j /join $1
@@ -161,7 +161,7 @@
       <p>/lines /say This is the first line | /say This is the second line | /say This is the last line
       <p>The last examples show how to /say multiple lines of text in one alias.  Just separate the commands with the | character.  You also see that not all aliases always have Strings in them.
 
-      <p><strong>Example: /me</strong> 
+      <p><strong>Example: /me</strong>
       <p>Actions in an alias...
       <p>/fun /me thinks this is fun!
       <br>/hug /me hugs $1 firmly!
@@ -200,7 +200,7 @@
       <br>but keep in mind: NOT ALWAYS !! You have to test this in every case you want to use it...
 
       <p><strong>Where can you use Aliases?</strong>
-      <p>Aliases can be used in the edit box (the line or lines you normally use to type commands in),  and you can even use aliases in the Popups and the Remote sections that will be explained in the following sections. The function key aliases can also be used on selected nicks in the channel names-list and in query windows, etc....depending on your alias definitions.   
+      <p>Aliases can be used in the edit box (the line or lines you normally use to type commands in),  and you can even use aliases in the Popups and the Remote sections that will be explained in the following sections. The function key aliases can also be used on selected nicks in the channel names-list and in query windows, etc....depending on your alias definitions.
       It is even allowed for aliases to call other aliases, or even to call themselves recursively. As a safeguard against infinite loops, the default maximum recurse depth is set at 5. This can be changed with the /maxdepth command. The minimum depth allowed is 1 (aliases can't call other aliases) and the maximum is 100. Calling aliases from within aliases uses quite a bit of memory, so this might cause problems in certain situations where memory is low etc.
       In case one of your aliases or remotes got into a loop use the CTRL+Break key combination to stop the process.
 
@@ -214,9 +214,9 @@
       <br>/f9 /dcc send $1 c:\serve\mircfq31.zip
       <br>/f10 /dcc send $1 c:\serve\mirc50s.exe
       <br>/f11 /dcc send $1
-      <p>The F9 key will send the mIRC FAQ to a person selected from the channel names list. Don't forget to select a nick first ! If you don't, you will see strange (but logical) things... You can even use the F9 key in a Private, Query or DCC Chat window with this alias definition !  
+      <p>The F9 key will send the mIRC FAQ to a person selected from the channel names list. Don't forget to select a nick first ! If you don't, you will see strange (but logical) things... You can even use the F9 key in a Private, Query or DCC Chat window with this alias definition !
       <br>The F11 key will prompt you for the nick to whom to send a file...
-      <br>Well.... invent your own custom use of the F keys ..... have fun ! You can also use -shift- and -ctrl- in combination with the F keys. Just define aliases like : 
+      <br>Well.... invent your own custom use of the F keys ..... have fun ! You can also use -shift- and -ctrl- in combination with the F keys. Just define aliases like :
       <br>/f1 /say I used F1 to say this
       <br>/sf1 /say I used Shift+F1 to say this
       <br>/cf1 /say I used CTRL+F1 to say this
@@ -226,7 +226,7 @@
       <p>You can now use [ and ] evaluation brackets in aliases to control the order of evaluation of identifiers. The brackets can be uses in popups and remotes as well. Identifiers within brackets will be evaluated first, from left to right. You can also nest brackets. This allows you to evaluate things any way you like...  The brackets will not show in the resulting text or command.  Example's are :
       <br>/note /notice $1 " $+ [ $read [ -s + [ $2 ] ] c:\text\note.txt ] $+ "
       <br>/sayvar /say % [ $+ [ $1 ] ]
-      <p>Definitions without evaluation brackets are evaluated the same way as before. 
+      <p>Definitions without evaluation brackets are evaluated the same way as before.
 
       <p><strong>Aliases in scripts.</strong>
       <p>You can easily load additional alias files into mIRC on top of the one(s) you already have. Open the aliases editor (Tools/Aliases/)  and goto File/Load/. It is easy to select a file with aliases now. Select 'View' to see all loaded alias files. This is an easy way to try the aliases your friends created and to give your file with aliases to your friends. Aliases can even be included in a complete script file and distributed together with Remote Commands and Events. We'll explain this in detail later on.
@@ -439,7 +439,7 @@
         if ($2 != 1) { %half = $2 / 2 } | else { %half = 1 }<br>
         %dummy = $1 * 100<br>
         %perc = %dummy / $2<br>
-        %remainder = %dummy % $2<br>  
+        %remainder = %dummy % $2<br>
         if (%perc == 0) { goto return }<br>
         elseif (%remainder >= %half) { inc %perc }<br>
         :return<br>
@@ -470,7 +470,7 @@
       <p><strong>Example: /join</strong>
       <p>Let's say that you join a particular channel frequently, #test.
       <p>Rather than having to type in "/join #test", wouldn't it be easier to just right-click and select a menu item to join you there automatically?
-      <p>The following popup would do that.  Just enter it into Tools/Popups, making sure that the "Status Window" is selected at the top.  (Not Query/Chat window, Channel Names list or Menu Bar!)  
+      <p>The following popup would do that.  Just enter it into Tools/Popups, making sure that the "Status Window" is selected at the top.  (Not Query/Chat window, Channel Names list or Menu Bar!)
       <br>Join the Test Channel:/join #test
       <p>Now right-click over your Status window and select "Join the Test Channel".  mIRC will do exactly that.
       <p><strong>Example: /away</strong>
@@ -492,7 +492,7 @@
       <p>Comment About People
       <br>.Compliments
       <br>..Nice Today:/say Wow, $? -- you're being very nice today!
-      <br>..Helpful:/say Thanks for being so helpful, $? 
+      <br>..Helpful:/say Thanks for being so helpful, $?
       <br>..Friend:/say I'm glad to have $? for a friend.
       <br>.Insults
       <br>..Jerk:/say Leave me alone, jerk!
@@ -533,12 +533,12 @@
       <p>/auser /auser {level} {nick or address}
       <br>'Auser' (Add user) adds whatever nick or address you specify to the users list at the level you specify.  It does not check for a valid address.  The nick or address is added exactly as you stated it.
       <p>/guser /guser {level} {nick} [type]
-      <br>'Guser' (Get user) adds a nick to the users list specified by address.  To accomplish this mIRC does a /whois on the nick you specify, and adds the returned address at the specified level to the users list.  This means that the specified nick has to be on IRC to be able to use the /guser command to add him/her to the list.  By specifying the 'type' mIRC can add a user with several types of wildcarded addresses.  This is analogous to the 'type' parameter used in the /ban command.  Type ranges from 0 to 9.  
-      <p>/ruser /ruser {nick or nick! or address or nick [type]} 
-      <br>'Ruser' (Remove user) removes a nick or address from the Users list.  You must know exactly how the nick or address is stated in the User list for this command to work.  
-      <br>If somebody is listed like nick!blabla@whatever.net you can also do "/ruser nick!".  Mind the "!" to remove the entire line.    
+      <br>'Guser' (Get user) adds a nick to the users list specified by address.  To accomplish this mIRC does a /whois on the nick you specify, and adds the returned address at the specified level to the users list.  This means that the specified nick has to be on IRC to be able to use the /guser command to add him/her to the list.  By specifying the 'type' mIRC can add a user with several types of wildcarded addresses.  This is analogous to the 'type' parameter used in the /ban command.  Type ranges from 0 to 9.
+      <p>/ruser /ruser {nick or nick! or address or nick [type]}
+      <br>'Ruser' (Remove user) removes a nick or address from the Users list.  You must know exactly how the nick or address is stated in the User list for this command to work.
+      <br>If somebody is listed like nick!blabla@whatever.net you can also do "/ruser nick!".  Mind the "!" to remove the entire line.
       <br>In mIRC version 3.5 an improved /ruser command was made so that it can work like /ban and /guser.    /ruser {nick} [type]   if you do NOT specify a type, then it works as usual and removes the specified nick from the user list.  If you DO specify a type, it looks up the users address and removes that address from the user list.<p>
-      Note: Using different address types allows you to specify a person or group of people with more or less wildcards.  I'll show you the different results .....  
+      Note: Using different address types allows you to specify a person or group of people with more or less wildcards.  I'll show you the different results .....
       If no type is mentioned type 6 is default; Kreet!*vonck@cheops.student.utwente.nl<br>
       type 0; *!vonck@cheops.student.utwente.nl<br>
       type 1; *!*vonck@cheops.student.utwente.nl<br>
@@ -563,17 +563,17 @@
       <p>/ctcp {yournick} {command with parameter(s) if any}
       <p>Consider the simple example of a ping.  The other user would type:
       <p>/ctcp {yournick} ping
-      <p>(You can also send yourself a ping command! Try it! Type "/ctcp {yournick} ping". 
+      <p>(You can also send yourself a ping command! Try it! Type "/ctcp {yournick} ping".
       <br>Under normal circumstances, mIRC would send a standard ping reply [ctcp hisnick pong].   But with Remote CTCP lines, you can redefine the program's response to the ping.  It can now do almost whatever you'd like it to do when it receives a ping.  On top of that, it can also send a normal ping reply.  Or not. It's up to you.
-      <br>There is ONE exception to this ... you cant hide your mIRC version reply....  We like the advertisement, you know.... 
-      <p>You can also create new CTCP commands, and responses for them.  This is how features like file offering (XDCC LISTs and SENDs) are handled.  
+      <br>There is ONE exception to this ... you cant hide your mIRC version reply....  We like the advertisement, you know....
+      <p>You can also create new CTCP commands, and responses for them.  This is how features like file offering (XDCC LISTs and SENDs) are handled.
       <p>But right now, let's get back to our ping example.
       <p><strong>Example: Custom Ping Response</strong>
       <p>Go to Tools/Remote and look in the 'View' menu if a script file called commands.ini or ctcps.ini is already there. If so, select that file and add lines to it and/or edit it. If not, go to the File menu and select 'New' to create a new script. Make sure that under "Listening" the CTCP's item is selected. (When items under "Listening" are not checked, for instance Remote Commands aka CTCP's, are ignored.).
-      <p>Now place the following example into an existing or new script file. 
+      <p>Now place the following example into an existing or new script file.
       <br>ctcp 1:ping:/notice $nick ping? Hmmm! ...pang pang pang!!
       <p>Now if someone pings you, your reply will be "ping?  Hmmm ! ... pang pang pang !!" in a notice sent to the person who pinged you, on top of the normal reply being 'pong'.
-      Test this by giving the command "/ctcp {yournick} ping"  If it doesnt work make sure mIRC is actually listening to Remote CTCP commands. Enable this by giving the command "/remote on" and/or "/ctcps on". 
+      Test this by giving the command "/ctcp {yournick} ping"  If it doesnt work make sure mIRC is actually listening to Remote CTCP commands. Enable this by giving the command "/remote on" and/or "/ctcps on".
       <br>If you want mIRC to -not- give the default ping reply on top of your custom one you can block the default processing by the /halt command. Use it like
       <br>1:ping:/notice $nick ping? Hmmm! ...pang pang pang!! | /halt
       <br>This will do the same thing as before, except it will not send your normal ping reply.
@@ -590,11 +590,11 @@
       <p>Let's take a look at our ping example and try to dissect it.
       <p>ctcp 1:ping:/notice $nick ping? Hmmm! ...pang pang pang!!
       <p>The ctcp prefix tells mIRC a remote command follows. In the same scripts also aliases, events and raw definitions can be used. This will be explained later.
-      <p>1 is the command level.  All users with a user level equal or higher than 1 can execute or use this command.  
+      <p>1 is the command level.  All users with a user level equal or higher than 1 can execute or use this command.
       <p>Ping is the CTCP command this Remote Command is going to react to.
       <p>The triggered command is a /notice.  In this case a notice is sent to $nick containing the entire line "ping?  Hmmm!  ... pang pang pang!!"  $nick is a pre-defined parameter that contains the nick of the person who gave you the CTCP command ... in this case he pinged you.  (More about the pre-defined parameters soon.)
       <p>Summarising, the effect of the command "/ctcp &lt;yournick> ping" is a "/notice {nick} ping?  Hmmm!  ...Pang pang pang!!"   This is executed as soon a CTCP Ping is received.
-      <p>You can also use multiple commands, utilizing the | character, as with Aliases and Popups.  That way a single Remote Command could activate multiple command lines. The use of the | is very straight forward, and we'll cover it later. Just glue two remote commands together using the |.  
+      <p>You can also use multiple commands, utilizing the | character, as with Aliases and Popups.  That way a single Remote Command could activate multiple command lines. The use of the | is very straight forward, and we'll cover it later. Just glue two remote commands together using the |.
       <p><strong>Different reactions to people with different user levels</strong>
       <p>You can fine tune your reactions to remote commands by assigning different levels to them.
       <br>mIRC will always respond to a user with the highest leveled reply that fits to the command he/she gave.. Lets analyze it with these example lines...
@@ -659,13 +659,13 @@
       <h2 class="topic"><a name="section7-3-3">7-3-3 Remote Scripts - Events</a></h2><p>
       In mIRC select Tools/Remote/ to open the mIRC Editor, then select the 'View' menu item and select a script named "events.ini". When no events script is already available eventually load a prefab script ini file or create a new script file with File/New/. A new script is called script1.ini by default.
       <p>As you've seen, Remote CTCP Script lines only deal with CTCP commands. Remote Events deal with just about everything else that can happen on IRC. If that sounds daunting, don't worry.  As explained earlier, these lessons are cumulative. If you understand Remote Commands, Remote Events will be a piece of cake. You've already learned the really difficult stuff.
-      <p>Warning: In general mIRC is very sensitive to poor Remote Event syntax. Using incorrect syntax can cause a GPF (General Protection Fault), so be careful! If ever you suddenly experience stability problems with mIRC, this is the part to check first!  
+      <p>Warning: In general mIRC is very sensitive to poor Remote Event syntax. Using incorrect syntax can cause a GPF (General Protection Fault), so be careful! If ever you suddenly experience stability problems with mIRC, this is the part to check first!
       <p><strong>Remote Event Syntax.</strong>
-      <p>The Remote Events are: TEXT, JOIN, PART, KICK, OP, DEOP, INVITE, NICK, QUIT, TOPIC, SERVEROP, NOTIFY, MODE,  SERVERMODE and SMODE.  Besides TEXT the similar ACTION, NOTICE, SNOTICE, CHAT, SERV and WALLOPS are available for more specific text origins. New are the FILESENT and FILERCVD events as well as CHATOPEN, CHATCLOSE, SERVOPEN, SERVCLOSE and several others. 
+      <p>The Remote Events are: TEXT, JOIN, PART, KICK, OP, DEOP, INVITE, NICK, QUIT, TOPIC, SERVEROP, NOTIFY, MODE,  SERVERMODE and SMODE.  Besides TEXT the similar ACTION, NOTICE, SNOTICE, CHAT, SERV and WALLOPS are available for more specific text origins. New are the FILESENT and FILERCVD events as well as CHATOPEN, CHATCLOSE, SERVOPEN, SERVCLOSE and several others.
       <p>Exactly what they do, and how to use them, will be explained shortly.  First, some quick examples and an explanation of the syntax used.
       <p>The syntax is essentially the same as with Remote Commands.  Here's a sample Remote Event for TEXT:
       <p>on 1:TEXT:hello:#:/msg $nick Hello back!
-      <p>Go to Tools/Remote and look if a script file called events.ini is already there. If not, go to the File menu and select 'New' to create a new script. Make sure that under "Listening" the events's item is selected. (When items under "Listening" are not checked, for instance the events you created are ignored by mIRC). Now place the above example into an existing or new script file. 
+      <p>Go to Tools/Remote and look if a script file called events.ini is already there. If not, go to the File menu and select 'New' to create a new script. Make sure that under "Listening" the events's item is selected. (When items under "Listening" are not checked, for instance the events you created are ignored by mIRC). Now place the above example into an existing or new script file.
       <p>This Remote Event is triggered when the word "hello" is found in any active channel. mIRC's response is to send a private message to the person who wrote it, saying "Hello back."
       <p>Here's another example, this time using JOIN:
       <p>on 1:JOIN:#:/notice $nick You are very welcome to $chan
@@ -676,20 +676,20 @@
       <p>{event_level}:{event}:{where}:{triggered_command(s) with parameter(s)}
       <p>{event_level} This event will effect users with this user level, and any higher levels, unless other event entries are created for them. Just like command_level in Remote Commands.
       <p>{event} The name of the event we're listening for. JOIN, OP, etc.
-      <p>{where} #, #name. Where are we listening for this event? Either # (any channel) or the name of a specific channel (like #test). 
+      <p>{where} #, #name. Where are we listening for this event? Either # (any channel) or the name of a specific channel (like #test).
       <br>EXCEPTION: Not used with NICK or QUIT.  Then just skip this part.
       <p>{triggered_command(s) with parameter(s)} The (to be) triggered command.  Just like in Remote Commands except that we have a few different pre-defined parameters.
       <br>...and of course, the big exceptions here are TEXT and ACTION which work like so:
       <p>{event_level}:{event}:{what_text}:{where}:{triggered_command(s) with parameter(s)}
       <p>{command_level} Same as above.
       <p>{event} Well, obviously, it's going to be TEXT or ACTION
-      <p>{what_text} Specify the word or phrase to listen for. Like "hello" in the first example.  
-      <p>{where} #, #name, ?, *. Just like above, you can tell TEXT and ACTION to listen on all channels (#) or on a specific channel (like #test).  But you can also tell it to listen to all of the private messages sent to you (?) or to both channel and private message text (*).  An TEXT or ACTION event can't listen for things said in DCC Chats or Server messages.  
+      <p>{what_text} Specify the word or phrase to listen for. Like "hello" in the first example.
+      <p>{where} #, #name, ?, *. Just like above, you can tell TEXT and ACTION to listen on all channels (#) or on a specific channel (like #test).  But you can also tell it to listen to all of the private messages sent to you (?) or to both channel and private message text (*).  An TEXT or ACTION event can't listen for things said in DCC Chats or Server messages.
       <p>{triggered_command(s) with paramerer(s)} Same as above.
       <p><strong>The Events</strong>
       <p>Here are the various Remote Events that mIRC can respond to...
       <p>
-      <br><strong>TEXT event</strong> Occurs when specified words/phrases are found in a channel or private message. ACTION works just the same ... 
+      <br><strong>TEXT event</strong> Occurs when specified words/phrases are found in a channel or private message. ACTION works just the same ...
       <p>Example:
       <br>on 1:TEXT:nonsense:#:/kick $chan $nick No nonsense!
       <br>This will look for the word "nonsense" in any channel and kick the user who said it.
@@ -705,27 +705,27 @@
       <br>word if a user said only (and exactly) this word the event will trigger. Exact match required.
       <br>word* if a user started a line with this word the event will trigger.
       <br>*word if a user ended any line with this word the event will trigger.
-      <br>*word* if a user said this word or phrase anywhere the event will trigger.  
+      <br>*word* if a user said this word or phrase anywhere the event will trigger.
       <p>Example:
       <br>on 5:TEXT:help:?:/notice $nick I wish I could help you, but I can't.
-      <p>This event will only react to a call for help if the msg only contained the word help ... not if a line containing the word 'help' was sent to you...  
+      <p>This event will only react to a call for help if the msg only contained the word help ... not if a line containing the word 'help' was sent to you...
       <p>Example:
       <br>on 5:TEXT:hello*:?:/notice $nick Hello to you too !
-      <p>This event will only react to private message lines sent to you starting with the word 'hello'.  
+      <p>This event will only react to private message lines sent to you starting with the word 'hello'.
       <p><strong>ACTION event</strong> See the TEXT event .... it works exactly the same....
       <p><strong>NOTICE event</strong> See the TEXT event .... it works exactly the same....
-      <p><strong>CHAT event</strong> Works like TEXT but listens to a DCC Chat text.  
-      <p>Example: 
-      <br>on 1:CHAT:blabla:/msg $me $nick said $1- to you in a DCC Chat.  
+      <p><strong>CHAT event</strong> Works like TEXT but listens to a DCC Chat text.
+      <p>Example:
+      <br>on 1:CHAT:blabla:/msg $me $nick said $1- to you in a DCC Chat.
       <p><strong>SERV event</strong> Works like the CHAT event but listens to DCC Fileserver text.
-      <p>Example: 
-      <br>on 1:SERV:get mirc:/echo server 6 To $nick the mIRC zip is sent.  
+      <p>Example:
+      <br>on 1:SERV:get mirc:/echo server 6 To $nick the mIRC zip is sent.
       <p><strong>JOIN event</strong> Occurs when a user joins a channel.
       <p>Example:
       <br>on 1:JOIN:#test:/notice $nick Welcome to the #test channel!
       <br>Sends a notice saying "Welcome to the #test channel!" to anyone who joins #test.
       <p>Example:
-      <br>on 25:JOIN:#cool:/kick $chan $nick You're not welcome here! 
+      <br>on 25:JOIN:#cool:/kick $chan $nick You're not welcome here!
       <br>Kicks any level 25 user who joins #cool with the message, "You're not welcome here!"
       <p><strong>PART event</strong> Occurs when a user leaves a channel.
       <p>Example:
@@ -740,7 +740,7 @@
       <p><strong>KICK event</strong> Occurs when a user is kicked from a channel.
       <p>Example:
       <br>on 100:KICK:#:/kick $chan $nick | /invite $knick $chan | /notice $nick That person is my friend!
-      <br>If any level 100 person is kicked from any channel, you kick the kicker off the channel, invite the kicked person back and send "That person is my friend!" to the kicker. 
+      <br>If any level 100 person is kicked from any channel, you kick the kicker off the channel, invite the kicked person back and send "That person is my friend!" to the kicker.
       <br>NOTE: $knick is the parameter for the kicked nick in this event. Also note that this example shows multiple commands.  It works just like in Remote Commands.
       <p><strong>OP event</strong> Occurs when a user is opped.
       <p>Note: This event requires people to be mentioned by NICK in your Remote/Users list !
@@ -757,7 +757,7 @@
       <br>NOTE: $opnick is the parameter for the deopped user's nick in this event.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
-      NOTE 
+      NOTE
       <br>Explaining the OP, DEOP, SERVEROP as well as the NOTIFY event an important remark should be made.  Due to the fact that servers only report the nick's of the people who are opped, deopped or notified on a channel or IRC, the OP, DEOP, SERVEROP and NOTIFY events only work properly if the nicks of the people who are opped, de-opped or notified are mentioned in the Users list.  Specifying even the full address (nick!account@machine.address.net) is NOT  enough... mIRC won't distillate the nick from such a statement.  The only exception to this is if you wish the event to affect everyone by giving it an access level of 1, or whatever you have set the default user level to.  This is the only case where it is not necessary to have a user in your User list by nick.
       <p>If you want to give people a level fitting to your OP, DEOP, SERVEROP or NOTIFY events you have to put them in your Users list by nick, like:
       <p>3:friendasnick
@@ -768,7 +768,7 @@
       <hr>
       <p><strong>BAN event</strong>
       <br><strong>UNBAN event</strong>With the BAN you can easily auto-unban your friends.
-      <p>Example: 
+      <p>Example:
       <br>on 5:BAN:#tree:/mode $chan -b $banmask
       <br>The $banmask will contain th
       <p><strong>INVITE event</strong> Occurs when you are invited to a channel.
@@ -790,11 +790,11 @@
       <p>Example:
       <br>on 1:TOPIC:#:/msg $chan Wow, I love the new topic!
       <br>Whenever a channel topic changes, sends a message to the channel saying, "Wow, I love the new topic!"
-      <p><strong>SERVEROP event</strong> Occurs when a server gives operator status (back) to a user on a channel.  
+      <p><strong>SERVEROP event</strong> Occurs when a server gives operator status (back) to a user on a channel.
       <p>Note: This event requires people to be mentioned by NICK in your Remote/Users list !
       <p>Example:
-      <br>on 1:SERVEROP:#mirc:/mode $chan -o $nick | /notice $opnick Sorry, serverops not allowed on $chan  
-      <br>Whenever a person is opped on #mirc by a server, the opped person is deopped and receives a notice "Sorry, serverops not allowed on #mirc"  Serverops normally occur after a netjoin when the two splitted nets exchange and update all current channel modes.  
+      <br>on 1:SERVEROP:#mirc:/mode $chan -o $nick | /notice $opnick Sorry, serverops not allowed on $chan
+      <br>Whenever a person is opped on #mirc by a server, the opped person is deopped and receives a notice "Sorry, serverops not allowed on #mirc"  Serverops normally occur after a netjoin when the two splitted nets exchange and update all current channel modes.
       <p><strong>NOTIFY event</strong>
       <br><strong>NOTIFY event</strong> These events trigger as soon as people in your notify list join or leave IRC.
       <p>Note: This event requires people to be mentioned by NICK in your Remote/Users list !
@@ -803,33 +803,33 @@
       <br>on 1:NOTIFY:/notice $nick If you are the real $nick then please join #mine !
       <br>on 1:UNOTIFY:/echo $active $nick has left IRC.
       <br>on3:NOTIFY:/whois $nick
-      <br>on 5:NOTIFY:/beep 10 50 | /whois $nick  
+      <br>on 5:NOTIFY:/beep 10 50 | /whois $nick
       <p><strong>MODE event</strong>
       <br><strong>SERVERMODE event</strong> These events can force a certain set of channel modes. The MODE event has changed syntax. It no longer enforces modes. $1- is now filled with the mode change that was made. Use this event to react to channel mode changes.
       <br>on 1!:MODE:#name:/echo 6 Mode change to $1- by $nick on $chan !
       <br>on 1!:SERVERMODE:#name:/echo 6 The server changed mode to $1-
-      <p>Keep in mind that if you allow a higher level person to change mode settings without you reacting, lower level users can mess that up !  As soon as they change a mode (or the server does) then the forced modes are set; mIRC does NOT keep in mind that part of the new modes might be set by higher level persons ...  Also beware of loops of more people on a channel forcing mis-matching modes !!   
+      <p>Keep in mind that if you allow a higher level person to change mode settings without you reacting, lower level users can mess that up !  As soon as they change a mode (or the server does) then the forced modes are set; mIRC does NOT keep in mind that part of the new modes might be set by higher level persons ...  Also beware of loops of more people on a channel forcing mis-matching modes !!
       <p><strong>USERMODE event</strong> This event triggers when you change usermode.
       <br>When your usermode changes (to +i for instance) this event will detect it and you can
-      automatically react to it.  
+      automatically react to it.
       <p><strong>VOICE event</strong>
       <br><strong>DEVOICE event</strong>These events react to people getting or loosing voice on channels.  Examples:
       <br>on 1:VOICE:/notice $nick Welcome in the speaking world!
       <br>on 1:DEVOICE:/notice $vnick Hey, $nick is allowed to speak here!
-      <p><strong>SNOTICE event</strong> This event listens for server notices. Server notices tell you all kind of things happening at and with the IRC server you use.  To recieve them you have to set your user mode to +s (/mode #nickname +s).  Most people don't need this setting... It is mostly meant for IRCOps and server maintainers.  With this event you can filter the server notices send to you and you can filter them ie. prevent them from being displayed or automatically react to them.  The event syntax is very much like the TEXT event... 
+      <p><strong>SNOTICE event</strong> This event listens for server notices. Server notices tell you all kind of things happening at and with the IRC server you use.  To recieve them you have to set your user mode to +s (/mode #nickname +s).  Most people don't need this setting... It is mostly meant for IRCOps and server maintainers.  With this event you can filter the server notices send to you and you can filter them ie. prevent them from being displayed or automatically react to them.  The event syntax is very much like the TEXT event...
       <br>on 1:SNOTICE:servers_text:/echo 6 status The server noticed you about $1-
-      <p><strong>FILESENT event</strong> This event will react to all successful DCC Send file transers. You can use it to send you or the reciever a small message... 
+      <p><strong>FILESENT event</strong> This event will react to all successful DCC Send file transers. You can use it to send you or the reciever a small message...
       <br>on 1:FILESENT:*.txt,*.ini:/echo Sent $filename to $nick ( $+ $address $+ )
       <br>on 1:FILESENT:mirc50s.exe:/notice $nick Have fun with the 16 bit mIRC
       <br>on 1:FILESENT:mirc50t.exe:/notice $nick Have fun with the 32 bit mIRC
-      <p><strong>FILERCVD event</strong> This event will react to all successful DCC Get file transers. It will trigger as soon as a file is successfully retrieved to your harddisk. You can use it to send you or the sender a small message, or to start a helper application to view the recieved picture, play a sound file or read the text. 
+      <p><strong>FILERCVD event</strong> This event will react to all successful DCC Get file transers. It will trigger as soon as a file is successfully retrieved to your harddisk. You can use it to send you or the sender a small message, or to start a helper application to view the recieved picture, play a sound file or read the text.
       <br>on 1:FILERCVD:*.txt,*.ini:/run notepad.exe $filename
       <br>on 1:FILERCVD:*.wav:/wavplay $filename
       <br>on 1:FILERCVD:*.gif:/run c:\windows\wingif\wingif.exe $filename
       <br>on 1:FILERCVD:*.jpg:/run c:\windows\lview\lviewp19.exe $filename
       <br>on 1:FILERCVD:*.mid,*.voc:/run wplany.exe $filename
       <br>on 1:FILERCVD:*.*:/notice $nick Thanks for the file!
-      <p><strong>SENDFAIL event</strong> 
+      <p><strong>SENDFAIL event</strong>
       <br><strong>GETFAIL event</strong> These events trigger when a DCC transfer fails due to a lost
       connection or transfer time-out. Examples:
       <br>on 1:SENDFAIL:*.txt:/echo failed to send $filename to $nick
@@ -873,67 +873,67 @@
       <p>Example:
       <br>on 1:JOIN:#mine:/ctcp $nick VERSION
       <br>on 3:JOIN:#mine:=
-      <br>Level 1 and 2 users will be versioned while level 3 and higher users will not see anything at all,... nor you. (In version 3.2 you had to set up an harmless event to do this.)  
+      <br>Level 1 and 2 users will be versioned while level 3 and higher users will not see anything at all,... nor you. (In version 3.2 you had to set up an harmless event to do this.)
       <p>Example:
       <br>on 1:JOIN:#test1:/notice $nick Welcome to #test1
       <br>on 1:JOIN:#test2:/notice $nick Welcome to #test2
       <br>on 3:JOIN:=
       <br>Level 3 and higher users won't be noticed Welcome.... lower level users only on #test1 and #test2.
-      <p>*** The + flag.  
-      <p>This flag makes a certain command available ONLY to users with the EXACT level of the command... Higher (and of course lower) level users can't use/access it !  
+      <p>*** The + flag.
+      <p>This flag makes a certain command available ONLY to users with the EXACT level of the command... Higher (and of course lower) level users can't use/access it !
       <p>Example:
       <br>on 1:JOIN:#mine:/ctcp $nick VERSION
       <br>on +3:JOIN:#mine:/notice $nick Welcome here.
       <br>All users EXCEPT level 3 users will be versioned on channel 'mine' ... Level 3 users will be welcomed...
       <p>Example:
       <br>on +5:JOIN:#mirc:/msg $nick Welcome level 5 user!
-      <p>*** The ; and REM flag.  
+      <p>*** The ; and REM flag.
       <p>These flags can be used to switch off commands or events temporarily by 'commenting them out'.
       <br>Example:
       <br>;on 1:JOIN:#mine:/notice $nick Welcome here.
       <br>REM on 1:JOIN:#mine:/notice $nick Welcome here.
-      <p>*** The * and @ flags.  
-      <br>Thise flags makes mIRC to execute an event or command ONLY if you're operator on the channel the event or commands if used on.  
+      <p>*** The * and @ flags.
+      <br>Thise flags makes mIRC to execute an event or command ONLY if you're operator on the channel the event or commands if used on.
       <br>on *1:JOIN:#mine:/notice $nick Welcome here.
-      <p>*** The me flag. 
-      <br>This flag is designed to make sure you can make events only work if somebody with exactly the same address as you use does something. This other person normally would be your 2nd instance of mIRC running from the same PC. Keep in mind that with proper leveling of your users in the Remote/users section you never (?) need this flag. 
+      <p>*** The me flag.
+      <br>This flag is designed to make sure you can make events only work if somebody with exactly the same address as you use does something. This other person normally would be your 2nd instance of mIRC running from the same PC. Keep in mind that with proper leveling of your users in the Remote/users section you never (?) need this flag.
       <p>In mIRC version 3.7 some additional flags for the EVENTS were introduced.  With these flags you can make mIRC to take into account the level of the person that started an EVENT.
-      <br>These flags can only be used with the OP, DEOP and KICK events since these are the only events that deal with somebody doing something to somebody else.  
-      <br>The three flags you can add are &gt;, &lt; and =.  But you can make mathematical combinations of them leading to a set of 6 flags:  &lt;, &gt;, &lt;=, &gt;=, &lt;&gt; and =.  
-      <p>These flags will make the event only be triggered if FIRST the level of the event fits the Opped, Deopped or Kicked guy (m/f) and then SECOND the level of the activator meets the  
+      <br>These flags can only be used with the OP, DEOP and KICK events since these are the only events that deal with somebody doing something to somebody else.
+      <br>The three flags you can add are &gt;, &lt; and =.  But you can make mathematical combinations of them leading to a set of 6 flags:  &lt;, &gt;, &lt;=, &gt;=, &lt;&gt; and =.
+      <p>These flags will make the event only be triggered if FIRST the level of the event fits the Opped, Deopped or Kicked guy (m/f) and then SECOND the level of the activator meets the
       <br>expression {level-activator} [flag (mathematical expression)] {level-of-event}
       <p>You look like you need some examples ....
       <p>Assume you being the GUARD with a Friend at level 2 and an Activator who can have several different levels....  Then imagine these simple EVENTS :
       <p>on &lt;2:DEOP:#test123:/msg $chan the &lt; triggered
       <br>on &gt;=2:DEOP:#test123:/msg $chan the &gt;= triggered
       <p>With the activator at level 1.
-      <br>*** Activator sets mode: -o Friend 
+      <br>*** Activator sets mode: -o Friend
       <br>&lt;GUARD> the &lt; triggered
       <br>Your Friend has level 2, the Activator has level 1, 1&lt;2 is valid (one is smaller than 2), the first level 2 DEOP event is triggered...
       <p>With the activator at level 2.
-      <br>*** Activator sets mode: -o Friend 
+      <br>*** Activator sets mode: -o Friend
       <br>&lt;GUARD> the &gt;= triggered
       <br>Your Friend has level 2, the Activator has level 2, 2&lt;2 is invalid, 2&gt;=2 is valid (2 is larger than or equal to  2), the second level 2 DEOP event is triggered...
       <p>With the activator at level 3.
-      <br>*** Activator sets mode: -o Friend 
+      <br>*** Activator sets mode: -o Friend
       <br>&lt;GUARD> the &gt;= triggered
       <br>Your Friend has level 2, the Activator has level 3, 3&lt;2 is invalid, 3&gt;=2 is valid (3 is larger than or equal to  2), the second level 2 DEOP event is triggered...
       <p>As you can see its pretty straight forward once you got the idea .... read this over till the coin drops...  More examples :
       <p>on &lt;2:DEOP:#test123:/msg $chan the &lt; triggered
       <br>on &gt;2:DEOP:#test123:/msg $chan the &gt; triggered
       <p>With the activator at level 1.
-      <br>*** Activator sets mode: -o Friend 
+      <br>*** Activator sets mode: -o Friend
       <br>&lt;GUARD> the &lt; triggered
       <p>With the activator at level 2.
-      <br>*** Activator sets mode: -o Friend 
+      <br>*** Activator sets mode: -o Friend
       <p>With the activator at level 3.
-      <br>*** Activator sets mode: -o Friend 
+      <br>*** Activator sets mode: -o Friend
       <br>&lt;GUARD> the &gt; triggered
       <p>on =2:DEOP:#test123:/msg $chan the = triggered
       <p>With the activator at level 1.
-      <br>*** Activator sets mode: -o Friend 
+      <br>*** Activator sets mode: -o Friend
       <p>With the activator at level 2.
-      <br>*** Activator sets mode: -o Friend 
+      <br>*** Activator sets mode: -o Friend
       <br>&lt;GUARD> the = triggered
       <p>With the activator at level 3.
       <br>*** Activator sets mode: -o Friend <br>
@@ -949,7 +949,7 @@
       <br>/inc [-q] &lt;%var> [value]  To increase a variable by a value (number or variable)
       <br>/dec [-q] &lt;%var> [value]  To decrease a variable by a value (number or variable)
       <p>With the aid of these commands you can make all kinds of handy aliases and remote lines!
-      <p>Let me give a bunch of examples :  
+      <p>Let me give a bunch of examples :
       <p>Remote commands (see later) :
       <br>ctcp 2:xdcc send #1:/dcc send $nick c:\temp\serve\mirc40.zip | /inc %mirc 1
       <br>ctcp 2:xdcc send #2:/dcc send $nick c:\temp\serve\mircfq24.zip | /inc %faq 1
@@ -970,7 +970,7 @@
       <br>ctcp 1:upme:/inc % $+ $site 1
       <br>ctcp 2:xdcc send #1:/dcc send $nick c:\temp\serve\mirc40.zip | /inc % $+ $nick 1
       <br>ctcp 2:xdcc send #2:/dcc send $nick c:\temp\serve\mircfq24.zip | /inc % $+ $nick 1
-      <br>ctcp 2:xdcc stats:/notice $nick You downloaded %nick files already since %date 
+      <br>ctcp 2:xdcc stats:/notice $nick You downloaded %nick files already since %date
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-3-6">7-3-6 Remote Raw processing</a></h2><p>

@@ -122,15 +122,15 @@
       <h2 class="topic"><a name="section6">6 FEATURES, TIPS and ANSWERS to QUESTIONS.</a></h2><p>
 
       <h2 class="topic"><a name="section6-1">6-1 How do I run the 32-bit mIRC on Win 3.1 or WFW 3.11 ?</a></h2><p>
-      The 32-bit mIRC no longer supports Windows 3.1 or WFW 3.11. Older versions used to work on 
-      Win 3.1 and WFW 3.11 if you installed the Win32s 32-bit extentions. There was and is no 
-      difference in functionality between the 16 and 32-bit mIRC apart from things old Windows 
+      The 32-bit mIRC no longer supports Windows 3.1 or WFW 3.11. Older versions used to work on
+      Win 3.1 and WFW 3.11 if you installed the Win32s 32-bit extentions. There was and is no
+      difference in functionality between the 16 and 32-bit mIRC apart from things old Windows
       versions simply don't understand. On Windows 3.1 or WFW 3.11 simply use the 16-bit mIRC. <p>
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
       <h2 class="topic"><a name="section6-2">6-2 How do I run the 32-bit mIRC on Windows 95, 98, 2000, ME, XP, NT etc?</a></h2><p>
-      On Windows 95, 98 and all newer Windows versions no problems running the 32-bit mIRC (mirc32.exe) are to be expected. By default Windows installs all things you need when you install your modem (or network adapter) and Internet software. It does not matter what kind on Internet connection you use. mIRC works fine with modems, cable connections, DSL, ADSL, and all sorts of network solutions. trv<p> 
+      On Windows 95, 98 and all newer Windows versions no problems running the 32-bit mIRC (mirc32.exe) are to be expected. By default Windows installs all things you need when you install your modem (or network adapter) and Internet software. It does not matter what kind on Internet connection you use. mIRC works fine with modems, cable connections, DSL, ADSL, and all sorts of network solutions. trv<p>
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
@@ -142,7 +142,7 @@
       <h2 class="topic"><a name="section6-4">6-4 How do I solve the "Can't Resolve Host Name" error?</a></h2><p>
       If you are using Windows95 first find out if you're trying to run mIRC32.exe with a 16-bit winsock. You need a 32-bit winsock to run the mirc32.exe on Win95. If you have a 16-bit winsock use the 16-bit mirc.exe. Also read section 6-2. <p>
       In the File/Options/Connect/Local_Info/ dialog box, you'll see mIRC needs your PC's Local Host name and IP number. This info is needed to be able to set up DCC Send/Chat connections to other users. <p>
-      Generally speaking you can leave both fields blank, set 'On connect, always get Local Host and IP Address' to active with method <em>Normal</em> and everything should work fine. But if you don't have an actual IP address (such as with TIA, Twinsock, SLiRP, or some other SLIP emulator), or if your stack is strange or there is some network oddity, it might not fill in these fields correctly.<p> 
+      Generally speaking you can leave both fields blank, set 'On connect, always get Local Host and IP Address' to active with method <em>Normal</em> and everything should work fine. But if you don't have an actual IP address (such as with TIA, Twinsock, SLiRP, or some other SLIP emulator), or if your stack is strange or there is some network oddity, it might not fill in these fields correctly.<p>
       The simple solution is to switch to the <em>Server method</em> and use the IRC server you want to connect to, to find your system's address information. Eventually clear the Local Host and IP Address fields first. Then set 'On connect, always get Local Host and IP Address' to active and select the 'Server' method. Now re-try to connect...<p>
       In the unlikely event the above method didn't help you could uncheck "On connect, always get IP Address and Local Host" and manually enter your PC's Local Host name and IP number. If you are using TIA, Twinsock, SLiRP, etc., simply enter _your provider's_ local host name and IP, not your own.  (Your provider's IP is not 192.0.2.1 or anything like that!  That's a dummy IP used by these emulators. If you don't know your provider's local host name and IP, ask them!) <p>
       Also setting the Ident server to active might help. (See section 6-7) (Note: You must be disconnected from any IRC server before changing the Ident server settings.)<p>
@@ -151,9 +151,9 @@
       <hr>
 
       <h2 class="topic"><a name="section6-5">6-5 How do I solve the "Unable to resolve IRC server name" error ?</a></h2><p>
-      If you can't get mIRC connected to one particular IRC server and you get this error you should first give another server a try... If you can connect to any other server you should check if you made a typo in the setup of your initial server address. (File/Options/Connect/IRC_Servers/ Edit)  
-      <p>If you get this error with whatever IRC server address you try, it is very likely your provider's DNS (Domain Name Server) is down, malfunctioning or very slow.  Especially if mIRC always worked flawlessly for you.   Besides waiting or giving your providers helpdesk a phone call you cant get this fixed.  
-      <p>mIRC needs a DNS to translate (resolve) the IRC servers' IP Address you specified, into an IP Number. (For example, the IP irc.law.emory.edu resolves to the IP Number 170.140.50.195)  
+      If you can't get mIRC connected to one particular IRC server and you get this error you should first give another server a try... If you can connect to any other server you should check if you made a typo in the setup of your initial server address. (File/Options/Connect/IRC_Servers/ Edit)
+      <p>If you get this error with whatever IRC server address you try, it is very likely your provider's DNS (Domain Name Server) is down, malfunctioning or very slow.  Especially if mIRC always worked flawlessly for you.   Besides waiting or giving your providers helpdesk a phone call you cant get this fixed.
+      <p>mIRC needs a DNS to translate (resolve) the IRC servers' IP Address you specified, into an IP Number. (For example, the IP irc.law.emory.edu resolves to the IP Number 170.140.50.195)
       (To see this give the command "/dns irc.law.emory.com" in mIRC)  You could bypass the need for the DNS lookup by specifying the IP Number in your server setup instead of the IP Address for every server.
       <p>Under File/Setup/IRC_Servers/Add or Edit server, specify your IRC servers like this:
       <br>Description : irc.law.emory.edu (Emory University)
@@ -177,7 +177,7 @@
 
       <h2 class="topic"><a name="section6-8">6-8 Why am I unidentified and what does it matter ?</a></h2><p>
       An ident server normally is maintained by the Unix machine of your network provider...  It is a kind of nameserver that guarantees your Identity.  Since most standalone windows machines are not correctly backed up by an ident service, such a server is built into mIRC. IRC servers can do an Ident request to your Ident server and then expect a standardized kind of answer.  More and more IRC servers require you to be identified in some way, and they will disconnect you if you're not identified !  Also if you don't react, or do so in the wrong way, they can decide to disconnect you.... You can check if you're properly identified by doing a /whois on yourself.  The first line in the reply should NOT contain a ~ (tilde) or a - (minus). If you have a ~ or - in it try activating the Ident server.
-      <p>mIRC's built-in Ident server can be switched to active under File/options/Connect/Identd/. Set it to : 
+      <p>mIRC's built-in Ident server can be switched to active under File/options/Connect/Identd/. Set it to :
       <br>User ID: &lt;account name> (The part before the @ in your email address normally)
       <br>System: UNIX (ALWAYS fill in UNIX !! not dos, win or *whatever* else !!)
       <br>Listen on port: 113 (The standard ident port number)<p>
@@ -192,7 +192,7 @@
       DCC file sending and initiating a DCC Chat (contrary to file getting and accepting a DCC Chat) requires that mIRC knows your correct IP Address. Without an IP number, mIRC will perfectly work as <em>far as normal chatting is concerned</em>, but won't allow DCC file sending or initiating a DCC Chat.<p>
       In almost all cases that DCC sending and chatting is messed up, the initiating <em>sending</em> party causes the troubles. This is caused by wrong Local Host and/or IP Address settings at the senders side. The Local Host and IP Address settings are found in the File/Setup/Local_Info menu. Typically if the senders IP Address is not correctly set, the receiving party will get the dcc offer and then try to confirm and connect to the incorrect IP Address. Of course, this doesn't work and you both sit there waiting. The sender will see the "Waiting for acknowledgement..." forever while the other person -did- acknowledge correctly.... <p>
       This problem is normally very simple to solve. Also if you can not get files from another person ask him/her to check the IP Address settings in his/her IRC client as these settings are often wrong.<p>
-      <strong>The cure.</strong><br> 
+      <strong>The cure.</strong><br>
       1) Disconnect from your IRC server. <br>
       2) Clear the current text in the Local Host and IP Address boxes under File/Setup in the Local_Info dialog.  <br>
       3) Select both 'On connect, Always get' Local Host and IP Address options in the Local_Info dialog.<br>
@@ -203,15 +203,15 @@
       <strong>Other solutions.</strong><p>
       <ul>
       <li>Check your DCC time-out settings!
-      <br>Make sure that your time-out values in DCC/Options are set large enough!!  "Get/Chat Dialog time out after" and "Send/Get Transfer time out after" are recommended to be set to at least 60 and 120, respectively. 
-      <p><li>In case you never ever managed to get sending files or initiating a DCC Chat to work, not even after studying all these hints, it might be that your provider blocks these DCC connections by the kind of internet access they give you. Especially the use of a firewall or proxy by you or your provider will block DCC connections. 
+      <br>Make sure that your time-out values in DCC/Options are set large enough!!  "Get/Chat Dialog time out after" and "Send/Get Transfer time out after" are recommended to be set to at least 60 and 120, respectively.
+      <p><li>In case you never ever managed to get sending files or initiating a DCC Chat to work, not even after studying all these hints, it might be that your provider blocks these DCC connections by the kind of internet access they give you. Especially the use of a firewall or proxy by you or your provider will block DCC connections.
       <p><li>If you have Dynamic IP...
       <br>If you have dynamic IP (your IP address is different each time you log on), make sure that "On connect, always get:" in the File/Setup/Local_Info dialog is set to get the Local Host and IP Address. If these were already set to ON make sure the correct 'local host' name and 'IP Address' are found by mIRC... on some systems this is rather tricky...  mIRC may not be able to correctly find your local host (domain name) and IP. With dynamic IP addressing you are in trouble then!
       <p><li>If you have Static IP...
       <br>If you have a strange Windows setup mIRC may not be able to correctly find your local host name and IP Address. In the File/Setup/Local_Info dialog, uncheck the options to "Always get the 'Local Host' and 'IP Address" and manually enter your correct Local Host and IP.
       <p><li>A known Windows95 bug causes a lot of people to report that mIRC (and any other IRC program) gets/finds the old (now wrong) Local Host name and/or IP Address after switching Internet provider. This blocks the capability of DCC Sending files and Initiating DCC Chats. If, for some reason, no matter what you do, mIRC picks the user ID (Local Host name) from the Internet Service Provider that you no longer wish to use this is fixable by editing the registry. If you open Regedit and look at MyComputer \HKEY_LOCAL_MACHINE \System \CurrentControlSet \Services \VxD \MSTCP you will see the Domain and NameServer fields from your old provider. These fields will persist even if you uninstall Dial-Up Networking and re-install and go through the TCP/IP settings again ! The best way to solve the described problem is going to Start/Settings/Control_Panel/Network/ double click on TCPIP/ select DNS_Configuration/ and set the HOST field to the hostname (ID) you have on your new provider.
-      <p><li>If you use Windows95 mIRC allows you to send long file names with spaces in them, but other IRC programs very often can not handle this. This might cause your transfers to fail. You might want to select mIRC's option to fill (up) spaces in such a long file name by an underscore.  
-      <p><li>Some people experience DCC File Send problems with mIRC on a windows system with Norton Desktop installed.  mIRC then suddenly shuts down completely (sometimes with an error message) as soon as you try to select a file to send.  The problem is that Norton Desktop's feature called 'File Assist' conflicts with mIRC's DCC Send dialog.  If you shut off File Assist entirely it will allow DCC transfers fine.  Even just disabling the "3D look and feel" in the File Assist options menu helps already.  
+      <p><li>If you use Windows95 mIRC allows you to send long file names with spaces in them, but other IRC programs very often can not handle this. This might cause your transfers to fail. You might want to select mIRC's option to fill (up) spaces in such a long file name by an underscore.
+      <p><li>Some people experience DCC File Send problems with mIRC on a windows system with Norton Desktop installed.  mIRC then suddenly shuts down completely (sometimes with an error message) as soon as you try to select a file to send.  The problem is that Norton Desktop's feature called 'File Assist' conflicts with mIRC's DCC Send dialog.  If you shut off File Assist entirely it will allow DCC transfers fine.  Even just disabling the "3D look and feel" in the File Assist options menu helps already.
       <p><li>Another program known to give DCC Send problems is a software package called Long File Names by View software. It is something you might be running in the background and you might never think of it as the cause of your troubles. The problem is that when you use the DCC Send option in mIRC, the dialog that pops-up doesnt allow you to select files so you can't send anything. Selecting files is blocked by LFN and if you disable the LFN software all your DCC problems will be solved.<p>
       <p><a href="#table">Return to the table of contents.</a><p>
       </ul>
@@ -233,8 +233,8 @@
       <hr>
 
       <h2 class="topic"><a name="section6-11">6-11 How do I use Copy and Paste?</a></h2><p>
-      In channel, query and DCC chat windows mIRC uses a nice select-and-copy-in-one-move feature.  Copying is done automatically as soon as you release the mouse button you used to select the text with. Just highlight the text and release.  Isn't that a nice feature?  Use ctrl-v to paste the copied text.  
-      <p>All text shown in mIRC outside the channel windows (in settings, menu's, dialogs and on the edit box line) can be copied, cut and pasted normally using the ctrl-c, ctrl-x and ctrl-v key combinations.  
+      In channel, query and DCC chat windows mIRC uses a nice select-and-copy-in-one-move feature.  Copying is done automatically as soon as you release the mouse button you used to select the text with. Just highlight the text and release.  Isn't that a nice feature?  Use ctrl-v to paste the copied text.
+      <p>All text shown in mIRC outside the channel windows (in settings, menu's, dialogs and on the edit box line) can be copied, cut and pasted normally using the ctrl-c, ctrl-x and ctrl-v key combinations.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
@@ -246,7 +246,7 @@
 
       <h2 class="topic"><a name="section6-13">6-13 How can I customize the fonts used in mIRC ?</a></h2><p>
       All font settings can be done from the windows' System Menus (those menus under that little horizontal bar or small icon in every top left corner of ANY window in mIRC and Windows), the /font command or the Tools/Font menu item.
-      <p>Use /font or select the 'Font' option in the System menu and a fonts selection dialog will pop up. Here you can choose whatever fonts are available on your machine.  This could be New Times Roman, Arial, MS Sans Serif,..... whatever you like.  You can also set the font size and set it to bold.   (italic is available but disabled for most fonts at the moment)  The settings you set here will be saved as the default for the window you are in.  
+      <p>Use /font or select the 'Font' option in the System menu and a fonts selection dialog will pop up. Here you can choose whatever fonts are available on your machine.  This could be New Times Roman, Arial, MS Sans Serif,..... whatever you like.  You can also set the font size and set it to bold.   (italic is available but disabled for most fonts at the moment)  The settings you set here will be saved as the default for the window you are in.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
@@ -279,7 +279,7 @@
         Bill irc.server.company.com (A superb company)<br>
         Bill 666 seconds idle<br>
         Bill End of /WHOIS list.<p>
-      If you don't care about channel takeovers and other annoying things, you can just specify the nick (Bill) of the person you want to auto-op, ignore or protect. If you want to be sure you 'op' , ignore and protect the right person, and not a faker, specify them by their address if possible. 
+      If you don't care about channel takeovers and other annoying things, you can just specify the nick (Bill) of the person you want to auto-op, ignore or protect. If you want to be sure you 'op' , ignore and protect the right person, and not a faker, specify them by their address if possible.
       In that case, Bill would be best referred to by<br>
         bill!gates@pentium.company.com<p>
       You could also use *!gates@*.company.com if he works on several machines with different nick's....<p>
@@ -322,7 +322,7 @@
 
       <h2 class="topic"><a name="section6-21">6-21: How can I make mIRC react to Events?</a></h2><p>
       Use the Tools/Remote/ section.....<br>
-      Events are all things happening on channels or in private conversations on IRC. People joining, leaving, getting opped, deopped, greeting you, even plain talking all are Events... 
+      Events are all things happening on channels or in private conversations on IRC. People joining, leaving, getting opped, deopped, greeting you, even plain talking all are Events...
       You can configure mIRC to react however you like to almost anything that can happen in IRC. See the mIRC help file for further instructions and read the tutorial in section 7 at the end of this FAQ.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
@@ -355,7 +355,7 @@
       <h2 class="topic"><a name="section6-25">6-25 Running multiple copies of mIRC.</a></h2><p>
       <strong>mirc.exe 16-bit :</strong>
       <br>You can't just start the 16-bit mirc.exe a second time.  If you want to run a second copy of mIRC16 (don't ask me why), it's best to rename your mirc.exe to mirc1.exe and also copy your mirc.exe to another instance, like mirc2.exe.  ( In the windows File Manager select mirc.exe and with File/Copy copy it to mirc2.exe, and with File/Rename rename it to mirc1.exe.  Both copies can be kept in the same directory (the mIRC home dir.))
-      <p>Do the same for the mirc.ini file that can be found in the c:\windows directory or in mIRC's home dir.  (Unless specified otherwise mIRC uses the mirc.ini file found in c:\windows. )  Copy mirc.ini to a mirc1.ini and to a mirc2.ini.  Now in the Program Manager, rename the mIRC icon to an icon called mIRC1, and use that to start the first copy.  'Under' the icon, on the startup line, state "c:\path\mirc1.exe -i c:\path\mirc1.ini" to make sure mirc1.exe will use the mirc1.ini!  Also, make an icon called mIRC2, and use that to start the second copy.  On the startup line 'under the icon' state "c:\path\mirc2.exe -i c:\path\mirc2.ini" to make sure mirc2.exe will use the mirc2.ini!  The -i startup line parameter tells mIRC to use the file after it as ini file.  If you want to place the mirc.ini files in another directory than your windows or home dir, make sure to specify the full and correct path!  
+      <p>Do the same for the mirc.ini file that can be found in the c:\windows directory or in mIRC's home dir.  (Unless specified otherwise mIRC uses the mirc.ini file found in c:\windows. )  Copy mirc.ini to a mirc1.ini and to a mirc2.ini.  Now in the Program Manager, rename the mIRC icon to an icon called mIRC1, and use that to start the first copy.  'Under' the icon, on the startup line, state "c:\path\mirc1.exe -i c:\path\mirc1.ini" to make sure mirc1.exe will use the mirc1.ini!  Also, make an icon called mIRC2, and use that to start the second copy.  On the startup line 'under the icon' state "c:\path\mirc2.exe -i c:\path\mirc2.ini" to make sure mirc2.exe will use the mirc2.ini!  The -i startup line parameter tells mIRC to use the file after it as ini file.  If you want to place the mirc.ini files in another directory than your windows or home dir, make sure to specify the full and correct path!
       You can now startup both exe's and configure them independently..... Nice huh?
       <p><strong>mirc32.exe 32-bit :</strong>
       <br>If you use the 32-bit version of mIRC you CAN run a second instance without problems without having to provide a second, renamed .exe file.  You don't have to rename and or copy the mirc32.exe. BUT you still have to create 2 shortcuts with unique mirc.ini names on the startup-line to get your 2 mIRC's working independently and not interfering ....  Don't forget that :-)
@@ -364,14 +364,14 @@
 
       <h2 class="topic"><a name="section6-26">6-26 How do I make myself invisible to other users ?</a></h2><p>
       And what it does and doesn't do. ;o)
-      <br>In mIRC, you can make yourself invisible with: "/mode {your_nickname}  +i".  The title of the STATUS window will show (+i) after your current nickname.  If you change nick, you will remain invisible under your new nick.  Use "/mode {your_nickname}  -i" to make yourself visible again.  
+      <br>In mIRC, you can make yourself invisible with: "/mode {your_nickname}  +i".  The title of the STATUS window will show (+i) after your current nickname.  If you change nick, you will remain invisible under your new nick.  Use "/mode {your_nickname}  -i" to make yourself visible again.
       <br>Nobody can detect your changing from invisible to visible or vice versa.
-      <br>When you're invisible, you are always visible to all the people who are on the same channel(s) as you are.  When you join a new channel (while invisible), everyone in the channel sees you joining.  Also, leaves are NOT hidden. Also, when people do a "/whois &lt;yournick>" they will see a normal whois list on you if the nick they enter matches your's exactly.  
-      <p>So, what's the point of this "invisibility" capability ?  
+      <br>When you're invisible, you are always visible to all the people who are on the same channel(s) as you are.  When you join a new channel (while invisible), everyone in the channel sees you joining.  Also, leaves are NOT hidden. Also, when people do a "/whois &lt;yournick>" they will see a normal whois list on you if the nick they enter matches your's exactly.
+      <p>So, what's the point of this "invisibility" capability ?
       <p>Users NOT on the same channel as you WILL NOT be able to see your name if they do /who <#channelname>.  Also, if they do /names to list all the people currently on IRC, they won't see you.  Also doing "/who *part.of.your.address.net*" won't result in your nick turning up.
-      <br>The point of being invisible is not to be able to stroll along channels like a ghost without anyone seeing you, but to hide (a bit) from users that scan channels with /who to find you.  
-      <br>If they scan channels by actually joining them, then invisibility won't help you.  
-      <p>To get rid of annoying people: first make yourself invisible ... then change your nick and make sure those people can't join the channels you are on in order to find out your new nick.  (also, doing:  /ignore {other_persons_nick} helps a lot !  
+      <br>The point of being invisible is not to be able to stroll along channels like a ghost without anyone seeing you, but to hide (a bit) from users that scan channels with /who to find you.
+      <br>If they scan channels by actually joining them, then invisibility won't help you.
+      <p>To get rid of annoying people: first make yourself invisible ... then change your nick and make sure those people can't join the channels you are on in order to find out your new nick.  (also, doing:  /ignore {other_persons_nick} helps a lot !
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
@@ -393,7 +393,7 @@
       <h2 class="topic"><a name="section6-29">6-29 What is the built in finger server for ?? </a></h2><p>
       Lets first explain that there are 2 sorts of fingering on IRC.  First there is the IRC finger that almost all clients can handle. This is a CTCP command with the syntax '/ctcp nickname finger'. The reply you will get to this CTCP command is usually a one liner set by the user you do the finger on.  In mIRC you can set this reply under File/Options/Action_Lists/ at the Ctcp_finger_reply line.  Some other clients use the alias '/finger nickname' to shortcut this CTCP finger command but thats not the official way... <p>
       The other finger command comes from the finger system familiar to UNIX users.  On UNIX systems you can finger the address of another user to find out some more about that person.  Normally this fingering will give you the persons home address, telephone number or other usefull info.  This info is given to you by a central finger server and you need a finger client to get it.  mIRC already has a finger -client- built in for a long time under Tools/Finger.  If you specify a users address, mIRC will try to get some info on the person at the other end.  The '/finger {nickname|users_address}' command is doing the same thing.  (If you specify a nickname mIRC will try to find out that users address and finger it.) Mind the syntax difference from the IRC finger command !! <p>
-      In the newest mIRC, a finger server is built in to enable you to provide finger info even if your school, provider or company doesn't maintain a central finger server.  Under Misc/Options/Servers/ you can enable this Finger server.  You also have to provide a text file with the info you want to give.  This file should meet a certain syntax as explained in mIRC's help file.  A last remark; dont be surprised if you find that the UNIX finger is hardly used on IRC ! 
+      In the newest mIRC, a finger server is built in to enable you to provide finger info even if your school, provider or company doesn't maintain a central finger server.  Under Misc/Options/Servers/ you can enable this Finger server.  You also have to provide a text file with the info you want to give.  This file should meet a certain syntax as explained in mIRC's help file.  A last remark; dont be surprised if you find that the UNIX finger is hardly used on IRC !
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
@@ -408,11 +408,11 @@
       <br>/fserve Friend 7 c:\
       <p>Keep in mind that you can't set up a server to yourself... you need others to test your server...
       <br>Typing help in the file server will show the available commands, which are styled after Unix and DOS.  "ls" or "dir" will show a directory listing, for example.  Even switched commands like "ls -k" (show file sizes in kilobytes) and "dir /w" (show a wide directory listing) work. The server supports all normal ftp commands like cd &lt;dir> , cd.., dir, ls, get, .... but NOT put, hash etc. Safety risks are none or minimal due to the major restricting of available commands.
-      <p>Of course, the /fserve command can be used in your Remote section.... 
+      <p>Of course, the /fserve command can be used in your Remote section....
       <br>Set up a simple Tools/Remote/command like :
       <br>1:server:/fserve $nick 3 c:\temp\serve
       <br>Set the commands to active (/remote on) and off you go....
-      <p>Other people only have to type "/ctcp yournick server" to activate the server. You can't set up a server to your own mIRC!! So, others have to test your server !! In the directory c:\temp\serve, you place all files other people are allowed to get from you. The people using your server will have access to the c:\temp\serve directory AND ALL directories BELOW it.. like c:\temp\serve\games.  
+      <p>Other people only have to type "/ctcp yournick server" to activate the server. You can't set up a server to your own mIRC!! So, others have to test your server !! In the directory c:\temp\serve, you place all files other people are allowed to get from you. The people using your server will have access to the c:\temp\serve directory AND ALL directories BELOW it.. like c:\temp\serve\games.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
@@ -421,7 +421,7 @@
       <br>"/speak this is a test"
       <br>"/speak can you hear me ?"
       <br>"/speak this is fun"             Try it !!
-      <p>It is fun indeed ! Once you manage to speak one-liners from a mIRC window by this /speak command, it is not that hard to get it speaking whole channels or conversations ... assuming you can handle programming mIRC's remote events section. (Read and study section 7.) It is not meant to be a plug and play solution ;o)  
+      <p>It is fun indeed ! Once you manage to speak one-liners from a mIRC window by this /speak command, it is not that hard to get it speaking whole channels or conversations ... assuming you can handle programming mIRC's remote events section. (Read and study section 7.) It is not meant to be a plug and play solution ;o)
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
@@ -470,7 +470,7 @@
       <hr>
 
       <h2 class="topic"><a name="section6-34">6-34 I switched to a new provider but mIRC keeps using the old one!</a></h2><p>
-      A known Windows95 flaw causes some people to report that mIRC (and several other Internet programs) tries to use the winsock software of an old provider, even if all references to that provider seem to be deleted from Windows95's setup. This blocks the capability of DCC Sending files and Initiating DCC Chats. 
+      A known Windows95 flaw causes some people to report that mIRC (and several other Internet programs) tries to use the winsock software of an old provider, even if all references to that provider seem to be deleted from Windows95's setup. This blocks the capability of DCC Sending files and Initiating DCC Chats.
       If, for some reason, no matter what you do, mIRC picks up the software, user ID (Local Host name) from the Internet Service Provider that you no longer wish to use, you can fix this by editing the registry. If you open Regedit and look at MyComputer \HKEY_LOCAL_MACHINE \System \CurrentControlSet \Services \VxD \MSTCP you will see the Domain and NameServer fields from your old provider and maybe even references to old winsock software. These fields will persist even if you uninstall Dial-Up Networking or other winsock's and re-install and go through the TCP/IP settings again ! The best way to solve the described problem is going to Start/Settings/Control_Panel/Network/ double click on TCPIP/ select DNS_Configuration/ and set the HOST field to the hostname (ID) you have on your new provider. If this fails edit the registry by hand, but do this with care!!
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
