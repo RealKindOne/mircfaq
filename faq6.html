@@ -108,7 +108,6 @@
       <li> <a href="faq6.html#section6-31">6-31: How do I use mIRC's built in support for Text To Speech? </a>
       <li> <a href="faq6.html#section6-32">6-32: What is a Firewall ? How can I use it?</a>
       <li> <a href="faq6.html#section6-33">6-33: How do I use mIRC's built in DDE support?</a>
-      <li> <a href="faq6.html#section6-34">6-34: I switched to a new provider but mIRC keeps using the old one!</a>
       </ul>
       </ul>
       <ul>
@@ -443,12 +442,6 @@
       /echo 3 my current nickname is $dde mirc nickname ""<br>
       /echo 4 My version is $dde mirc version ""<br>
       /echo 5 mIRC is connected to port number $dde mirc port ""<br>
-      <p><a href="#table">Return to the table of contents.</a><p>
-      <hr>
-
-      <h2 class="topic"><a name="section6-34">6-34 I switched to a new provider but mIRC keeps using the old one!</a></h2><p>
-      A known Windows95 flaw causes some people to report that mIRC (and several other Internet programs) tries to use the winsock software of an old provider, even if all references to that provider seem to be deleted from Windows95's setup. This blocks the capability of DCC Sending files and Initiating DCC Chats.
-      If, for some reason, no matter what you do, mIRC picks up the software, user ID (Local Host name) from the Internet Service Provider that you no longer wish to use, you can fix this by editing the registry. If you open Regedit and look at MyComputer \HKEY_LOCAL_MACHINE \System \CurrentControlSet \Services \VxD \MSTCP you will see the Domain and NameServer fields from your old provider and maybe even references to old winsock software. These fields will persist even if you uninstall Dial-Up Networking or other winsock's and re-install and go through the TCP/IP settings again ! The best way to solve the described problem is going to Start/Settings/Control_Panel/Network/ double click on TCPIP/ select DNS_Configuration/ and set the HOST field to the hostname (ID) you have on your new provider. If this fails edit the registry by hand, but do this with care!!
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
