@@ -114,10 +114,10 @@
       <h2 class="topic"><a name="section7-1">7-1 The Aliases section</a></h2><p>
 
       Select the menu item 'Tools/Script Editor/Aliases'.<br>
-      The mIRC Editor will will start with the Aliases section opened.<br>
+      The mIRC Script Editor will will start with the Aliases section opened.<br>
       Please ignore the Popups, Remote, Users and Variables sections for now!?<p>
 
-      The mIRC Editor is used as a compact and uniform interface to almost all mIRC's programmable sections. With the Aliases section selected the 'File' menu will help you to load, unload and save alias files. The 'Edit' menu offers copy/paste and search routines. The 'View' menu lets you select what alias file you want to edit and 'Alias' shows an index of the current opened alias file.<p>
+      The mIRC Script Editor is used as a compact and uniform interface to almost all mIRC's programmable sections. With the Aliases section selected the 'File' menu will help you to load, unload and save alias files. The 'Edit' menu offers copy/paste and search routines. The 'View' menu lets you select what alias file you want to edit and 'Alias' shows an index of the current opened alias file.<p>
 
       In the Aliases section you can define shortcuts for often-used commands such as join, part, quit, opping and deopping, and whatever else you want. Even things you frequently say can be placed in an alias...  In general, ALL commands which can be used in the edit box (the line or lines you normally use to talk/type in) can be used in an alias. Aliases can also be used to execute several commands at once. You can even define aliases that are launched by the function keys F1 - F12....  (Finally some use for those never touched keys..) In mIRC you can even call aliases in aliases or from popup menu's and remote lines. In the new mIRC you can have multiple alias files. mIRC comes with one prefab alias.ini file you can add items to, or you can decide to add an entire new file with aliases. very easy!<p>
 
@@ -462,7 +462,7 @@
 
       <h2 class="topic"><a name="section7-2">7-2 The Popups section</a></h2><p>
       <p>Popups are the menus that appear when you right-click with your mouse.  If you haven't found this nice feature of mIRC already, give it a try NOW!  Some popup menu's are predefined in the popups.ini from the mirc distribution file, but they are fully customizable under the 'Tools/Script Editor/Popups' menu item.
-      <p>The mIRC Editor will will start with the Popups section opened. Please ignore the Remote, Users and Variables sections for now!? The mIRC Editor is used as a compact and uniform interface to almost all mIRC's programmable sections. With the Popups section selected the 'File' menu will help you to load, unload and save popup files. The 'Edit' menu offers copy/paste and search routines. 'Popup' shows an index of the current opened popup menu file.
+      <p>The mIRC Script Editor will will start with the Popups section opened. Please ignore the Remote, Users and Variables sections for now!? The mIRC Script Editor is used as a compact and uniform interface to almost all mIRC's programmable sections. With the Popups section selected the 'File' menu will help you to load, unload and save popup files. The 'Edit' menu offers copy/paste and search routines. 'Popup' shows an index of the current opened popup menu file.
       <p>The 'View' menu lets you select what popups you want to edit. There are different popup menus for different kind of windows in mIRC; In a Channel window you'll have a popup menu different from the popup menu in Queries (private conversations). Use the View menu to edit another popup menu. There are programmable popup sections for the Status window, Channel windows, Query/Chat windows and Nickname list and a special item called Menubar for the programmable Menubar item. (All explained later)
       <p>If your copy of mIRC does not seem to be equipped with some prefab popup menu's (the 'Tools/Script Editor/Popups' tab is empty then), it is almost certain that you didn't make sure that the prefab ini files were correctly copied from the mIRC distribution file to the mirc directory, or the place where the popups.ini file can be found by mIRC is not correctly specified. You can easily fix this in the 'File/Load' menu item in the Popups editor.
       <p>The popup commands work almost exactly like aliases.  All of the strings mentioned in Section 7-1 are allowed in popups (and vital for the proper use of them).  If you haven't read the Aliases section (7-1), please do so now!  You need to know that information before moving on.
@@ -513,7 +513,7 @@
 
       <h2 class="topic"><a name="section7-3-1">7-3-1 Remote Users</a></h2><p>
       (Also please read section 6-7.)
-      <p>In mIRC select 'Tools/Script Editor' to open the mIRC Editor. Then make sure to select the Users tab. In this part you can assign various user levels. You can assign certain levels to your friends and certain levels to your "enemies" (you can create a "shit list"), and a host of levels in between.
+      <p>In mIRC select 'Tools/Script Editor' to open the mIRC Script Editor. Then make sure to select the Users tab. In this part you can assign various user levels. You can assign certain levels to your friends and certain levels to your "enemies" (you can create a "shit list"), and a host of levels in between.
       <p>Why is this important?  Let's say that you've written a Remote Event designed to kick anyone who says the word "nonsense" in your channel (just replace this in your head with whatever foul word you'd like). We'll explain how to do this later (in Section 7-3-3), but for now it's just the idea that's important.  Sounds reasonable, right?
       <p>OK, but perhaps you'd ONLY like regular users to be kicked for saying "nonsense."  You'd like some of your friends only to be warned. And you'd like to ignore it from still others, perhaps your closest friends.  And if you do not care for someone much at all, perhaps you'd like to kick AND ban them for saying "nonsense"!
       <p>To do these kinds of things (give different responses to different people), you need to setup a users list.  For each user, you'll specify their nick or address and the user level you've decided to assign them.
@@ -557,7 +557,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-3-2">7-3-2 Remote Scripts - CTCP Commands</a></h2><p>
-      In mIRC select 'Tools/Script Editor' to open the mIRC Editor. Here you can set up how your mIRC reacts to things happening around you on IRC. Two distinct groups of reactions are possible; reactions to CTCP Commands and reactions to Events. In this paragraph the CTCP Commands are discussed.
+      In mIRC select 'Tools/Script Editor' to open the mIRC Script Editor. Here you can set up how your mIRC reacts to things happening around you on IRC. Two distinct groups of reactions are possible; reactions to CTCP Commands and reactions to Events. In this paragraph the CTCP Commands are discussed.
       <p><strong>Introduction</strong> - Remote Commands refers to a very specific type of commands: CTCP commands. CTCP stands for Client To Client Protocol. The Remote CTCP Command lines you can define in mIRC do one thing and one thing only -- they allow you to make mIRC to respond to CTCP commands sent by other users the way -you- wish.
       <p>There are a lot of ctcp commands defined according to the IRC RFC's (standards). The usual ones are version, ping, time, userinfo, and clientinfo. Every IRC client will respond in a standard way if one of these commands is send to it. These ctcp commands are sent by or to you in the format:
       <p>/ctcp {yournick} {command with parameter(s) if any}
@@ -657,7 +657,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-3-3">7-3-3 Remote Scripts - Events</a></h2><p>
-      In mIRC select 'Tools/Script Editor' to open the mIRC Editor, then select the 'View' menu item and select a script named "events.ini". When no events script is already available eventually load a prefab script ini file or create a new script file with File/New/. A new script is called script1.ini by default.
+      In mIRC select 'Tools/Script Editor' to open the mIRC Script Editor, then select the 'View' menu item and select a script named "events.ini". When no events script is already available eventually load a prefab script ini file or create a new script file with File/New/. A new script is called script1.ini by default.
       <p>As you've seen, Remote CTCP Script lines only deal with CTCP commands. Remote Events deal with just about everything else that can happen on IRC. If that sounds daunting, do not worry.  As explained earlier, these lessons are cumulative. If you understand Remote Commands, Remote Events will be a piece of cake. You've already learned the really difficult stuff.
       <p>Warning: In general mIRC is very sensitive to poor Remote Event syntax. Using incorrect syntax can cause a GPF (General Protection Fault), so be careful! If ever you suddenly experience stability problems with mIRC, this is the part to check first!
       <p><strong>Remote Event Syntax.</strong>
