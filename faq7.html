@@ -102,7 +102,7 @@
       CTCP's and Events. <p>
       <strong>The best way to learn and understand the way
       mIRC's programmable sections work is by studying this chapter in consecutive order. Really!
-      Please don't try to take a shortcut to the Remote Scripts section before you really understand
+      Please do not try to take a shortcut to the Remote Scripts section before you really understand
       the Aliases and Popups. The lessons you'll learn from each are cumulative.</strong><p>
       (A note for those familiar with ircii: mIRC's aliasing syntax is similar to ircii's, but not exactly
       the same.  mIRC's Remote Command and Event sections allow you to implement many of
@@ -128,7 +128,7 @@
       <p>Instead of typing "/join #{name}", let's make it so that we can type "/j #{name}" with the same results.
       <p>In that case, the Alias would be:
       <p>/j /join $1
-      <p>(You don't have to understand exactly what that means to mIRC at this point, just what it will do.  I'll explain the alias syntax shortly.)
+      <p>(You do not have to understand exactly what that means to mIRC at this point, just what it will do.  I'll explain the alias syntax shortly.)
       <p>Give it a try by placing the line "/j /join $1" in the Aliases list under 'Tools/Script Editor/Aliases' tab (if it isn't already there).  Then try it out on the command line (where you normally type) with a simple command like:
       <br>"/j #test".
       <p>You'll see that "/j #test" now does exactly the same thing as "/join #test" -- it joins you to a channel named #test.  This construction is called an alias.
@@ -136,8 +136,8 @@
       <p><strong>Alias Syntax.</strong>
       <p>Aliases use the following format: "/{aliasname} /{command}"
       <p>In other words, first your "shortcut" name (like "/j" in the example above), then a space, and then the actual command your shortcut is pointing to (like "/join" in the example above).
-      <p>But it doesn't stop there.   Aliases also use a number of special STRINGS.  There are three pre-defined strings (#, $me and $! ) which always mean the same thing to mIRC (new predefined strings are the $read [-l#] &lt;filename.txt> and $url .... I'll discuss them later too.), and then several variable strings (such as $1, $3-5, $$1, $?, #$1, #$$1, and even #$?).
-      <p>Don't worry, we'll explain all of these in good time.
+      <p>But it does not stop there.   Aliases also use a number of special STRINGS.  There are three pre-defined strings (#, $me and $! ) which always mean the same thing to mIRC (new predefined strings are the $read [-l#] &lt;filename.txt> and $url .... I'll discuss them later too.), and then several variable strings (such as $1, $3-5, $$1, $?, #$1, #$$1, and even #$?).
+      <p>Do not worry, we'll explain all of these in good time.
       <p>Right now, let's concentrate on $1.  After all, that's the string we used in our example above:
       <p>/j /join $1
       <p>$1 means "the first word typed after the Alias, whatever that may be."  So if you type "/j #test", mIRC knows that this is a shortcut for "/join #test".  If you type "/j #hello", it will know that this is a shortcut for "/join #hello".
@@ -214,7 +214,7 @@
       <br>/f9 /dcc send $1 c:\serve\mircfq31.zip
       <br>/f10 /dcc send $1 c:\serve\mirc50s.exe
       <br>/f11 /dcc send $1
-      <p>The F9 key will send the mIRC FAQ to a person selected from the channel names list. Don't forget to select a nick first ! If you don't, you will see strange (but logical) things... You can even use the F9 key in a Private, Query or DCC Chat window with this alias definition !
+      <p>The F9 key will send the mIRC FAQ to a person selected from the channel names list. Do not forget to select a nick first ! If you do not, you will see strange (but logical) things... You can even use the F9 key in a Private, Query or DCC Chat window with this alias definition !
       <br>The F11 key will prompt you for the nick to whom to send a file...
       <br>Well.... invent your own custom use of the F keys ..... have fun ! You can also use -shift- and -ctrl- in combination with the F keys. Just define aliases like :
       <br>/f1 /say I used F1 to say this
@@ -464,7 +464,7 @@
       <p>Popups are the menus that appear when you right-click with your mouse.  If you haven't found this nice feature of mIRC already, give it a try NOW!  Some popup menu's are predefined in the popups.ini from the mirc distribution file, but they are fully customizable under the 'Tools/Script Editor/Popups' menu item.
       <p>The mIRC Editor will will start with the Popups section opened. Please ignore the Remote, Users and Variables sections for now!? The mIRC Editor is used as a compact and uniform interface to almost all mIRC's programmable sections. With the Popups section selected the 'File' menu will help you to load, unload and save popup files. The 'Edit' menu offers copy/paste and search routines. 'Popup' shows an index of the current opened popup menu file.
       <p>The 'View' menu lets you select what popups you want to edit. There are different popup menus for different kind of windows in mIRC; In a Channel window you'll have a popup menu different from the popup menu in Queries (private conversations). Use the View menu to edit another popup menu. There are programmable popup sections for the Status window, Channel windows, Query/Chat windows and Nickname list and a special item called Menubar for the programmable Menubar item. (All explained later)
-      <p>If your copy of mIRC doesn't seem to be equipped with some prefab popup menu's (the 'Tools/Script Editor/Popups' tab is empty then), it is almost certain that you didn't make sure that the prefab ini files were correctly copied from the mIRC distribution file to the mirc directory, or the place where the popups.ini file can be found by mIRC is not correctly specified. You can easily fix this in the 'File/Load' menu item in the Popups editor.
+      <p>If your copy of mIRC does not seem to be equipped with some prefab popup menu's (the 'Tools/Script Editor/Popups' tab is empty then), it is almost certain that you didn't make sure that the prefab ini files were correctly copied from the mIRC distribution file to the mirc directory, or the place where the popups.ini file can be found by mIRC is not correctly specified. You can easily fix this in the 'File/Load' menu item in the Popups editor.
       <p>The popup commands work almost exactly like aliases.  All of the strings mentioned in Section 7-1 are allowed in popups (and vital for the proper use of them).  If you haven't read the Aliases section (7-1), please do so now!  You need to know that information before moving on.
       <p>Also: Definitely read the Help file's explanation of popups, as well as take a look at the many popup examples included in mIRC under 'Tools/Script Editor/Popups' tab. The more examples you try, examine, and mess around with, the better your grasp of mIRC will be.
       <p><strong>Example: /join</strong>
@@ -498,7 +498,7 @@
       <br>..Jerk:/say Leave me alone, jerk!
       <br>..Idiot:/me wonders why $? is such an idiot sometimes.
       <br>..Enemy:/say I'm proud to have $? as my enemy!
-      <p>And so on!  Just order them properly, using the periods.  (If the manner in which the above is organized doesn't "click" with you, definitely try it out!  Enter the above "comment" section into 'Tools/Script Editor/Popups' tab.  It's a lot easier to grasp when you see it working.)
+      <p>And so on!  Just order them properly, using the periods.  (If the manner in which the above is organized does not "click" with you, definitely try it out!  Enter the above "comment" section into 'Tools/Script Editor/Popups' tab.  It's a lot easier to grasp when you see it working.)
       <p>All popup menu items can be put under a Function key too!  That's handy as a replacement for often-used popups....  (Make sure to use the correct syntax and put them [ie.the function key replacements] in the alias section)<br>
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
@@ -515,7 +515,7 @@
       (Also please read section 6-7.)
       <p>In mIRC select 'Tools/Script Editor' to open the mIRC Editor. Then make sure to select the Users tab. In this part you can assign various user levels. You can assign certain levels to your friends and certain levels to your "enemies" (you can create a "shit list"), and a host of levels in between.
       <p>Why is this important?  Let's say that you've written a Remote Event designed to kick anyone who says the word "nonsense" in your channel (just replace this in your head with whatever foul word you'd like). We'll explain how to do this later (in Section 7-3-3), but for now it's just the idea that's important.  Sounds reasonable, right?
-      <p>OK, but perhaps you'd ONLY like regular users to be kicked for saying "nonsense."  You'd like some of your friends only to be warned. And you'd like to ignore it from still others, perhaps your closest friends.  And if you don't care for someone much at all, perhaps you'd like to kick AND ban them for saying "nonsense"!
+      <p>OK, but perhaps you'd ONLY like regular users to be kicked for saying "nonsense."  You'd like some of your friends only to be warned. And you'd like to ignore it from still others, perhaps your closest friends.  And if you do not care for someone much at all, perhaps you'd like to kick AND ban them for saying "nonsense"!
       <p>To do these kinds of things (give different responses to different people), you need to setup a users list.  For each user, you'll specify their nick or address and the user level you've decided to assign them.
       <p>Here's an example of a valid user list:
       <p>1:nick1
@@ -529,7 +529,7 @@
       <p>The numbers you pick for the user levels are completely up to you. You can decide what each of the user level numbers can and cannot do, as you'll see in the next two sections.  By default, mIRC assigns everyone not specified in the user list to level 1. (Depending on the setting in 'Tools/Script Editor/Options/Default level'.
       <p>If you specified different levels to different users you of course also need commands and events that have different reactions or power to users of these levels...  That will be explained later...
       <p>As you can see, either a nick or an address are permissible.  Wildcards are also allowed.  There are some cases where you might want to specify your users twice, by both nick and address. These cases (with OP, DEOP, SERVEROP,.... and NOTIFY events) is explained in Section 7-3-3.
-      <p>You don't have to do all the editing by hand ... you could also use mIRC's edit box or  command line commands /auser, /guser and /ruser.
+      <p>You do not have to do all the editing by hand ... you could also use mIRC's edit box or  command line commands /auser, /guser and /ruser.
       <p>/auser /auser {level} {nick or address}
       <br>'Auser' (Add user) adds whatever nick or address you specify to the users list at the level you specify.  It does not check for a valid address.  The nick or address is added exactly as you stated it.
       <p>/guser /guser {level} {nick} [type]
@@ -573,7 +573,7 @@
       <p>Now place the following example into an existing or new script file.
       <br>ctcp 1:ping:/notice $nick ping? Hmmm! ...pang pang pang!!
       <p>Now if someone pings you, your reply will be "ping?  Hmmm ! ... pang pang pang !!" in a notice sent to the person who pinged you, on top of the normal reply being 'pong'.
-      Test this by giving the command "/ctcp {yournick} ping"  If it doesnt work make sure mIRC is actually listening to Remote CTCP commands. Enable this by giving the command "/remote on" and/or "/ctcps on".
+      Test this by giving the command "/ctcp {yournick} ping"  If it does not work make sure mIRC is actually listening to Remote CTCP commands. Enable this by giving the command "/remote on" and/or "/ctcps on".
       <br>If you want mIRC to -not- give the default ping reply on top of your custom one you can block the default processing by the /halt command. Use it like
       <br>1:ping:/notice $nick ping? Hmmm! ...pang pang pang!! | /halt
       <br>This will do the same thing as before, except it will not send your normal ping reply.
@@ -617,12 +617,12 @@
       $site The site of the person who sent the command.<br>
       $wildsite Returns the address of the user who triggered the event in the form *!*@host.domain<br>
       $level Represents the users remote level. <p>
-      Note: The $chan is NOT ALWAYS DEFINED in the Remote Commands ... $chan normally contains the channel from which a commands is given ... CTCP commands don't have to be given to you from a channel ... or the person sending the command could be on more channels ... Get the point ?? Maybe $active will do what you want ? or $target ?<p>
+      Note: The $chan is NOT ALWAYS DEFINED in the Remote Commands ... $chan normally contains the channel from which a commands is given ... CTCP commands do not have to be given to you from a channel ... or the person sending the command could be on more channels ... Get the point ?? Maybe $active will do what you want ? or $target ?<p>
       Example: Here's an example using the pre-defined $address parameter...<br>
       ctcp 1:address:/notice $nick Your address is $address<br>
       If a user were to send a '/ctcp {yournick} address' command to you, you would reply with a notice reading, "Your address is {whatever his or her address is}".<p>
       <strong>Example:</strong> Opping friends on demand. (Using $2)
-      <p>If you're not clear on the basics of how all of this works yet, don't worry. Try to follow along with the examples and see if it "clicks" in your brain. Re-read the above examples if necessary.  But don't attempt to write your own Remote Commands or move on to the next section until it "clicks."
+      <p>If you're not clear on the basics of how all of this works yet, do not worry. Try to follow along with the examples and see if it "clicks" in your brain. Re-read the above examples if necessary.  But do not attempt to write your own Remote Commands or move on to the next section until it "clicks."
       <p>ctcp 1:opme:/notice $nick Sorry, you won't get opped on $2 .. your level is too low
       <br>ctcp 5:opme:/mode $2 +o $nick
       <p>If a level 5 friend sends '/ctcp {yournick} opme {#channelname}', this command will op them in the specified channel. Level 1 people WON'T get opped whatever they try....
@@ -647,8 +647,8 @@
       <p>$2 contains the channel name you are asked to leave.
       <br>$nick is the nick of the person who asked.
       <p>*** Other Examples.
-      <p>ctcp 1:ping:/notice $nick Please don't ping me.
-      <p>...would respond with: "/notice {nick} Please don't ping me."
+      <p>ctcp 1:ping:/notice $nick Please do not ping me.
+      <p>...would respond with: "/notice {nick} Please do not ping me."
       <p>ctcp 5:time:/notice $nick Time to get a watch.
       <p>...would respond with: "/notice {nick} Time to get a watch.
       <p>ctcp 10:whoareyou:/notice $nick I am who I say I am | /notice $nick And I say that I'm YOU!
@@ -658,7 +658,7 @@
 
       <h2 class="topic"><a name="section7-3-3">7-3-3 Remote Scripts - Events</a></h2><p>
       In mIRC select 'Tools/Script Editor' to open the mIRC Editor, then select the 'View' menu item and select a script named "events.ini". When no events script is already available eventually load a prefab script ini file or create a new script file with File/New/. A new script is called script1.ini by default.
-      <p>As you've seen, Remote CTCP Script lines only deal with CTCP commands. Remote Events deal with just about everything else that can happen on IRC. If that sounds daunting, don't worry.  As explained earlier, these lessons are cumulative. If you understand Remote Commands, Remote Events will be a piece of cake. You've already learned the really difficult stuff.
+      <p>As you've seen, Remote CTCP Script lines only deal with CTCP commands. Remote Events deal with just about everything else that can happen on IRC. If that sounds daunting, do not worry.  As explained earlier, these lessons are cumulative. If you understand Remote Commands, Remote Events will be a piece of cake. You've already learned the really difficult stuff.
       <p>Warning: In general mIRC is very sensitive to poor Remote Event syntax. Using incorrect syntax can cause a GPF (General Protection Fault), so be careful! If ever you suddenly experience stability problems with mIRC, this is the part to check first!
       <p><strong>Remote Event Syntax.</strong>
       <p>The Remote Events are: TEXT, JOIN, PART, KICK, OP, DEOP, INVITE, NICK, QUIT, TOPIC, SERVEROP, NOTIFY, MODE,  SERVERMODE and SMODE.  Besides TEXT the similar ACTION, NOTICE, SNOTICE, CHAT, SERV and WALLOPS are available for more specific text origins. New are the FILESENT and FILERCVD events as well as CHATOPEN, CHATCLOSE, SERVOPEN, SERVCLOSE and several others.
@@ -798,7 +798,7 @@
       <p><strong>NOTIFY event</strong>
       <br><strong>NOTIFY event</strong> These events trigger as soon as people in your notify list join or leave IRC.
       <p>Note: This event requires people to be mentioned by NICK in your Remote/Users list !
-      <p>You could use this event to do things like a /whois on the notified nick to make sure it is the correct guy.... Remember that this event ONLY works on nicks mentioned in the remote/user list by NICK.... (like OP, DEOP and SERVEROP) This is due to the IRC protocols which don't pass through the address of the notified person...  You have to put the nickname in the 'Tools/Address Book/Notify' tab and then as soon as mIRC detects the person on IRC this event will trigger. The UNOTIFY event will triggers as soon as mIRC detects that the nick left IRC; the person left or changed nickname.
+      <p>You could use this event to do things like a /whois on the notified nick to make sure it is the correct guy.... Remember that this event ONLY works on nicks mentioned in the remote/user list by NICK.... (like OP, DEOP and SERVEROP) This is due to the IRC protocols which do not pass through the address of the notified person...  You have to put the nickname in the 'Tools/Address Book/Notify' tab and then as soon as mIRC detects the person on IRC this event will trigger. The UNOTIFY event will triggers as soon as mIRC detects that the nick left IRC; the person left or changed nickname.
       <p>Examples:
       <br>on 1:NOTIFY:/notice $nick If you are the real $nick then please join #mine !
       <br>on 1:UNOTIFY:/echo $active $nick has left IRC.
@@ -816,7 +816,7 @@
       <br><strong>DEVOICE event</strong>These events react to people getting or loosing voice on channels.  Examples:
       <br>on 1:VOICE:/notice $nick Welcome in the speaking world!
       <br>on 1:DEVOICE:/notice $vnick Hey, $nick is allowed to speak here!
-      <p><strong>SNOTICE event</strong> This event listens for server notices. Server notices tell you all kind of things happening at and with the IRC server you use.  To recieve them you have to set your user mode to +s (/mode #nickname +s).  Most people don't need this setting... It is mostly meant for IRCOps and server maintainers.  With this event you can filter the server notices send to you and you can filter them ie. prevent them from being displayed or automatically react to them.  The event syntax is very much like the TEXT event...
+      <p><strong>SNOTICE event</strong> This event listens for server notices. Server notices tell you all kind of things happening at and with the IRC server you use.  To recieve them you have to set your user mode to +s (/mode #nickname +s).  Most people do not need this setting... It is mostly meant for IRCOps and server maintainers.  With this event you can filter the server notices send to you and you can filter them ie. prevent them from being displayed or automatically react to them.  The event syntax is very much like the TEXT event...
       <br>on 1:SNOTICE:servers_text:/echo 6 status The server noticed you about $1-
       <p><strong>FILESENT event</strong> This event will react to all successful DCC Send file transers. You can use it to send you or the reciever a small message...
       <br>on 1:FILESENT:*.txt,*.ini:/echo Sent $filename to $nick ( $+ $address $+ )
@@ -1006,7 +1006,7 @@
       /ame is back,.. what did I miss ?<br>
       /away<br>
       }<p>
-      I agree that doesnt really help -here-, but while you're writing and testing the new possibilities in mIRC's conditional commands you might like this structure? Btw, the { } brackets are needed around all commands that use the new possibilitie of conditional looping etc. Now we're at it, you could leave out all / command prefixes if you wanted to... They are no longer needed. <p>
+      I agree that does not really help -here-, but while you're writing and testing the new possibilities in mIRC's conditional commands you might like this structure? Btw, the { } brackets are needed around all commands that use the new possibilitie of conditional looping etc. Now we're at it, you could leave out all / command prefixes if you wanted to... They are no longer needed. <p>
       A /goto command is added which can be used in { } definitions.<br>
       Example:<br>
       /greet {<br>
@@ -1047,7 +1047,7 @@
       Example:<br>
       Make this alias and start it like "/test 4";<br>
       /test { set %i 0 | :start | inc %i | if %i > $1 halt | echo $active %i | goto start } <p>
-      If/elseif/else can all be nested inside each other. You should use () and {} brackets to make sure that you're terms are evaluated correctly (in the correct order), though you don't *have* to use them. Using brackets also speeds up processing quite a bit since mIRC then knows exactly what it has to evaluate.<p>
+      If/elseif/else can all be nested inside each other. You should use () and {} brackets to make sure that you're terms are evaluated correctly (in the correct order), though you do not *have* to use them. Using brackets also speeds up processing quite a bit since mIRC then knows exactly what it has to evaluate.<p>
       Available comparisons and operators:<br>
       == equal to<br>
       != not equal to<br>
@@ -1084,7 +1084,7 @@
       These equivalent aliases will both print a list of numbers upto the value you give. Try it with "/printnum1 14" or something similar .... The second alias shows how smart use of identifiers can reduce the length of the alias a lot.<p>
 
       <strong>Empty or invalid identifiers</strong><p>
-      Variables or identifiers that don't evaluate to a value now return the value $null so they can be used in the if statement for checking etc. <p>
+      Variables or identifiers that do not evaluate to a value now return the value $null so they can be used in the if statement for checking etc. <p>
       Example:<br>
       /listops { echo 4 * Listing Ops on # | set %i 1 | :next | set %nick $nick(%i,#) | if %nick == $null { goto done } | if %nick isop # { echo 3 %nick is an Op on # } | inc %i | goto next | :done | echo 4 * End of Ops list }<p>
       This alias will list all ops on the channel you're on.<br>
