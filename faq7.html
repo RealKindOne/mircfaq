@@ -842,8 +842,8 @@
       <br>on 1:MIDIEND:/echo mIRC finished playing midi file!
       <p><strong>INPUT event</strong> This event is triggered when you enter whatever text message into an editbox and press enter. You can process the line with a script or whatever you like then! /halt prevents the standard processing of the text. Example:
       <br>on 1:INPUT:/echo you entered $1-
-      <p><strong>LOAD event</strong> Triggers when mIRC is started and scripts are loaded.
-      <br><strong>START event</strong> Triggers as soon as your (new) script is ready to go.
+      <p><strong>LOAD event</strong> Triggers the first time the script file is loaded.
+      <br><strong>START event</strong> Triggers the first time the script is loaded and every time you start mIRC.
       <br>on 1:LOAD:/echo script successfully loaded
       <br>on 1:START:/echo script successfully started
       <p>With the LOAD event you can give commands when mIRC loads the scripts. To give
