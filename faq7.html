@@ -1107,13 +1107,13 @@
       This popup menu item will op all selected people on a channel where you're operator.<p>
       Selkick:/kick # $token($rand(1,$snick(0,#)),44,$snicks)<p>
       This popup will kick one random person out of the people you selected on a channel.<p>
-      RandNopkick:/kick # $nopnick($rand(1,$nopnick(0,#)),#)<p>
+      RandNopkick:/kick # $nick(#,$rand(1,$nick(#,0,r)),r)<p>
       This popup will kick a random non-operator from the channel you're on.<p>
-      RandNopkick { :begin | /set %kicknick $nick($rand(1,$nick(0,#)),#) | if %kicknick isop # goto begin | /kick # %kicknick }<p>
+      RandNopkick { :begin | /set %kicknick $nick(#,$rand(1,$nick(#,0,r)),r) | if %kicknick isop # goto begin | /kick # %kicknick }<p>
       This popup will also kick a random non-operator from the channel you're on.<p>
-      Randkick:/kick # $nick($rand(1,$nick(0,#)),#)<p>
+      Randkick:/kick # $nick(#,$rand(1,$nick(#,0,r)),r)<p>
       Arent kicks fun ???? Another one ...  randomly kicking just anybody .... might be -you- !<p>
-      RandOpkick:/kick # $opnick($rand(1,$opnick(0,#)),#)<p>
+      RandOpkick:/kick # $nick($rand(1,$nick(0,#,ovr)),#,ovr)<p>
       Randomly kicking an op .... they at least can defend themselves !<p>
       <strong>Endless loops.</strong><p>
       With all these conditional statements I foresee you ending up in some endless loop. A simple example is creating something like:<p>
