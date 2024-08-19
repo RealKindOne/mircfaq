@@ -661,7 +661,7 @@
       <p>As you've seen, Remote CTCP Script lines only deal with CTCP commands. Remote Events deal with just about everything else that can happen on IRC. If that sounds daunting, do not worry.  As explained earlier, these lessons are cumulative. If you understand Remote Commands, Remote Events will be a piece of cake. You've already learned the really difficult stuff.
       <p>Warning: In general mIRC is very sensitive to poor Remote Event syntax. Using incorrect syntax can cause a GPF (General Protection Fault), so be careful! If ever you suddenly experience stability problems with mIRC, this is the part to check first!
       <p><strong>Remote Event Syntax.</strong>
-      <p>The Remote Events are: TEXT, JOIN, PART, KICK, OP, DEOP, INVITE, NICK, QUIT, TOPIC, SERVEROP, NOTIFY, MODE,  SERVERMODE and SMODE.  Besides TEXT the similar ACTION, NOTICE, SNOTICE, CHAT, SERV and WALLOPS are available for more specific text origins. New are the FILESENT and FILERCVD events as well as CHATOPEN, CHATCLOSE, SERVOPEN, SERVCLOSE and several others.
+      <p>The Remote Events are: TEXT, JOIN, PART, KICK, OP, DEOP, INVITE, NICK, QUIT, TOPIC, SERVEROP, NOTIFY, MODE,  SERVERMODE and SMODE.  Besides TEXT the similar ACTION, NOTICE, SNOTICE, CHAT, SERV and WALLOPS are available for more specific text origins. New are the FILESENT and FILERCVD events as well as several others.
       <p>Exactly what they do, and how to use them, will be explained shortly.  First, some quick examples and an explanation of the syntax used.
       <p>The syntax is essentially the same as with Remote Commands.  Here's a sample Remote Event for TEXT:
       <p>on 1:TEXT:hello:#:/msg $nick Hello back!
