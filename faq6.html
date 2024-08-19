@@ -335,12 +335,21 @@
       <hr>
 
       <h2 class="topic"><a name="section6-25">6-25 Running multiple copies of mIRC.</a></h2><p>
-      <strong>mirc.exe 16-bit :</strong>
-      <br>You can't just start the 16-bit mirc.exe a second time.  If you want to run a second copy of mIRC16 (don't ask me why), it's best to rename your mirc.exe to mirc1.exe and also copy your mirc.exe to another instance, like mirc2.exe.  ( In the windows File Manager select mirc.exe and with File/Copy copy it to mirc2.exe, and with File/Rename rename it to mirc1.exe.  Both copies can be kept in the same directory (the mIRC home dir.))
-      <p>Do the same for the mirc.ini file that can be found in the c:\windows directory or in mIRC's home dir.  (Unless specified otherwise mIRC uses the mirc.ini file found in c:\windows. )  Copy mirc.ini to a mirc1.ini and to a mirc2.ini.  Now in the Program Manager, rename the mIRC icon to an icon called mIRC1, and use that to start the first copy.  'Under' the icon, on the startup line, state "c:\path\mirc1.exe -i c:\path\mirc1.ini" to make sure mirc1.exe will use the mirc1.ini!  Also, make an icon called mIRC2, and use that to start the second copy.  On the startup line 'under the icon' state "c:\path\mirc2.exe -i c:\path\mirc2.ini" to make sure mirc2.exe will use the mirc2.ini!  The -i startup line parameter tells mIRC to use the file after it as ini file.  If you want to place the mirc.ini files in another directory than your windows or home dir, make sure to specify the full and correct path!
-      You can now startup both exe's and configure them independently..... Nice huh?
-      <p><strong>mirc32.exe 32-bit :</strong>
-      <br>If you use the 32-bit version of mIRC you CAN run a second instance without problems without having to provide a second, renamed .exe file.  You don't have to rename and or copy the mirc32.exe. BUT you still have to create 2 shortcuts with unique mirc.ini names on the startup-line to get your 2 mIRC's working independently and not interfering ....  Don't forget that :-)
+      There are multiple methods of running mIRC.
+      <br>
+      <strong>Command Line Switches :</strong>
+      <!-- copy/paste from v7.77 mirc.chm -->
+      <br>-i<filename.ini> - Make mIRC use the specific file in place of mirc.ini
+      <br>-r<path> - Sets the data path where mIRC saves mirc.ini as well as other files and data. If -r is specified without a path, the path is set to that of the mIRC executable.
+      <!-- end copy/paste -->
+      <p>Right click the mirc.exe file and click "Create shortcut". Right click the shortcut and click "Properties". Edit the Target.
+      <br>
+      <p>Examples:
+      <br>"C:\Program Files (x86)\mIRC\mirc.exe" -r"C:\Users\Bill\AppData\Roaming\mIRC\example"
+      <br>"C:\Program Files (x86)\mIRC\mirc.exe" -i"C:\Users\Bill\AppData\Roaming\mIRC\example.ini"
+      <br>
+      <strong>Other method :</strong>
+      <br>You can copy/paste mirc.exe and mirc.ini into a folder and mirc will by default use that mirc.ini file. Using one of the command line switch will take priority over this method.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
