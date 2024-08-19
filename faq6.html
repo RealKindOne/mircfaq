@@ -266,11 +266,11 @@
         bill!gates@pentium.company.com<p>
       You could also use *!gates@*.company.com if he works on several machines with different nick's....<p>
 
-      To add a user to the lists use the /auto, /ignore or /protect command (like /auto *!gates@*.company.com), or use the command while specifying an [Address Type:addresstypes], or add a user by simply typing him into the specific edit box.
-      Make sure to switch the functions to active by the checkbox under 'Tools/Address Book/Options' menu.  Or use the commands /auto [on|off], /ignore [on|off]  or /protect [on|off] on the command line.<p>
+      To add a user to the lists use the /aop, /voice, /ignore or /protect command (like /aop *!gates@*.company.com), or use the command while specifying an [Address Type:addresstypes], or add a user by simply typing him into the specific edit box.
+      Make sure to switch the functions to active by the checkbox under 'Tools/Address Book/Options' menu.  Or use the commands /aop [on|off], /voice [on|off], /ignore [on|off]  or /protect [on|off] on the command line.<p>
       You can make the auto-op, ignore and protect more specific by specifying some parameters.<p>
       The auto-op and protect can be set to make people operator and/or protect them only on certain channels if you want. In that case just specify the channel names.  like <br>
-      /auto &lt;nickname|address> [#channel1,#channel2,...]    and<br>
+      /aop &lt;nickname|address> [#channel1,#channel2,...]    and<br>
       /protect &lt;nickname> [#channel1,#channel2,...] (protect only works with nicks!)<br>
       If you do not specify one or more channel names mIRC will op and protect the person on all channels where you're operator.<p>
       The ignore can be set to ignore only certain actions from a person. mIRC distinguises between private messages, text in channels, notices send to you, ctcp commands and invitations. From the command line you can use: /ignore [-pcntik] &lt;nickname/address> [type]  where p = private, c = channel, n = notice, t = ctcp, i = invite, k = color. (more parameters discussed in the help file!)  In the ignore section an ignore will look like nick!userid@host.domain,private,channel,notice,ctcp,invite. If you dont specify any of these additional parameters mIRC will just ignore somebody totally.
