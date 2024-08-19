@@ -119,7 +119,7 @@
 
       The mIRC Script Editor is used as a compact and uniform interface to almost all mIRC's programmable sections. With the Aliases section selected the 'File' menu will help you to load, unload and save alias files. The 'Edit' menu offers copy/paste and search routines. The 'View' menu lets you select what alias file you want to edit and 'Alias' shows an index of the current opened alias file.<p>
 
-      In the Aliases section you can define shortcuts for often-used commands such as join, part, quit, opping and deopping, and whatever else you want. Even things you frequently say can be placed in an alias...  In general, ALL commands which can be used in the edit box (the line or lines you normally use to talk/type in) can be used in an alias. Aliases can also be used to execute several commands at once. You can even define aliases that are launched by the function keys F1 - F12....  (Finally some use for those never touched keys..) In mIRC you can even call aliases in aliases or from popup menu's and remote lines. In the new mIRC you can have multiple alias files. mIRC comes with one prefab alias.ini file you can add items to, or you can decide to add an entire new file with aliases. very easy!<p>
+      In the Aliases section you can define shortcuts for often-used commands such as join, part, quit, opping and deopping, and whatever else you want. Even things you frequently say can be placed in an alias...  In general, ALL commands which can be used in the edit box (the line or lines you normally use to talk/type in) can be used in an alias. Aliases can also be used to execute several commands at once. You can even define aliases that are launched by the function keys F1 - F12....  (Finally some use for those never touched keys..) In mIRC you can even call aliases in aliases or from popup menu's and remote lines. In the new mIRC you can have multiple alias files. mIRC comes with one prefab aliases.ini file you can add items to, or you can decide to add an entire new file with aliases. very easy!<p>
 
       <h2 class="topic"><a name="section7-1-1">7-1-1 Creating Aliases</a></h2><p>
       <p>OK, let's start right off the bat with an example.  To join a channel, you normally have to type:
@@ -257,7 +257,7 @@
       And...<br>
       /mess /msg $1 $2-<br>
       ...and type "/mess {nick} {whatever text}"<br>
-      (Make sure you realize that these commands would have given the same result if you defined the aliases as '/note /notice $1-' and '/mess /msg $1-' respectivly.)<br>
+      (Make sure you realize that these commands would have given the same result if you defined the aliases as '/note /notice $1-' and '/mess /msg $1-' respectively.)<br>
       The $N- replaces the old *N definition. <p>
 
       <strong>$$1</strong>
@@ -348,7 +348,7 @@
       $duration(seconds) Translates numbers like 123456 into 1day 10hrs 17mins 36secs.<br>
 
       $logdir, $getdir, $wavedir, $mircdir Return the paths to these directories. <br>
-      $mircini Returns path to and name og the ini file you're using. <br>
+      $mircini Returns path to and name of the ini file you're using. <br>
       $nopath(filename) Returns only the filename with no path.<br>
       $nofile(filename) Strips the filename and returns the remaining path.<br>
       $exists(filename) Checks if the given filename exists. (Returning $true or $false)<br>
@@ -428,12 +428,12 @@
         %temp = $1 + $2<br>
         return %temp<br>
       }<p>
-      Now you can use the $sum identier anywhere in aliases, popups, or remote. For example in the popup item:<br>
+      Now you can use the $sum identifier anywhere in aliases, popups, or remote. For example in the popup item:<br>
         Add:/say The sum of 45 and 78 is $sum(45,78)<br>
       Or the Alias:<br>
         /add /say The sum of $1 and $2 is $sum($1,$2)<br>
       (btw. it makes no sense to give a command like /sum .. that wont work)<p>
-      All parameters given to the identifier are seperated with commas. You can use all usuall if/then/else structures to in the identifier definitions. You could for instance check if all the required parameters are there, and return an Error command instead. For example, this routine that calculates what percentage X is of Y.<p>
+      All parameters given to the identifier are separated with commas. You can use all usual if/then/else structures to in the identifier definitions. You could for instance check if all the required parameters are there, and return an Error command instead. For example, this routine that calculates what percentage X is of Y.<p>
       /perc {<br>
         if ($1 == $null) || ($2 == $null) { return Error not enough parameters }<br>
         if ($2 != 1) { %half = $2 / 2 } | else { %half = 1 }<br>
@@ -479,8 +479,8 @@
       <br>Set Back:/ame is BACK | /away
       <p>(Note again that on some systems you may need to scroll to the right to see the full text of some examples.)
       <p>Notice that the "Set Away" example uses multiple commands.
-      <p><strong>Heirarchal Menus</strong>
-      <p>If you were to add a few popups like that, your screen would quickly get cluttered every time you right-click.  So you can organize your popups into heirarchal menus.
+      <p><strong>Hierarchical Menus</strong>
+      <p>If you were to add a few popups like that, your screen would quickly get cluttered every time you right-click.  So you can organize your popups into hierarchical menus.
       <p>Try entering all of the following popups:
       <p>Say Things
       <br>.Hello:/say Hello folks
@@ -580,7 +580,7 @@
       Again, test it and see the difference!
       <p>Assuming you actually tried the two given ping replies, and that you got them to work, let's go over the syntax used here a bit, and then we'll go back to the above example and _why_ it does what it does.
       <p><strong>Remote Command Syntax.</strong>
-      <p>Remote Commands, except for some special cases, are made up of 3 portions.  Each of the portions are seperated by a colon.  The general syntax looks like:
+      <p>Remote Commands, except for some special cases, are made up of 3 portions.  Each of the portions are separated by a colon.  The general syntax looks like:
       <p>ctcp {command_level}:{ctcp_command}:{triggered_command(s) with parameter(s)}
       <p>Lets go over the separate portions one by one:
       <p>ctcp  This tells mIRC that a ctcp (Remote Command) definition follows.
@@ -593,7 +593,7 @@
       <p>1 is the command level.  All users with a user level equal or higher than 1 can execute or use this command.
       <p>Ping is the CTCP command this Remote Command is going to react to.
       <p>The triggered command is a /notice.  In this case a notice is sent to $nick containing the entire line "ping?  Hmmm!  ... pang pang pang!!"  $nick is a pre-defined parameter that contains the nick of the person who gave you the CTCP command ... in this case he pinged you.  (More about the pre-defined parameters soon.)
-      <p>Summarising, the effect of the command "/ctcp &lt;yournick> ping" is a "/notice {nick} ping?  Hmmm!  ...Pang pang pang!!"   This is executed as soon a CTCP Ping is received.
+      <p>Summarizing, the effect of the command "/ctcp &lt;yournick> ping" is a "/notice {nick} ping?  Hmmm!  ...Pang pang pang!!"   This is executed as soon a CTCP Ping is received.
       <p>You can also use multiple commands, utilizing the | character, as with Aliases and Popups.  That way a single Remote Command could activate multiple command lines. The use of the | is very straight forward, and we'll cover it later. Just glue two remote commands together using the |.
       <p><strong>Different reactions to people with different user levels</strong>
       <p>You can fine tune your reactions to remote commands by assigning different levels to them.
@@ -610,8 +610,8 @@
       <p>This leveling can be done for ALL remote commands (and events) ....
       <br>Make sure you get the point here !!! Maybe re-read the above sections ??<p>
       <strong>Special identifiers for Remote/Commands/ lines.</strong><p>
-      $nick, $address, $site, $level etc. are all identifiers specially created tobe used in remote lines.<br>
-      You can use them whereever you want in the lines triggered by remote commands... <p>
+      $nick, $address, $site, $level etc. are all identifiers specially created to be used in remote lines.<br>
+      You can use them wherever you want in the lines triggered by remote commands... <p>
       $nick The nick of the person who sent the command or activated the event.<br>
       $address The full address of the person who sent the command.<br>
       $site The site of the person who sent the command.<br>
@@ -685,7 +685,7 @@
       <p>{event} Well, obviously, it's going to be TEXT or ACTION
       <p>{what_text} Specify the word or phrase to listen for. Like "hello" in the first example.
       <p>{where} #, #name, ?, *. Just like above, you can tell TEXT and ACTION to listen on all channels (#) or on a specific channel (like #test).  But you can also tell it to listen to all of the private messages sent to you (?) or to both channel and private message text (*).  An TEXT or ACTION event can't listen for things said in DCC Chats or Server messages.
-      <p>{triggered_command(s) with paramerer(s)} Same as above.
+      <p>{triggered_command(s) with parameter(s)} Same as above.
       <p><strong>The Events</strong>
       <p>Here are the various Remote Events that mIRC can respond to...
       <p>
@@ -818,11 +818,11 @@
       <br>on 1:DEVOICE:/notice $vnick Hey, $nick is allowed to speak here!
       <p><strong>SNOTICE event</strong> This event listens for server notices. Server notices tell you all kind of things happening at and with the IRC server you use.  To recieve them you have to set your user mode to +s (/mode #nickname +s).  Most people do not need this setting... It is mostly meant for IRCOps and server maintainers.  With this event you can filter the server notices send to you and you can filter them ie. prevent them from being displayed or automatically react to them.  The event syntax is very much like the TEXT event...
       <br>on 1:SNOTICE:servers_text:/echo 6 status The server noticed you about $1-
-      <p><strong>FILESENT event</strong> This event will react to all successful DCC Send file transers. You can use it to send you or the reciever a small message...
+      <p><strong>FILESENT event</strong> This event will react to all successful DCC Send file transfers. You can use it to send you or the receiver a small message...
       <br>on 1:FILESENT:*.txt,*.ini:/echo Sent $filename to $nick ( $+ $address $+ )
       <br>on 1:FILESENT:mirc50s.exe:/notice $nick Have fun with the 16 bit mIRC
       <br>on 1:FILESENT:mirc50t.exe:/notice $nick Have fun with the 32 bit mIRC
-      <p><strong>FILERCVD event</strong> This event will react to all successful DCC Get file transers. It will trigger as soon as a file is successfully retrieved to your harddisk. You can use it to send you or the sender a small message, or to start a helper application to view the recieved picture, play a sound file or read the text.
+      <p><strong>FILERCVD event</strong> This event will react to all successful DCC Get file transfers. It will trigger as soon as a file is successfully retrieved to your harddisk. You can use it to send you or the sender a small message, or to start a helper application to view the received picture, play a sound file or read the text.
       <br>on 1:FILERCVD:*.txt,*.ini:/run notepad.exe $filename
       <br>on 1:FILERCVD:*.wav:/wavplay $filename
       <br>on 1:FILERCVD:*.gif:/run c:\windows\wingif\wingif.exe $filename
@@ -852,8 +852,8 @@
       when a script is first loaded. If a script is loaded from within the remote dialog, auto-run
       commands are not executed until the dialog is closed. <p>
       <strong>Special identifiers for Remote/Events/ lines.</strong><p>
-      $nick, $address, $site etc. are all identifiers specially created tobe used in remote lines.
-      You can use them whereever you want in the lines triggered by remote events... <p>
+      $nick, $address, $site etc. are all identifiers specially created to be used in remote lines.
+      You can use them wherever you want in the lines triggered by remote events... <p>
       $nick The nick of the person who sent the command or activated the event.<br>
       $address The full address of the person who sent the command.<br>
       $site The site of the person who sent the command.<br>
@@ -893,7 +893,7 @@
       <br>;on 1:JOIN:#mine:/notice $nick Welcome here.
       <br>REM on 1:JOIN:#mine:/notice $nick Welcome here.
       <p>*** The * and @ flags.
-      <br>Thise flags makes mIRC to execute an event or command ONLY if you're operator on the channel the event or commands if used on.
+      <br>These flags makes mIRC to execute an event or command ONLY if you're operator on the channel the event or commands if used on.
       <br>on *1:JOIN:#mine:/notice $nick Welcome here.
       <p>*** The me flag.
       <br>This flag is designed to make sure you can make events only work if somebody with exactly the same address as you use does something. This other person normally would be your 2nd instance of mIRC running from the same PC. Keep in mind that with proper leveling of your users in the Remote/users section you never (?) need this flag.
@@ -1142,7 +1142,7 @@
       <br>/rline [-cN] @name N text   replace Nth line
       <br>/sline       @name N        selects Nth line
       <br>Where -cN allows you to specify the line color.
-      <p>You can use the $window(N/@name) identifer to access the following custom window information:
+      <p>You can use the $window(N/@name) identifier to access the following custom window information:
       <br>$window(N).x      left
       <br>$window(N).y      top
       <br>$window(N).w      width
@@ -1152,7 +1152,7 @@
       <br>$line(@name,N)    returns Nth line
       <br>$sline(@name,N)   returns Nth selected line (listbox only)
       <br>$sline(@name,N).ln to return line number of selected item.
-      <p>This new tool offers a lot of usefull and creative uses but needs some experimenting to have it behave exactly as you want it to. Have fun!<br>
+      <p>This new tool offers a lot of useful and creative uses but needs some experimenting to have it behave exactly as you want it to. Have fun!<br>
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <em><strong>Copyrights</strong> - You are allowed to provide and distribute the mIRC FAQ -as is- by or on any medium as long as you make it available for free. You are not allowed to change anything in the file or charge any amount of money for your services. If you want to copy only certain parts for whatever use, make sure to mention my name and the FAQ as the source of information with every single quote whenever you publish it. Copyright &copy; Tjerk Vonck 1995-2024. All Rights Reserved.</em>
