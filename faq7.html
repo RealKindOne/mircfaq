@@ -406,8 +406,8 @@
       Example: /echo $right(3,$left($len(goats),ToMooOrNotToMoo))  results in ' Moo'<p>
 
       <strong>Identifiers with properties. </strong><p>
-      Several identifiers can be used with special parameters attached. This eases up remembering their syntax and might help a lot in scriping. The syntax is $identifier(N|#|nick).property <p>
-      $server(N|address) Gives access to the servers list under File/Setup/IRC_Servers.<br>
+      Several identifiers can be used with special parameters attached. This eases up remembering their syntax and might help a lot in scripting. The syntax is $identifier(N|#|nick).property. Note: This is not a complete list of properties.<p>
+      $server(N|address) Gives access to the servers list under 'File/Select Server' dialog.<br>
       $server(N|address) for the address, .desc for the description, .port for the port, .group for the group.<br>
       $server(N|address,group) as above but for a specific group.<br>
       $ial(mask,N) Gives access to the Internal Address List.<br>
@@ -767,10 +767,10 @@
       <p>This construction can give you a good reason to specify people in your Users list by both their full address (wildcards are permitted) and their nick. This could then guarantee the proper reaction to an OP, DEOP or SERVEROP without giving ALL people around with by accident (?) the same nick the same rights as your friends  (or enemies).
       <hr>
       <p><strong>BAN event</strong>
-      <br><strong>UNBAN event</strong>With the BAN you can easily auto-unban your friends.
+      <br><strong>UNBAN event</strong> With the BAN you can easily auto-unban your friends.
       <p>Example:
       <br>on 5:BAN:#tree:/mode $chan -b $banmask
-      <br>The $banmask will contain th
+      <br>The $banmask will contain the banned entry.
       <p><strong>INVITE event</strong> Occurs when you are invited to a channel.
       <p>Example:
       <br>on 5:INVITE:#test:/join $chan | /describe $chan thanks you for inviting him!
@@ -1151,7 +1151,7 @@
       <br>$window(N).y      top
       <br>$window(N).w      width
       <br>$window(N).h      height
-      <br>$window(N).state  minimized/maximized/normal
+      <br>$window(N).state  minimized/maximized/normal/hidden
       <p>To access the lines in a custom window you can use:
       <br>$line(@name,N)    returns Nth line
       <br>$sline(@name,N)   returns Nth selected line (listbox only)
