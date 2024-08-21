@@ -1077,7 +1077,7 @@
       /massinvite { echo 4 * Mass-inviting # | set %i $nick(0,#) | :next | if $nick(%i,#) != $me invite $nick(%i,#) $1 | dec %i | if %i > 1 goto next | echo 4 * Mass-invite # done }<p>
       Use this example alias like "/massinvite #yourchannel". (btw massinvites are very impolite!)<p>
       <strong>Example:</strong><br>
-      /randnopkick { :begin | set %kicknick $nick($rand(1,$nick(0,#)),#) | if %kicknick isop # goto begin | /echo 6 %kicknick }<p>
+      /randnopkick { :begin | set %kicknick $nick(#,$rand(1,$nick(#,0))) | if %kicknick isop # goto begin | /echo 6 %kicknick }<p>
       If you're an op on some channel you might like this random-non-op-kick. It kicks a random person from your channel, but never an op. Mind you.... if only ops are available you've a problem ;-) <p>
       <strong>Example:</strong><br>
       /line { %line = "" | if $asc($1) < $asc($2) { set %i $asc($1) | :add | %line = %line $chr(%i) | inc %i | if %i <= $asc($2) { goto add } | if (%line == "") { halt } | else { echo # %line | halt } } else echo # sorry not valid }<p>
@@ -1113,7 +1113,7 @@
       This popup will also kick a random non-operator from the channel you're on.<p>
       Randkick:/kick # $nick(#,$rand(1,$nick(#,0,r)),r)<p>
       Arent kicks fun ???? Another one ...  randomly kicking just anybody .... might be -you- !<p>
-      RandOpkick:/kick # $nick($rand(1,$nick(0,#,ovr)),#,ovr)<p>
+      RandOpkick:/kick # $nick(#,$rand(1,$nick(#,0,ovr)),ovr)<p>
       Randomly kicking an op .... they at least can defend themselves !<p>
       <strong>Endless loops.</strong><p>
       With all these conditional statements I foresee you ending up in some endless loop. A simple example is creating something like:<p>
