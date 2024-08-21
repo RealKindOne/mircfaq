@@ -224,7 +224,7 @@
 
       <p><strong>Using evaluation brackets.</strong>
       <p>You can now use [ and ] evaluation brackets in aliases to control the order of evaluation of identifiers. The brackets can be uses in popups and remotes as well. Identifiers within brackets will be evaluated first, from left to right. You can also nest brackets. This allows you to evaluate things any way you like...  The brackets will not show in the resulting text or command.  Example's are :
-      <br>/note /notice $1 " $+ [ $read [ -s + [ $2 ] ] c:\text\note.txt ] $+ "
+      <br>/note /notice $1 " $+ [ $read(c:\text\note.txt,ns,[ $2 ]) ] $+ "
       <br>/sayvar /say % [ $+ [ $1 ] ]
       <p>Definitions without evaluation brackets are evaluated the same way as before.
 
@@ -314,15 +314,16 @@
       /nick /say I like $1 better than $me | /nick $1<br>
       a try, and change your nick then by "/nick {newnick}"<p>
 
-      <strong>$read</strong> [-l#] {filename.txt}<br>
+      <strong>$read</strong>({filename.txt},[ntswrp],[matchtext],[N])
       <p>This identifier is a funny one.  It will pick a random line from the specified file and insert that line into the alias.... The line can contain plain text and, also, commands !! (to make it easier ;o)  Also $!read which is the same as $read except that it isn't evaluated the first time it is passed through the alias routines. This allows you to use it in a /timer command if you want the $read to be re-evaluated each time.<br>
       <em>IMPORTANT : in the file you get the random lines from the FIRST line should state the total of text lines in the file ! Otherwise only the first line will be used .... not very random, huh ?</em><br>
       For example:<br>
-      /fun /say $read c:\mirc\funlines.txt<br>
-      /kick /kick # $1 $read c:\mirc\funkicks.txt <br>
-      /silly /say $read -l5 silly.txt<p>
+      /fun /say $read(c:\mirc\funlines.txt,n)<br>
+      /kick /kick # $1 $read(c:\mirc\funkicks.txt,n) <br>
+      /silly /say $read(c:mirc\silly.txt,n,14)<p>
+      The -n parameter will prevent a line from being evaluated.
 
-      <strong>$readini</strong> [-n] {inifile} {section} {item}
+      <strong>$readini</strong>({filename}[np],{section} {item})
       <p>Similar to $read this identifier reads items from .ini files. It is created in conjunction to the /writeini command. Both use the built in windows routines to read from and write to standard Windows .ini files. We think $readini and /writeini will open up new and better possibilities for writing your own automated actions on IRC. The -n parameter will prevent a line from being evaluated.
       <p>
 
