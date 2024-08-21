@@ -569,7 +569,7 @@
       <p>You can also create new CTCP commands, and responses for them.  This is how features like file offering (XDCC LISTs and SENDs) are handled.
       <p>But right now, let's get back to our ping example.
       <p><strong>Example: Custom Ping Response</strong>
-      <p>Go to 'Tools/Script Editor' select the Remote tab and look in the 'View' menu if a script file called commands.ini or ctcps.ini is already there. If so, select that file and add lines to it and/or edit it. If not, go to the File menu and select 'New' to create a new script. Make sure that under "Listening" the CTCP's item is selected. (When items under "Listening" are not checked, for instance Remote Commands aka CTCP's, are ignored.).
+      <p>Go to 'Tools/Script Editor' select the Remote tab and look in the 'View' menu if a script file called remote.ini is already there. If so, select that file and add lines to it and/or edit it. If not, go to the File menu and select 'New' to create a new script. Make sure that under "Listening" the CTCP's item is selected. (When items under "Listening" are not checked, for instance Remote Commands aka CTCP's, are ignored.).
       <p>Now place the following example into an existing or new script file.
       <br>ctcp 1:ping:/notice $nick ping? Hmmm! ...pang pang pang!!
       <p>Now if someone pings you, your reply will be "ping?  Hmmm ! ... pang pang pang !!" in a notice sent to the person who pinged you, on top of the normal reply being 'pong'.
@@ -609,7 +609,7 @@
       <br>Level 6 and higher users will all get the level 6 ping reply...
       <p>This leveling can be done for ALL remote commands (and events) ....
       <br>Make sure you get the point here !!! Maybe re-read the above sections ??<p>
-      <strong>Special identifiers for Remote/Commands/ lines.</strong><p>
+      <strong>Special identifiers for Remote Event lines.</strong><p>
       $nick, $address, $site, $level etc. are all identifiers specially created to be used in remote lines.<br>
       You can use them wherever you want in the lines triggered by remote commands... <p>
       $nick The nick of the person who sent the command or activated the event.<br>
@@ -617,12 +617,12 @@
       $site The site of the person who sent the command.<br>
       $wildsite Returns the address of the user who triggered the event in the form *!*@host.domain<br>
       $level Represents the users remote level. <p>
-      Note: The $chan is NOT ALWAYS DEFINED in the Remote Commands ... $chan normally contains the channel from which a commands is given ... CTCP commands do not have to be given to you from a channel ... or the person sending the command could be on more channels ... Get the point ?? Maybe $active will do what you want ? or $target ?<p>
+      Note: The $chan is NOT ALWAYS DEFINED in the Remote Event ... $chan normally contains the channel from which a commands is given ... CTCP commands do not have to be given to you from a channel ... or the person sending the command could be on more channels ... Get the point ?? Maybe $active will do what you want ? or $target ?<p>
       Example: Here's an example using the pre-defined $address parameter...<br>
       ctcp 1:address:/notice $nick Your address is $address<br>
       If a user were to send a '/ctcp {yournick} address' command to you, you would reply with a notice reading, "Your address is {whatever his or her address is}".<p>
       <strong>Example:</strong> Opping friends on demand. (Using $2)
-      <p>If you're not clear on the basics of how all of this works yet, do not worry. Try to follow along with the examples and see if it "clicks" in your brain. Re-read the above examples if necessary.  But do not attempt to write your own Remote Commands or move on to the next section until it "clicks."
+      <p>If you're not clear on the basics of how all of this works yet, do not worry. Try to follow along with the examples and see if it "clicks" in your brain. Re-read the above examples if necessary.  But do not attempt to write your own Remote Event or move on to the next section until it "clicks."
       <p>ctcp 1:opme:/notice $nick Sorry, you won't get opped on $2 .. your level is too low
       <br>ctcp 5:opme:/mode $2 +o $nick
       <p>If a level 5 friend sends '/ctcp {yournick} opme {#channelname}', this command will op them in the specified channel. Level 1 people WON'T get opped whatever they try....
