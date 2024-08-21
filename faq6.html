@@ -270,7 +270,7 @@
       You could also use *!gates@*.company.com if he works on several machines with different nick's....<p>
 
       To add a user to the lists use the /aop, /voice, /ignore or /protect command (like /aop *!gates@*.company.com), or use the command while specifying an [Address Type:addresstypes], or add a user by simply typing him into the specific edit box.
-      Make sure to switch the functions to active by the checkbox under 'Tools/Address Book/Options' menu.  Or use the commands /aop [on|off], /voice [on|off], /ignore [on|off]  or /protect [on|off] on the command line.<p>
+      Make sure to switch the functions to active by the checkbox under 'Tools/Address Book/Control' tab, select the function in the dropdown box.  Or use the commands /aop [on|off], /voice [on|off], /ignore [on|off]  or /protect [on|off] on the command line.<p>
       You can make the auto-op, ignore and protect more specific by specifying some parameters.<p>
       The auto-op and protect can be set to make people operator and/or protect them only on certain channels if you want. In that case just specify the channel names.  like <br>
       /aop &lt;nickname|address> [#channel1,#channel2,...]    and<br>
@@ -299,21 +299,21 @@
       <hr>
 
       <h2 class="topic"><a name="section6-20">6-20 How can I make mIRC react to Remote Commands?</a></h2><p>
-      Use the 'Tools/Script Editor/Remote' tab.<br>
-      mIRC can react to CTCP commands given by other users. You can customize your responses to CTCP commands and offer files: features that usually require scripting but here are handled by the 'Tools/Script Editor/Remote' tab section. It is this section in mIRC that can handle OPME, KICK, MYLEVEL, or XDCC SEND commands for you, if you configure it well. Setting up the remote section is not an easy task, but the way it works guarantees full freedom to make it do what you want it to do.<br>
+      Open the script editor by clicking 'Tools/Script Editor' then selecting the Remote tab.<br>
+      mIRC can react to CTCP commands given by other users. You can customize your responses to CTCP commands and offer files: features that usually require scripting but here are handled by the 'Tools/Script Editor' Remote tab section. It is this section in mIRC that can handle OPME, KICK, MYLEVEL, or XDCC SEND commands for you, if you configure it well. Setting up the remote section is not an easy task, but the way it works guarantees full freedom to make it do what you want it to do.<br>
       As soon as your mIRC receives a CTCP command from somebody else, it checks if that command is defined and if so, it matches the required user level against the level of the remote user.  If the remote user has a suitable user level his command is executed...  All commands given to you have to have the format '/CTCP &lt;yournick> &lt;command> &lt;parameter(s)>'.  If a command is defined on several levels, the highest ranked one is executed.  See the help file included in the mIRC package for detailed instructions and read the tutorial in section 7 of this FAQ.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
       <h2 class="topic"><a name="section6-21">6-21: How can I make mIRC react to Events?</a></h2><p>
-      Use the 'Tools/Script Editor/Remote' tab.<br>
+      Open the script editor by clicking 'Tools/Script Editor' then selecting the Remote tab.
       Events are all things happening on channels or in private conversations on IRC. People joining, leaving, getting opped, deopped, greeting you, even plain talking all are Events...
       You can configure mIRC to react however you like to almost anything that can happen in IRC. See the mIRC help file for further instructions and read the tutorial in section 7 at the end of this FAQ.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
       <h2 class="topic"><a name="section6-22">6-22 How do I specify my friend Bill correctly in the Users list with an access level of 2?</a></h2><p>
-      (In the 'Tools/Script Editor/Users' tab)<br>
+      Open the script editor by clicking 'Tools/Script Editor' then selecting the Users tab.<br>
       You can add your friend Bill with access level 2 to the Users list in two ways:<br>
       1. Specifying the nick -- "2:bill"<br>
           and/or by...<br>
@@ -396,7 +396,7 @@
       <p>Keep in mind that you can't set up a server to yourself... you need others to test your server...
       <br>Typing help in the file server will show the available commands, which are styled after Unix and DOS.  "ls" or "dir" will show a directory listing, for example.  Even switched commands like "ls -k" (show file sizes in kilobytes) and "dir /w" (show a wide directory listing) work. The server supports all normal ftp commands like cd &lt;dir> , cd.., dir, ls, get, .... but NOT put, hash etc. Safety risks are none or minimal due to the major restricting of available commands.
       <p>Of course, the /fserve command can be used in your Remote section....
-      <br>Set up a simple 'Tools/Script Editor/Remote' tab command like :
+      <br>Set up a simple 'Tools/Script Editor' Remote tab command like :
       <br>1:server:/fserve $nick 3 c:\temp\serve
       <br>Set the commands to active (/remote on) and off you go....
       <p>Other people only have to type "/ctcp yournick server" to activate the server. You can't set up a server to your own mIRC!! So, others have to test your server !! In the directory c:\temp\serve, you place all files other people are allowed to get from you. The people using your server will have access to the c:\temp\serve directory AND ALL directories BELOW it.. like c:\temp\serve\games.
