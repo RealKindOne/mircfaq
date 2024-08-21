@@ -129,7 +129,7 @@
       <p>In that case, the Alias would be:
       <p>/j /join $1
       <p>(You do not have to understand exactly what that means to mIRC at this point, just what it will do.  I'll explain the alias syntax shortly.)
-      <p>Give it a try by placing the line "/j /join $1" in the Aliases list under 'Tools/Script Editor/Aliases' tab (if it isn't already there).  Then try it out on the command line (where you normally type) with a simple command like:
+      <p>Give it a try by placing the line "/j /join $1" in the Aliases list under 'Tools/Script Editor' and select the Aliases tab (if it isn't already there).  Then try it out on the command line (where you normally type) with a simple command like:
       <br>"/j #test".
       <p>You'll see that "/j #test" now does exactly the same thing as "/join #test" -- it joins you to a channel named #test.  This construction is called an alias.
 
@@ -146,7 +146,7 @@
       <p>Now, let's say that you'd like to join several channels at once.  You can make an alias to do this.  Just separate the commands with the | character (on most keyboards, this is the shifted version of the \ backslash key)...
       <p>Let's say that you'd like to be able to type "/j3" and then follow it with the names of three channels, and they'll all be joined at once. The alias would be:
       <p>/j3 /join $1 | /join $2 | /join $3
-      <p>So if you placed this alias in 'Tools/Script Editor/Aliases' tab and you were to type:
+      <p>So if you placed this alias in 'Tools/Script Editor' and select the Aliases tab and you were to type:
       <p>/j3 #test1 #test2 #test3
       <p>...mIRC would "/join #test1", then "/join #test2", and then "/join #test3".
       <p>In this case, you see that $1 means the first word typed after the Alias.  And $2 of course means the second word, and $3 the third.
@@ -229,7 +229,7 @@
       <p>Definitions without evaluation brackets are evaluated the same way as before.
 
       <p><strong>Aliases in scripts.</strong>
-      <p>You can easily load additional alias files into mIRC on top of the one(s) you already have. Open the aliases editor (Tools/Aliases/)  and goto File/Load/. It is easy to select a file with aliases now. Select 'View' to see all loaded alias files. This is an easy way to try the aliases your friends created and to give your file with aliases to your friends. Aliases can even be included in a complete script file and distributed together with Remote Commands and Events. We'll explain this in detail later on.
+      <p>You can easily load additional alias files into mIRC on top of the one(s) you already have. Open the Script Editor, 'Tools/Script Editor' and select the Aliases tab and goto 'File/Load'. It is easy to select a file with aliases now. Select 'View' to see all loaded alias files. This is an easy way to try the aliases your friends created and to give your file with aliases to your friends. Aliases can even be included in a complete script file and distributed together with Remote Commands and Events. We'll explain this in detail later on.
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-1-2">7-1-2 String Definitions</a></h2><p>
@@ -461,12 +461,12 @@
       <hr>
 
       <h2 class="topic"><a name="section7-2">7-2 The Popups section</a></h2><p>
-      <p>Popups are the menus that appear when you right-click with your mouse.  If you haven't found this nice feature of mIRC already, give it a try NOW!  Some popup menu's are predefined in the popups.ini from the mirc distribution file, but they are fully customizable under the 'Tools/Script Editor/Popups' menu item.
+      <p>Popups are the menus that appear when you right-click with your mouse.  If you haven't found this nice feature of mIRC already, give it a try NOW!  Some popup menu's are predefined in the popups.ini from the mirc distribution file, but they are fully customizable under the 'Tools/Script Editor' Popups tab.
       <p>The mIRC Script Editor will will start with the Popups section opened. Please ignore the Remote, Users and Variables sections for now!? The mIRC Script Editor is used as a compact and uniform interface to almost all mIRC's programmable sections. With the Popups section selected the 'File' menu will help you to load, unload and save popup files. The 'Edit' menu offers copy/paste and search routines. 'Popup' shows an index of the current opened popup menu file.
       <p>The 'View' menu lets you select what popups you want to edit. There are different popup menus for different kind of windows in mIRC; In a Channel window you'll have a popup menu different from the popup menu in Queries (private conversations). Use the View menu to edit another popup menu. There are programmable popup sections for the Status window, Channel windows, Query/Chat windows and Nickname list and a special item called Menubar for the programmable Menubar item. (All explained later)
-      <p>If your copy of mIRC does not seem to be equipped with some prefab popup menu's (the 'Tools/Script Editor/Popups' tab is empty then), it is almost certain that you didn't make sure that the prefab ini files were correctly copied from the mIRC distribution file to the mirc directory, or the place where the popups.ini file can be found by mIRC is not correctly specified. You can easily fix this in the 'File/Load' menu item in the Popups editor.
+      <p>If your copy of mIRC does not seem to be equipped with some prefab popup menu's (the 'Tools/Script Editor' Popups tab is empty then), it is almost certain that you didn't make sure that the prefab ini files were correctly copied from the mIRC distribution file to the mirc directory, or the place where the popups.ini file can be found by mIRC is not correctly specified. You can easily fix this in the 'File/Load' menu item in the Popups editor.
       <p>The popup commands work almost exactly like aliases.  All of the strings mentioned in Section 7-1 are allowed in popups (and vital for the proper use of them).  If you haven't read the Aliases section (7-1), please do so now!  You need to know that information before moving on.
-      <p>Also: Definitely read the Help file's explanation of popups, as well as take a look at the many popup examples included in mIRC under 'Tools/Script Editor/Popups' tab. The more examples you try, examine, and mess around with, the better your grasp of mIRC will be.
+      <p>Also: Definitely read the Help file's explanation of popups, as well as take a look at the many popup examples included in mIRC under 'Tools/Script Editor' Popups tab. The more examples you try, examine, and mess around with, the better your grasp of mIRC will be.
       <p><strong>Example: /join</strong>
       <p>Let's say that you join a particular channel frequently, #test.
       <p>Rather than having to type in "/join #test", wouldn't it be easier to just right-click and select a menu item to join you there automatically?
@@ -498,13 +498,13 @@
       <br>..Jerk:/say Leave me alone, jerk!
       <br>..Idiot:/me wonders why $? is such an idiot sometimes.
       <br>..Enemy:/say I'm proud to have $? as my enemy!
-      <p>And so on!  Just order them properly, using the periods.  (If the manner in which the above is organized does not "click" with you, definitely try it out!  Enter the above "comment" section into 'Tools/Script Editor/Popups' tab.  It's a lot easier to grasp when you see it working.)
+      <p>And so on!  Just order them properly, using the periods.  (If the manner in which the above is organized does not "click" with you, definitely try it out!  Enter the above "comment" section into 'Tools/Script Editor' Popups tab.  It's a lot easier to grasp when you see it working.)
       <p>All popup menu items can be put under a Function key too!  That's handy as a replacement for often-used popups....  (Make sure to use the correct syntax and put them [ie.the function key replacements] in the alias section)<br>
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
       <h2 class="topic"><a name="section7-3">7-3 The Remote Section</a></h2><p>
-      The Remote section can be found under 'Tools/Script Editor/Remote' tab.  Clearly the most advanced part of mIRC, you can do things with mIRC's Remote section that would normally require advanced scripting or special bot software...
+      The Remote section can be found under 'Tools/Script Editor' Remote tab.  Clearly the most advanced part of mIRC, you can do things with mIRC's Remote section that would normally require advanced scripting or special bot software...
       <p>Things like: offering files (an XDCC list); responding to specific channel or private message text; customizing CTCP responses; setting up various user levels for your friends; ...almost anything that happens on IRC can be automatically responded to, and your response can make use of almost any mIRC command or commands.
       <p>The Remote syntax can be a bit complicated at times, but it's a simple extension of the formats explained previously for Aliases and Popups. If you understand those well, including the Strings, then please proceed.  If not, go back and read (or re-read) Sections 7-1 and 7-2.  The information presented there is ABSOLUTELY REQUIRED LEARNING before attempting Remote.
       <p>It's also important to remember why Remote is called Remote. The Remote section is designed to respond to things done by users OTHER than yourself -- in effect, it reacts to things happening on IRC around you and allows others to "remotely control" your mIRC session. All according to the specific Remote features you implement. Many examples can't be tested by simply sending the commands or typing the text yourself. They have to be sent by some other client or things have to happen on IRC.
@@ -526,7 +526,7 @@
       <br>4:*!*@*subnet.edu
       <br>5:*!account@*.subnet.edu
       <br>10:yournick!youraccount@yourmachine.net
-      <p>The numbers you pick for the user levels are completely up to you. You can decide what each of the user level numbers can and cannot do, as you'll see in the next two sections.  By default, mIRC assigns everyone not specified in the user list to level 1. (Depending on the setting in 'Tools/Script Editor/Options/Default level'.
+      <p>The numbers you pick for the user levels are completely up to you. You can decide what each of the user level numbers can and cannot do, as you'll see in the next two sections.  By default, mIRC assigns everyone not specified in the user list to level 1. (Depending on the setting in 'Tools/Script Editor' then 'Options/Default level' menu.
       <p>If you specified different levels to different users you of course also need commands and events that have different reactions or power to users of these levels...  That will be explained later...
       <p>As you can see, either a nick or an address are permissible.  Wildcards are also allowed.  There are some cases where you might want to specify your users twice, by both nick and address. These cases (with OP, DEOP, SERVEROP,.... and NOTIFY events) is explained in Section 7-3-3.
       <p>You do not have to do all the editing by hand ... you could also use mIRC's edit box or  command line commands /auser, /guser and /ruser.
@@ -557,7 +557,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-3-2">7-3-2 Remote Scripts - CTCP Commands</a></h2><p>
-      In mIRC select 'Tools/Script Editor' to open the mIRC Script Editor. Here you can set up how your mIRC reacts to things happening around you on IRC. Two distinct groups of reactions are possible; reactions to CTCP Commands and reactions to Events. In this paragraph the CTCP Commands are discussed.
+      In mIRC select 'Tools/Script Editor' to open the mIRC Script Editor. Select the Remote tab. Here you can set up how your mIRC reacts to things happening around you on IRC. Two distinct groups of reactions are possible; reactions to CTCP Commands and reactions to Events. In this paragraph the CTCP Commands are discussed.
       <p><strong>Introduction</strong> - Remote Commands refers to a very specific type of commands: CTCP commands. CTCP stands for Client To Client Protocol. The Remote CTCP Command lines you can define in mIRC do one thing and one thing only -- they allow you to make mIRC to respond to CTCP commands sent by other users the way -you- wish.
       <p>There are a lot of ctcp commands defined according to the IRC RFC's (standards). The usual ones are version, ping, time, userinfo, and clientinfo. Every IRC client will respond in a standard way if one of these commands is send to it. These ctcp commands are sent by or to you in the format:
       <p>/ctcp {yournick} {command with parameter(s) if any}
@@ -569,7 +569,7 @@
       <p>You can also create new CTCP commands, and responses for them.  This is how features like file offering (XDCC LISTs and SENDs) are handled.
       <p>But right now, let's get back to our ping example.
       <p><strong>Example: Custom Ping Response</strong>
-      <p>Go to 'Tools/Script Editor/Remote' tab and look in the 'View' menu if a script file called commands.ini or ctcps.ini is already there. If so, select that file and add lines to it and/or edit it. If not, go to the File menu and select 'New' to create a new script. Make sure that under "Listening" the CTCP's item is selected. (When items under "Listening" are not checked, for instance Remote Commands aka CTCP's, are ignored.).
+      <p>Go to 'Tools/Script Editor' select the Remote tab and look in the 'View' menu if a script file called commands.ini or ctcps.ini is already there. If so, select that file and add lines to it and/or edit it. If not, go to the File menu and select 'New' to create a new script. Make sure that under "Listening" the CTCP's item is selected. (When items under "Listening" are not checked, for instance Remote Commands aka CTCP's, are ignored.).
       <p>Now place the following example into an existing or new script file.
       <br>ctcp 1:ping:/notice $nick ping? Hmmm! ...pang pang pang!!
       <p>Now if someone pings you, your reply will be "ping?  Hmmm ! ... pang pang pang !!" in a notice sent to the person who pinged you, on top of the normal reply being 'pong'.
@@ -665,7 +665,7 @@
       <p>Exactly what they do, and how to use them, will be explained shortly.  First, some quick examples and an explanation of the syntax used.
       <p>The syntax is essentially the same as with Remote Commands.  Here's a sample Remote Event for TEXT:
       <p>on 1:TEXT:hello:#:/msg $nick Hello back!
-      <p>Go to 'Tools/Script Editor/Remote Tab/View' and look if a script file called events.ini is already there. If not, go to the File menu and select 'New' to create a new script. Make sure that under "Listening" the events's item is selected. (When items under "Listening" are not checked, for instance the events you created are ignored by mIRC). Now place the above example into an existing or new script file.
+      <p>Go to 'Tools/Script Editor' select the Remote tab and click the 'View' menu item and look if a script file called events.ini is already there. If not, go to the File menu and select 'New' to create a new script. Make sure that under "Listening" the events's item is selected. (When items under "Listening" are not checked, for instance the events you created are ignored by mIRC). Now place the above example into an existing or new script file.
       <p>This Remote Event is triggered when the word "hello" is found in any active channel. mIRC's response is to send a private message to the person who wrote it, saying "Hello back."
       <p>Here's another example, this time using JOIN:
       <p>on 1:JOIN:#:/notice $nick You are very welcome to $chan
@@ -974,7 +974,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-3-6">7-3-6 Remote Raw processing</a></h2><p>
-      In the 'Tools/Script Editor/Remote' tab mIRC also offers you the possibility to process all server %lt;> client (mIRC) processes directly and in any way you want/like. It works exactly like the Remote Events except mIRC listens to the NUMERIC events. These server numerics are described in the IRC RFC1459. More mIRC specific info is available on http://www.ircworks.com/
+      In the 'Tools/Script Editor' select the Remote tab mIRC also offers you the possibility to process all server %lt;> client (mIRC) processes directly and in any way you want/like. It works exactly like the Remote Events except mIRC listens to the NUMERIC events. These server numerics are described in the IRC RFC1459. More mIRC specific info is available on http://www.ircworks.com/
       You better use Raw Script lines -only- if you exactly know what you do and only if absolutely needed. Wrong use of Raw Script lines can mess-up mIRC totally. It can over-rule all routines hardcoded into mIRC.  Example:<br>
       322:*mirc*:/echo 2 $1-<p>
       This would print all lines which have the word "mirc" in them when you do a channels /list (this is a pretty intensive test).<p>
