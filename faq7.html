@@ -887,11 +887,13 @@
       <br>All users EXCEPT level 3 users will be versioned on channel 'mine' ... Level 3 users will be welcomed...
       <p>Example:
       <br>on +5:JOIN:#mirc:/msg $nick Welcome level 5 user!
-      <p>*** The ; and REM flag.
+      <p>*** The ; and /* */ flag.
       <p>These flags can be used to switch off commands or events temporarily by 'commenting them out'.
       <br>Example:
       <br>;on 1:JOIN:#mine:/notice $nick Welcome here.
-      <br>REM on 1:JOIN:#mine:/notice $nick Welcome here.
+      <br>/*
+      <br>on 1:JOIN:#mine:/notice $nick Welcome here.
+      <br>*/
       <p>*** The * and @ flags.
       <br>These flags makes mIRC to execute an event or command ONLY if you're operator on the channel the event or commands if used on.
       <br>on *1:JOIN:#mine:/notice $nick Welcome here.
