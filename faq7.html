@@ -233,7 +233,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-1-2">7-1-2 String Definitions</a></h2><p>
-      <p>By now, you should have a decent grasp of the Aliases section. You might be interested in a full list of the strings and identifiers that you can use in your aliases and, later on, in popups and remote definitions as well, by now? The next two sections will introduce them all. At this point, make sure to try all of the examples given until you fully understand how to do it yourselves!<p>
+      <p>By now, you should have a decent grasp of the Aliases section. You might be interested in a full list of the strings and identifiers that you can use in your aliases and, later on, in popups and remote definitions as well, by now? The next two sections will introduce you to some of them. At this point, make sure to try all of the examples given until you fully understand how to do it yourselves!<p>
 
       <strong>$N</strong>
       <p>The simplest string.  It contains one word. For instance $1 will contain the first word after the alias command.  By the same token, $2 would indicate the second word, $3 the third, etc. Example: <br>
@@ -353,7 +353,7 @@
       $nopath(filename) Returns only the filename with no path.<br>
       $nofile(filename) Strips the filename and returns the remaining path.<br>
       $exists(filename) Checks if the given filename exists. (Returning $true or $false)<br>
-      $findfile(dir,filename,N) searches the specified directory tree for the Nth specified file.<br>
+      $findfile(dir,wildcard,N,depth,@window | command) searches the specified directory tree for the Nth specified file.<br>
       $ddename The DDE service name mIRC uses.<p>
       $abs(N) returns the absolute value of number N.<br>
       $chr(N) returns the character with ascii number N.<br>
@@ -1120,7 +1120,7 @@
       /loop { :start | echo 6 # test loop | goto start }<p>
       I case one of your aliases or remotes got into such a loop use the CTRL+Break key combination to stop the process. It will take you home safely.
       <p><strong>Custom Windows.</strong>
-      <p>In mIRC 5.0 a new tool is added that allows you to create your own custom windows. This window creation/manipulation tool can for instance be used to create a window in which you can keep track of what your script does. A custom window is created with the /window command. It can handle a lot of parameters to define the sort of window that mIRC creates, the state of the window and to control its content.<br>
+      <p>In mIRC 5.0 a new tool is added that allows you to create your own custom windows. This window creation/manipulation tool can for instance be used to create a window in which you can keep track of what your script does. A custom window is created with the /window command. It can handle a lot of parameters to define the sort of window that mIRC creates, the state of the window and to control its content. (more parameters for all commands and identifiers below are discussed in the help file!) <br>
       /window [-abcdelnorsx] @name [x y [w h]] [/command] [popup.txt] [font [size]]
       <p>Switches (options):
       <br>a = activate window
