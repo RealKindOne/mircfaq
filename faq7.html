@@ -113,11 +113,9 @@
 
       <h2 class="topic"><a name="section7-1">7-1 The Aliases section</a></h2><p>
 
-      Select the menu item 'Tools/Script Editor/Aliases'.<br>
-      The mIRC Script Editor will will start with the Aliases section opened.<br>
-      Please ignore the Popups, Remote, Users and Variables sections for now!?<p>
-
-      The mIRC Script Editor is used as a compact and uniform interface to almost all mIRC's programmable sections. With the Aliases section selected the 'File' menu will help you to load, unload and save alias files. The 'Edit' menu offers copy/paste and search routines. The 'View' menu lets you select what alias file you want to edit and 'Alias' shows an index of the current opened alias file.<p>
+      Select the menu item 'Tools/Script Editor'.<br>
+      The mIRC Script Editor will start with the Aliases section opened.<br>
+      The mIRC Script Editor is used as a compact and uniform interface to almost all mIRC's programmable sections. With the Aliases section selected the 'File' menu will help you to load, unload and save alias files. The 'Edit' menu offers copy/paste and search routines. The 'View' menu lets you select what alias file you want to edit and 'Alias' shows an index of the current opened alias file. The 'Index' menu lists all usable (not commented out) aliases.<p>
 
       In the Aliases section you can define shortcuts for often-used commands such as join, part, quit, opping and deopping, and whatever else you want. Even things you frequently say can be placed in an alias...  In general, ALL commands which can be used in the edit box (the line or lines you normally use to talk/type in) can be used in an alias. Aliases can also be used to execute several commands at once. You can even define aliases that are launched by the function keys F1 - F12....  (Finally some use for those never touched keys..) In mIRC you can even call aliases in aliases or from popup menu's and remote lines. In the new mIRC you can have multiple alias files. mIRC comes with one prefab aliases.ini file you can add items to, or you can decide to add an entire new file with aliases. very easy!<p>
 
@@ -195,6 +193,8 @@
       <p>...will NOT work! There needs to be a space between the string "$1" and your "!!!"'s.  (This can sometimes make your text look awkward when using commands like /say, so be careful with your phrasing.)
       <p>/like /say I really like $1 !!!
       <p>...WILL work just fine.
+      <p>/like /say I really like $1 $+ !!!
+      <p>...WILL also work since you are using the $+ parameter to append the !!! to the $1
       <p>This is true of ALL strings.  To make one particular case easier, specifying channels, a few special strings have been created that automatically prefix the parameter with the # character. These are #$1, #$$1, and #$?.  See below for details.
       <p>In SOME cases you CAN do:  /like /say I really like $1's topic,
       <br>but keep in mind: NOT ALWAYS !! You have to test this in every case you want to use it...
@@ -657,7 +657,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-3-3">7-3-3 Remote Scripts - Events</a></h2><p>
-      In mIRC select 'Tools/Script Editor' to open the mIRC Script Editor, then select the 'View' menu item and select a script named "events.ini". When no events script is already available eventually load a prefab script ini file or create a new script file with File/New/. A new script is called script1.ini by default.
+      In mIRC select 'Tools/Script Editor' to open the mIRC Script Editor, then select the 'View' menu item and select a script named "events.ini". When no events script is already available eventually load a prefab script ini file or create a new script file with 'File/New' menu. A new script is called script1.ini by default.
       <p>As you've seen, Remote CTCP Script lines only deal with CTCP commands. Remote Events deal with just about everything else that can happen on IRC. If that sounds daunting, do not worry.  As explained earlier, these lessons are cumulative. If you understand Remote Commands, Remote Events will be a piece of cake. You've already learned the really difficult stuff.
       <p>Warning: In general mIRC is very sensitive to poor Remote Event syntax. Using incorrect syntax can cause a GPF (General Protection Fault), so be careful! If ever you suddenly experience stability problems with mIRC, this is the part to check first!
       <p><strong>Remote Event Syntax.</strong>
@@ -940,7 +940,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-3-5">7-3-5 Variables</a></h2><p>
-      Select the 'Tools/Script Editor' menu, and goto the "Variables" tab ...
+      Select the 'Tools/Script Editor' menu, and select the 'Variables' tab.
       In this part of Remote you can setup your own variables. Variables can contain numbers, words or even lines of text. On variables containing numbers you can apply mathematical manipulations to increase, decrease, add and subtract variables with given values to or from each other. Variables always start with a % and can have names of any length. The variables are stored between sessions in a variable file in the mIRC directory.
       <p>Available commands are :    (q=quiet; no status report of the operation is given)
       <p>/set [-q] &lt;%var> [value]  To create a variable
@@ -974,9 +974,9 @@
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-3-6">7-3-6 Remote Raw processing</a></h2><p>
-      In the 'Tools/Script Editor' select the Remote tab mIRC also offers you the possibility to process all server %lt;> client (mIRC) processes directly and in any way you want/like. It works exactly like the Remote Events except mIRC listens to the NUMERIC events. These server numerics are described in the IRC RFC1459. More mIRC specific info is available on http://www.ircworks.com/
+      In the 'Tools/Script Editor' select the Remote tab mIRC also offers you the possibility to process all server &lt;> client (mIRC) processes directly and in any way you want/like. It works exactly like the Remote Events except mIRC listens to the NUMERIC events. These server numerics are described in the IRC RFC1459 and RFC2812. More non-RFC NUMERIC events are documented at https://defs.ircdocs.horse/defs/numerics
       You better use Raw Script lines -only- if you exactly know what you do and only if absolutely needed. Wrong use of Raw Script lines can mess-up mIRC totally. It can over-rule all routines hardcoded into mIRC.  Example:<br>
-      322:*mirc*:/echo 2 $1-<p>
+      raw 322:*mirc*:/echo 2 $1-<p>
       This would print all lines which have the word "mirc" in them when you do a channels /list (this is a pretty intensive test).<p>
       To echo a concise 2 line summary of the /whois return in your active window, place the following lines in your Raw section (listening on):
       <br>raw 311:*:echo 5 $active *** $2-
@@ -1032,7 +1032,7 @@
       /set %x 0 | :retry | inc %x | goto %x | :%jump2 | echo line2 | halt | :%jump1 | echo line1 | goto retry<p>
       You can use the /return command to finish processing a command and to allow any default processing to continue. eg.<br>
       on 1:JOIN:#mIRC {<br>
-      /echo 3 #mirc [Joins $nick]<br>
+      /echo 3 #mirc [Joins $nick $+ ]<br>
       /return<br>
       /echo 3 #mirc I'm not printed!<br>
       }<p>
