@@ -133,7 +133,7 @@
       In the 'Tools/Options/Connect/Local' dialog, you'll see mIRC needs your PC's Local Host name and IP number. This info is needed to be able to set up DCC Send/Chat connections to other users. <p>
       The simple solution is to switch to the <em>Server method</em> and use the IRC server you want to connect to, to find your system's address information. Eventually clear the Local Host and IP Address fields first. Then set 'On connect, always get Local Host and IP Address' to active and select the 'Server' method. Now re-try to connect...<p>
       In the unlikely event the above method didn't help you could uncheck "On connect, always get IP Address and Local Host" and manually enter your PC's Local Host name and IP number. (Your provider's IP is not 192.0.2.1 or anything like that!  That's a dummy IP used by these emulators. If you do not know your provider's local host name and IP, ask them!) <p>
-      Also setting the Ident server to active might help. (See section 6-7) (Note: You need to reconnect after changing your Identd for the new Identd to apply.)<p>
+      Also setting the Ident server to active might help. (See section 6-7) (Note: You need to reconnect after changing your Ident for the new Ident to apply.)<p>
       If none of the above solutions helps it is possible that mIRC cannot complete the reverse look up it tries and gives the "Can't resolve host name" error when your IP name is not properly configured in your provider's DNS. This is not something you can solve yourself. In this case you have to ask your provider to correctly assign an IP name to your IP Number to solve the problem. For your provider setting up the IP name on the DNS is not that hard, and does not take much time.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
@@ -298,21 +298,21 @@
       <hr>
 
       <h2 class="topic"><a name="section6-20">6-20 How can I make mIRC react to Remote Commands?</a></h2><p>
-      Open the script editor by clicking 'Tools/Script Editor' then selecting the Remote tab.<br>
+      Open the script editor by clicking 'Tools/Script Editor' then select the Remote tab.<br>
       mIRC can react to CTCP commands given by other users. You can customize your responses to CTCP commands and offer files: features that usually require scripting but here are handled by the 'Tools/Script Editor' Remote tab section. It is this section in mIRC that can handle OPME, KICK, MYLEVEL, or XDCC SEND commands for you, if you configure it well. Setting up the remote section is not an easy task, but the way it works guarantees full freedom to make it do what you want it to do.<br>
       As soon as your mIRC receives a CTCP command from somebody else, it checks if that command is defined and if so, it matches the required user level against the level of the remote user.  If the remote user has a suitable user level his command is executed...  All commands given to you have to have the format '/CTCP &lt;yournick> &lt;command> &lt;parameter(s)>'.  If a command is defined on several levels, the highest ranked one is executed.  See the help file included in the mIRC package for detailed instructions and read the tutorial in section 7 of this FAQ.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
       <h2 class="topic"><a name="section6-21">6-21: How can I make mIRC react to Events?</a></h2><p>
-      Open the script editor by clicking 'Tools/Script Editor' then selecting the Remote tab.
+      Open the script editor by clicking 'Tools/Script Editor' then select the Remote tab.
       Events are all things happening on channels or in private conversations on IRC. People joining, leaving, getting opped, deopped, greeting you, even plain talking all are Events...
       You can configure mIRC to react however you like to almost anything that can happen in IRC. See the mIRC help file for further instructions and read the tutorial in section 7 at the end of this FAQ.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
       <h2 class="topic"><a name="section6-22">6-22 How do I specify my friend Bill correctly in the Users list with an access level of 2?</a></h2><p>
-      Open the script editor by clicking 'Tools/Script Editor' then selecting the Users tab.<br>
+      Open the script editor by clicking 'Tools/Script Editor' then select the Users tab.<br>
       You can add your friend Bill with access level 2 to the Users list in two ways:<br>
       1. Specifying the nick -- "2:bill"<br>
           and/or by...<br>
@@ -339,6 +339,7 @@
       <h2 class="topic"><a name="section6-25">6-25 Running multiple copies of mIRC.</a></h2><p>
       There are multiple methods of running mIRC.
       <br>
+      <p>
       <strong>Command Line Switches :</strong>
       <!-- copy/paste from v7.77 mirc.chm -->
       <br>-i<filename.ini> - Make mIRC use the specific file in place of mirc.ini
@@ -350,7 +351,7 @@
       <br>"C:\Program Files (x86)\mIRC\mirc.exe" -r"C:\Users\Bill\AppData\Roaming\mIRC\example"
       <br>"C:\Program Files (x86)\mIRC\mirc.exe" -i"C:\Users\Bill\AppData\Roaming\mIRC\example.ini"
       <br>
-      <strong>Other method :</strong>
+      <p><strong>Other method :</strong>
       <br>You can copy/paste mirc.exe and mirc.ini into a folder and mirc will by default use that mirc.ini file. Using one of the command line switch will take priority over this method.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
