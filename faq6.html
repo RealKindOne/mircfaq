@@ -106,10 +106,10 @@
       <li> <a href="faq6.html#section6-26">6-26: How do I make myself invisible to other users? </a>
       <li> <a href="faq6.html#section6-27">6-27: How does the new sound command in mIRC work?</a>
       <li> <a href="faq6.html#section6-28">6-28: How does the WWW support in mIRC work?</a>
-      <li> <a href="faq6.html#section6-30">6-30: How can I easily serve my collection of shareware to others, using mIRC? </a>
-      <li> <a href="faq6.html#section6-31">6-31: How do I use mIRC's built in support for Text To Speech? </a>
-      <li> <a href="faq6.html#section6-32">6-32: What is a Firewall ? How can I use it?</a>
-      <li> <a href="faq6.html#section6-33">6-33: How do I use mIRC's built in DDE support?</a>
+      <li> <a href="faq6.html#section6-29">6-29: How can I easily serve my collection of shareware to others, using mIRC? </a>
+      <li> <a href="faq6.html#section6-30">6-30: How do I use mIRC's built in support for Text To Speech? </a>
+      <li> <a href="faq6.html#section6-31">6-31: What is a Firewall ? How can I use it?</a>
+      <li> <a href="faq6.html#section6-32">6-32: How do I use mIRC's built in DDE support?</a>
       </ul>
       </ul>
       <ul>
@@ -391,7 +391,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
-      <h2 class="topic"><a name="section6-30">6-30 How can I easily serve my collection of shareware to others, using mIRC ?</a></h2><p>
+      <h2 class="topic"><a name="section6-29">6-29 How can I easily serve my collection of shareware to others, using mIRC ?</a></h2><p>
       mIRC offers an unique built-in Fileserver. This Fileserver feature is a combination of DCC and FTP. You open the server window to someone, (it's a special DCC chat window), restricting them to a certain directory tree, and they can browse your file listings, change directories, read text files, or get files.
       <p>The syntax to set up a DCC server connection to somebody is:
       <br>/fserve {nick} {max gets simultaneously allowed} {homedir} [welcome file]
@@ -410,7 +410,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
-      <h2 class="topic"><a name="section6-31">6-31 How do you use Text To Speech support ??</a></h2><p>
+      <h2 class="topic"><a name="section6-30">6-30 How do you use Text To Speech support ??</a></h2><p>
       <p>In mIRC the '/speak {text}' command is used to speak text. It is used like :
       <br>"/speak this is a test"
       <br>"/speak can you hear me ?"
@@ -419,7 +419,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
-      <h2 class="topic"><a name="section6-32">6-32 What is a Firewall ? How can I use it ?</a></h2><p>
+      <h2 class="topic"><a name="section6-31">6-31 What is a Firewall ? How can I use it ?</a></h2><p>
       -- A firewall is not a feature, it is something you need to solve, something to get around. --<p>
       One potential drawback to an Internet connection is that other Internet users could gain access to files and data residing on your PC. This can be prevented by establishing a security system such as a "firewall" or "proxy". A firewall usually consists of a UNIX machine that is placed between your PC and the Internet, and all traffic between you and the Internet must pass through that machine. So a firewall is not something included in mIRC, or something active on your PC. The problem is that most firewalls also block your possibilities to use IRC. Normally spoken firewalls block all IRC traffic and access to an IRC server, unless specific precautions are made and a Socks compliant firewall is used. <p>
       If your provider or employer uses a Socks compliant firewall that blocks your IRC access you can set mIRC to connect to the firewall to reach the outside world. In this case, and -only- in this case, set mIRC to use the Socks firewall under 'Tools/Options/Connect/Proxy' dialog. Your provider or employer should be able to provide you with the necessary settings. <br>
@@ -428,7 +428,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
-      <h2 class="topic"><a name="section6-33">6-33 How do I use mIRC's built in DDE support ?</a></h2><p>
+      <h2 class="topic"><a name="section6-32">6-32 How do I use mIRC's built in DDE support ?</a></h2><p>
       This section on mIRC's built in DDE support is initiated by Prophet's quick DDE Reference. Thanks for allowing me to include parts of your work in the mIRC FAQ! <p>
       <strong>What is DDE?</strong> - DDE stands for Dynamic Data Exchange. DDE is used by programs running under Window to communicate with each other. In the typical case one of the programs involved acts as a DDE server, the other as a DDE client. The server is always accepting requests and commands and the client is requesting information and giving commands to the server. Good examples of the use of DDE are mIRC's support of WWW browsers by the built-in URL catcher. <p>
       <strong>Setting up mIRC's DDE server</strong> - To be able to control mIRC from within another application, program or another copy of mIRC running on your PC, you first have to make sure the DDE server is set to active. The server settings are found under 'Tools/Options/Other/DDE...'. You should always specify an unique service name but for now the default 'mirc' will do fine. The service name is used by mIRC to identify DDE commands given to it. To be able to play a little with the DDE things having only one copy of mIRC running will do fine for now, but for useful future use you might have to start a second copy of mIRC or get another external DDE client/server. If you want to have a second copy of mIRC running do not forget to give it an unique DDE service name! The default server name for mIRC is 'mirc', but you can change the server name to anything more suitable. <p>
