@@ -816,7 +816,7 @@
       <br><strong>DEVOICE event</strong>These events react to people getting or loosing voice on channels.  Examples:
       <br>on 1:VOICE:/notice $nick Welcome in the speaking world!
       <br>on 1:DEVOICE:/notice $vnick Hey, $nick is allowed to speak here!
-      <p><strong>SNOTICE event</strong> This event listens for server notices. Server notices tell you all kind of things happening at and with the IRC server you use.  To recieve them you have to set your user mode to +s (/mode #nickname +s).  Most people do not need this setting... It is mostly meant for IRCOps and server maintainers.  With this event you can filter the server notices send to you and you can filter them ie. prevent them from being displayed or automatically react to them.  The event syntax is very much like the TEXT event...
+      <p><strong>SNOTICE event</strong> This event listens for server notices. Server notices tell you all kind of things happening at and with the IRC server you use.  To receive them you have to set your user mode to +s (/mode #nickname +s).  Most people do not need this setting... It is mostly meant for IRCOps and server maintainers.  With this event you can filter the server notices send to you and you can filter them ie. prevent them from being displayed or automatically react to them.  The event syntax is very much like the TEXT event...
       <br>on 1:SNOTICE:servers_text:/echo 6 status The server noticed you about $1-
       <p><strong>FILESENT event</strong> This event will react to all successful DCC Send file transfers. You can use it to send you or the receiver a small message...
       <br>on 1:FILESENT:*.txt,*.ini:/echo Sent $filename to $nick ( $+ $address $+ )
@@ -976,7 +976,7 @@
       <p><a href="#table">Return to the table of contents.</a><p>
 
       <h2 class="topic"><a name="section7-3-6">7-3-6 Remote Raw processing</a></h2><p>
-      In the 'Tools/Script Editor' select the Remote tab mIRC also offers you the possibility to process all server &lt;> client (mIRC) processes directly and in any way you want/like. It works exactly like the Remote Events except mIRC listens to the NUMERIC events. These server numerics are described in the IRC RFC1459 and RFC2812. More non-RFC NUMERIC events are documented at https://defs.ircdocs.horse/defs/numerics
+      In the 'Tools/Script Editor' select the Remote tab mIRC also offers you the possibility to process all server &lt;> client (mIRC) processes directly and in any way you want/like. It works exactly like the Remote Events except mIRC listens to the NUMERIC events. These server numerics are described in the IRC RFC1459 and RFC2812. More non-RFC NUMERIC events are documented at <a href="https://defs.ircdocs.horse/defs/numerics">https://defs.ircdocs.horse/defs/numerics</a>
       You better use Raw Script lines -only- if you exactly know what you do and only if absolutely needed. Wrong use of Raw Script lines can mess-up mIRC totally. It can over-rule all routines hardcoded into mIRC.  Example:<br>
       raw 322:*mirc*:/echo 2 $1-<p>
       This would print all lines which have the word "mirc" in them when you do a channels /list (this is a pretty intensive test).<p>
