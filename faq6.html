@@ -156,14 +156,14 @@
       <hr>
 
       <h2 class="topic"><a name="section6-6">6-6 How do I solve the "Not enough user parameters" error?</a></h2><p>
-      You will get a "Not enough user parameters" from mIRC if you try to connect to a server but you didn't have the local host filled in, or had it filled in incorrectly.  Check your entry under 'Tools/Options/Connect/Local/Host Name' dialog. Also check to see if you supplied mIRC with a valid email address under 'Tools/Options/Connect' dialog. (See section 8, too.)
+      You will get a "Not enough user parameters" from mIRC if you try to connect to a server but you didn't have the local host filled in, or had it filled in incorrectly.  Check your entry under 'Tools/Options/Connect/Local/Host Name' dialog. Also check to see if you supplied mIRC with a valid email address under 'Tools/Options/Connect' dialog. (See section 6-8, too.)
       <p>Note: The email address is used internally by mIRC and cannot be seen by others when they do a /whois on you.  Some have noticed the "email:" field in the User Central dialog (/uwho command).  This field is made up of your or the other person's user@host (your username plus your local host name)... in many cases you'll notice that it does not reflect the actual email address. <p>
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
       <h2 class="topic"><a name="section6-7">6-7 How do I solve the "You haven't registered" error?</a></h2><p>
       <p>Although mIRC is shareware and you have to register it if you like mIRC and/or if you continue to use it after the 30 days evaluation period, this is NOT a message from mIRC. mIRC will not block features or cease to function if you have not <a href="http://www.mirc.com/register.html">registered</a> yet. This message is an error message from the IRC network you try to use.
-      <p>If you receive this message and/or you get disconnected that quickly, your Local Host name and/or IP number might be wrong, or not filled in at all.  Look under 'File/Options/Connect/Local_Info/', and check if the local host is correct and if the IP address (number) is filled in automatically...   An easy way to solve a wrong IP Address is setting the 'On connect, always get' "IP Address" and "Local Host" to "ON" and restarting mIRC.
+      <p>If you receive this message and/or you get disconnected that quickly, your Local Host name and/or IP number might be wrong, or not filled in at all.  Look under 'Tools/Options/Connect/Local' dialog, and check if the Host name is correct and if the IP address (number) is filled in automatically...   An easy way to solve a wrong IP Address is setting the 'On connect, always get' "IP Address" and "Local Host" to "ON" and restarting mIRC.
       <p>If this does not help you could be trying to connect to a NON-public server!!  Try another server to check this...
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
@@ -187,9 +187,9 @@
       This problem is normally very simple to solve. Also if you can not get files from another person ask him/her to check the IP Address settings in his/her IRC client as these settings are often wrong.<p>
       <strong>The cure.</strong><br>
       1) Disconnect from your IRC server. <br>
-      2) Clear the current text in the Local Host and IP Address boxes under 'Tools/Options/Connect/Local' in the Local dialog.  <br>
-      3) Select both 'On connect, Always get' Local Host and IP Address options in the Local dialog.<br>
-      4) Set 'Method' to Normal.<br>
+      2) Clear the current text in the Host name and IP Address boxes under 'Tools/Options/Connect/Local' dialog.  <br>
+      3) Select both 'On connect' Get host name and  Get IP Address options in the Local dialog.<br>
+      4) Set 'Lookup Method' to Normal.<br>
       5) Click 'OK' to save and exit the Options dialog.<br>
       6) Reconnect to your IRC server and try to send a file.<p>
       If this does not work experiment with the 'On connect' .. settings... !!  ie. For instance, try to use the 'Server' method instead of the default Normal one. (Read what this does in <a href="#section6-3">section 6-3</a>) or try to set your Local Host name by hand and let mIRC look for only the IP Address on each startup.<p>
@@ -199,9 +199,9 @@
       <br>Make sure that your time-out values in 'Tools/Options/DCC/Options' dialog are set large enough!! "Get/Chat Dialog time out after" and "Send/Get Transfer time out after" are recommended to be set to at least 60 and 120, respectively.
       <p><li>In case you never ever managed to get sending files or initiating a DCC Chat to work, not even after studying all these hints, it might be that your provider blocks these DCC connections by the kind of internet access they give you. Especially the use of a firewall or proxy by you or your provider will block DCC connections.
       <p><li>If you have Dynamic IP...
-      <br>If you have dynamic IP (your IP address is different each time you log on), make sure that "On connect, always get:" in the 'Tools/Options/Connect/Local' dialog is set to get the Host name and IP Address. If these were already set to ON make sure the correct 'local host' name and 'IP Address' are found by mIRC... on some systems this is rather tricky...  mIRC may not be able to correctly find your local host (domain name) and IP. With dynamic IP addressing you are in trouble then!
+      <br>If you have dynamic IP (your IP address is different each time you log on), make sure that "On connect:" in the 'Tools/Options/Connect/Local' dialog is set to get the Host name and IP address. If these were already set to ON make sure the correct 'local host' name and 'IP address' are found by mIRC... on some systems this is rather tricky...  mIRC may not be able to correctly find your local host (domain name) and IP. With dynamic IP addressing you are in trouble then!
       <p><li>If you have Static IP...
-      <br>If you have a strange Windows setup mIRC may not be able to correctly find your local host name and IP Address. In the 'Tools/Options/Connect/Local' dialog, uncheck the options to "Always get the 'Local Host' and 'IP Address" and manually enter your correct Local Host and IP.
+      <br>If you have a strange Windows setup mIRC may not be able to correctly find your local host name and IP address. In the 'Tools/Options/Connect/Local' dialog, uncheck the options to "On Connect:" 'Get host name' and 'Get IP address' and manually enter your correct Host name and IP address.
       </ul>
       <hr>
 
@@ -241,7 +241,7 @@
       <hr>
 
       <h2 class="topic"><a name="section6-14">6-14 How can I select custom backgrounds in mIRC?</a></h2><p>
-      Very easy! In all channel, query and DCC windows open the system menu (the top left little icon) eventually by typing ALT - (ALT minus). You will notice a /Background/select/ dialog. Select any bitmap you like and it will be placed in the background of the window you were in. To change mIRC's main background right-click on it and a selection dialog will open.
+      Very easy! In all channel, query and DCC windows open the system menu (the top left little icon) eventually by typing ALT - (ALT minus). You will notice a 'Background/select' dialog. Select any bitmap you like and it will be placed in the background of the window you were in. To change mIRC's main background right-click on it and a selection dialog will open.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
@@ -346,10 +346,8 @@
       <br>
       <p>
       <strong>Command Line Switches:</strong>
-      <!-- copy/paste from v7.77 mirc.chm -->
       <br>-i<filename.ini> - Make mIRC use the specific file in place of mirc.ini
       <br>-r<path> - Sets the data path where mIRC saves mirc.ini as well as other files and data. If -r is specified without a path, the path is set to that of the mIRC executable.
-      <!-- end copy/paste -->
       <p>Right click the mirc.exe file and click "Create shortcut". Right click the shortcut and click "Properties". Edit the Target.
       <br>
       <p>Examples:
