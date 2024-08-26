@@ -384,13 +384,13 @@
       $fserv(N) returns the nick of the Nth file server window you have open.<br>
       $send(N) and $get(N) return the nick of the Nth open send/get window.<br>
       $notify(N) returns the Nth notify nick currently on IRC.<br>
-      $token(N,C,text) returns the Nth token in 'text' separated by character C (C is the ascii number of a character)<br>
+      $gettok(text,N,C) returns the Nth token in 'text' separated by character C (C is the ascii number of a character)<br>
       $addtok(text,token,C) adds a token to the end of text but only if it's not already in text.<br>
       $findtok(text,token,C) returns Nth position of token in text.<br>
       $gettok(text,N,C) returns Nth token in text.<br>
       $instok(text,token,N,C) inserts token into Nth position in text even if it already exists in text.<br>
-      $remtok(text,token,C) removes 1 matching token from text.<br>
-      $reptok(text,token,new,C) replaces 1 matching token with new token in text.<p>
+      $remtok(text,token,N,C) removes the Nth matching token from text.<br>
+      $reptok(text,token,new,N,C) replaces the Nth matching token in text with a new token.<p>
       For the above identifiers you can specify N as 0 (zero) to get the total number of nicks/channels/etc. for that identifier.<p>
       $snotify returns the nick currently selected in the notify window.<br>
       $address returns the full address of the user that triggered a remote line.<br>
