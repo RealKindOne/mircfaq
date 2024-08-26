@@ -93,7 +93,7 @@
       <li> <a href="faq6.html#section6-14">6-14: How can I select custom backgrounds in mIRC?</a>
       <li> <a href="faq6.html#section6-15">6-15: What is a script?</a>
       <li> <a href="faq6.html#section6-16">6-16: How do I make a script?</a>
-      <li> <a href="faq6.html#section6-17">6-17: How do I specify people correctly in the auto-op, protect and ignore list?</a>
+      <li> <a href="faq6.html#section6-17">6-17: How do I specify people correctly in the auto-op, auto-voice, protect and ignore list?</a>
       <li> <a href="faq6.html#section6-18">6-18: What is the best script?</a>
       <li> <a href="faq6.html#section6-19">6-19: What are trojans?</a>
       <li> <a href="faq6.html#section6-20">6-20: How can I make mIRC react to Remote Commands?</a>
@@ -250,15 +250,15 @@
       <hr>
 
       <h2 class="topic"><a name="section6-16">6-16 How do I make a script?</a></h2><p>
-      First of all you have to make sure you really need a script. Scripting is not difficult but if you simply want to auto-op your friends on your IRC channel, or if you want to ban or ignore an annoying person, mIRC is perfectly equipped already with functions that do exactly what you want. In this case read the section about the auto-op, protect and ignore lists.<p>
+      First of all you have to make sure you really need a script. Scripting is not difficult but if you simply want to auto-op your friends on your IRC channel, or if you want to ban or ignore an annoying person, mIRC is perfectly equipped already with functions that do exactly what you want. In this case read the section about the auto-op, auto-voice, protect and ignore lists.<p>
       In case you really need a script to make mIRC do some advanced tricks nobody thought of before, read study and learn the sections on <a href="faq7.html#section7">programming mIRC</a> in chapter 7 of this FAQ. I strongly discourage the use of scripts created by other persons. If you did not write your script yourself, chances are high you have no idea what exactly the script is doing and you, and your PC, are in the hands of the author of the script, a person who could very well turn out to be a malicious hacker. I'm not trying to get on your nerves here but you should realize scripts are very powerful. It is easy to write something that allows others to access and completely ruin your PC, or to read copy and spread all the private documents, email and passwords stored on your PC.<p>
       Note; By default mIRC does not come with any scripts or settings that can get you in trouble. The default settings in mIRC for DCC file transfers etc. are perfectly safe. All changes to settings that, in combination with other settings, or careless behaviour, could get you into trouble will display a warning message before any changes are made. <p>
       Of course creating a script can be great fun. You can program lots of useful things in mIRC and I encourage you to share your tricks with your friends on IRC.
       <p><a href="#table">Return to the table of contents.</a><p>
       <hr>
 
-      <h2 class="topic"><a name="section6-17">6-17 How do I specify people correctly in the auto-op, protect and ignore list?</a></h2><p>
-      When you look in the Address Book in mIRC, in the Control section, you will find the Auto-op, Protect and Ignore address lists with which you can easily auto-op and protect your friends on your IRC channel, or ignore an annoying person. This set of 3 lists provides you with the most basic channel maintenance possible in mIRC. No scripting is needed to use these functions. If you need better, smarter, but also more difficult to understand functions or behaviour, you should check out mIRC's 'remote' capabilities explained in section 7 of this FAQ. For starters these functions will do fine I think.<p>
+      <h2 class="topic"><a name="section6-17">6-17 How do I specify people correctly in the auto-op, auto-voice, protect and ignore list?</a></h2><p>
+      When you look in the Address Book in mIRC, in the Control tab, you will find a dropdown menu for Op, Voice, Protect and Ignore address lists with which you can easily auto-op, auto-voice, and protect your friends on your IRC channel, or ignore an annoying person. This set of 3 lists provides you with the most basic channel maintenance possible in mIRC. No scripting is needed to use these functions. If you need better, smarter, but also more difficult to understand functions or behaviour, you should check out mIRC's 'remote' capabilities explained in section 7 of this FAQ. For starters these functions will do fine I think.<p>
       For mIRC to be able to op, protect or ignore a person on IRC it matches the nickname or address of that person with the nicknames and addresses you have in the op, protect and ignore lists. In the address definitions you can use wildcards.<p>
 
       The full address format of a person on IRC is Nick!Account@machine.<br>
@@ -275,8 +275,8 @@
 
       To add a user to the lists use the /aop, /voice, /ignore or /protect command (like /aop *!gates@*.company.com), or use the command while specifying an [Address Type:addresstypes], or add a user by simply typing him into the specific edit box.
       Make sure to switch the functions to active by the checkbox under 'Tools/Address Book/Control' tab, select the function in the dropdown box.  Or use the commands /aop [on|off], /voice [on|off], /ignore [on|off]  or /protect [on|off] on the command line.<p>
-      You can make the auto-op, ignore and protect more specific by specifying some parameters.<p>
-      The auto-op and protect can be set to make people operator and/or protect them only on certain channels if you want. In that case just specify the channel names.  like <br>
+      You can make the auto-op, auto-voice, ignore and protect more specific by specifying some parameters.<p>
+      The auto-op, auto-voice and protect can be set to make people operator and/or protect them only on certain channels if you want. In that case just specify the channel names.  like <br>
       /aop &lt;nickname|address> [#channel1,#channel2,...]    and<br>
       /protect &lt;nickname> [#channel1,#channel2,...] (protect only works with nicks!)<br>
       If you do not specify one or more channel names mIRC will op and protect the person on all channels where you're operator.<p>
