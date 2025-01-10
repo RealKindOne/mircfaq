@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<title>mIRC: Proxies and Firewalls</title>
+<meta name="author" content="mIRC Co. Ltd.">
+<meta name="description" content="mIRC: Proxies and Firewalls">
+<meta name="keywords" content="mIRC, IRC, IRC Client, Internet Relay Chat, Chat, Channels, Chat Rooms, Chat Online">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="/styles/layout.css">
+</head>
+<body>
+
+<!-- Header Start -->
+<table width="100%" cellpadding="0" cellspacing="0" class="text">
+<tbody>
+  <tr>
+    <td class="left"></td>
+    <td class="middle">
+      <div class="hxsnazzy">
+      <div class="hxboxcontent">
+        <table width="100%" cellpadding="0" cellspacing="0" class="text">
+        <tbody>
+          <tr valign="middle">
+            <td class="w5p"></td>
+            <td><a href="/index.html"><img class="header" src="/images/barlogo.gif" alt="mIRC" width="16" height="16"></a></td>
+            <td class="w5p"></td>
+            <td class="w10p"><a href="/index.html">Home</a></td>
+            <td class="w5p"><span class="sepright">&nbsp;</span><span class="sepleft">&nbsp;</span></td>
+            <td class="w10p"><a href="/about.html">About</a></td>
+            <td class="w5p"><span class="sepright">&nbsp;</span><span class="sepleft">&nbsp;</span></td>
+            <td class="w10p"><a href="/get.html">Download</a></td>
+            <td class="w5p"><span class="sepright">&nbsp;</span><span class="sepleft">&nbsp;</span></td>
+            <td class="w10p"><a href="/register.html">Register</a></td>
+            <td class="w5p"><span class="sepright">&nbsp;</span><span class="sepleft">&nbsp;</span></td>
+            <td class="w10p"><a href="/news.html">News</a></td>
+            <td class="w5p"><span class="sepright">&nbsp;</span><span class="sepleft">&nbsp;</span></td>
+            <td class="w10p"><a href="/help.html">Help</a></td>
+            <td class="w5p"></td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+      <em class="hxbottom"><em class="hxb4"></em><em class="hxb3"></em><em class="hxb2"></em><em class="hxb1"></em></em>
+      </div>
+      <br>
+    </td>
+    <td class="right"></td>
+  </tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" class="text">
+<tbody>
+  <tr>
+    <td class="left"></td>
+    <td class="middle">
+<!-- Header End -->
+
+<!-- Content Start -->
+<table width="100%" cellpadding="0" cellspacing="0" class="text">
+<tbody>
+  <tr>
+    <td>
+      <h1 class="title">Proxies and Firewalls</h1><p>
+
+      <h2 class="topic"><A NAME="section0-0">0.0. Introduction</A></h2><p> 
+
+      This is a help file on the use of mIRC behind firewalls and proxies. Your firewall or proxy has to be SOCKS compliant. Alternatively you can connect to IRC through a HTTP or HTTPS proxy. <p>
+
+      We hope, with your help, this info will grow into a useful resource for all users behind proxies and firewalls. Please provide me with additional info and solutions on the firewall and/or proxy you use, regarding the use of mIRC and the use of DCC. <p>
+
+      You can help a lot by simply sharing the settings that proved to be successful for you. State clearly what mIRC version you use and what proxy or firewall you have. Also of value is any information on setups, proxies and firewalls that do -not- seem to work.<p>
+
+      This file is not meant to provide you with information on how to pass by proxies and firewalls raised by parents or company's for example, to keep you -away- from IRC. Especially firewalls are often used to keep your place safe and free of intruders and viruses. If your companies policies directly or indirectly forbid the use of IRC then please respect these rules?<p>
+
+      This file is permanently under construction. In the end of the file you'll see lots of unstructured comments and snippets that need to be re-written or deleted. You might find something useful in there but read it with care! Feel free to send additional and/or better info for this file!! Thanks a lot to all who contributed to this information! <p>
+
+      <ul>
+      <li> <A href="proxies.html#section0-0">0.0. Introduction</A>
+      <li> <A href="proxies.html#section1-0">1.0. What is a Proxy?</A>
+      <ul><li> <A href="proxies.html#section1-1">1.1 What is a Firewall?</A>
+      <li> <A href="proxies.html#section1-2">1.2. What is a HTTP or HTTPS Proxy?</A></ul>
+      <li> <A href="proxies.html#section2-0">2.0. IRC</A>
+      <ul><li> <A href="proxies.html#section2-1">2.1. DCC and IdentD</A></ul>
+      <li> <A href="proxies.html#section3-0">3.0. IRC through a Proxy or Firewall</A>
+      <li> <A href="proxies.html#section4-0">4.0. IRC through a HTTP proxy</A>
+      <li> <A href="proxies.html#section5-0">5.0. Other aspects</A>
+      <li> <A href="proxies.html#section6-0">6.0. Open Proxies</A>
+      <li> <A href="proxies.html#section7-0">7.0. Frequently Asked Questions.... and their answers</A>
+      <li> <A href="proxies.html#section8-0">8.0. Proxy Server Software</A>
+      </ul><p>
+
+      <h2 class="topic"><A NAME="section1-0">1.0. What is a Proxy?</A></h2><p> 
+
+      In the context of this file a proxy is a central machine (P) in a small network that allows other machines (A, B and C) in that network to use a shared Internet connection. The software on the central machine is called proxy software. The proxy is also called 'server' or 'gateway'. Most proxy software works perfectly for browsing the Web, sending files with FTP and sending email. Normally proxy software does not understand IRC connections or DCC File transfers by default. Very often this is easily fixed! <p>
+
+      Lots of companies use proxies to allow multiple machines access to the Web. There are a lot of proxies (and programs alike) that you can use yourself in a small network to give all your computers access to the internet. <p>
+
+      <h2 class="topic"><A NAME="section1-1">1.1. What is a Firewall?</A></h2><p> 
+
+      A firewall is not that different from a proxy. A firewall again offers Internet access to lots of other computers on a network but is mostly deployed to provide safety or security; control over the information going in and out the network. Firewalls are used in business environments, at schools, universities and the like. Please keep in mind that most proxies and firewalls in use in business situations are there for a reason; to protect your work environment from the evil Internet. If your companies policy is to block IRC then stick to the rules, ok? <p>
+
+      <h2 class="topic"><A NAME="section1-2">1.2. What is a HTTP or HTTPS Proxy?</A></h2><p> 
+
+      Do not mix up the proxies (sharing your Internet Conection) we're talking about in most of this file, with a (caching) web proxy as lots of companies use to speed up your surfing over the web with your web browser. Only recently mIRC 5.81 introduced an option you can use to connect to IRC through a HTTP Proxy. In this case mIRC uses a smart method to open a persistent connection to such a HTTP Proxy and from there to the IRC server. <p>
+
+      <h2 class="topic"><A NAME="section2-0">2.0. IRC</A></h2><p>
+
+      Our goal of course is to get IRC through your proxy (or firewall) working. But lets first look at a normal situation where no proxies or firewalls are used at all:<p>
+
+      <pre>
+      IRC Server ports 6660-6669
+         |
+        # Internet #
+         |
+        Internet Provider
+         |
+        PC you are using
+         *
+        IRC Client port 6668
+      </pre><p>
+      You have mIRC (your IRC Client) installed on your PC. You have a connection to the Internet by your Internet Provider. When you start your IRC session you try to connect to some IRC server on the Net. You connect to one of its open ports (by default 6667). IRC Servers usually have open ports in the range 6660-6669. mIRC by default randomly selects one of the ports defined in the servers' settings in the /File/Connect/ menu. As long as your IRC session continues all communication between the IRC server and the IRC client on your PC will use this port.<p>
+
+      <h2 class="topic"><A NAME="section2-1">2.1. DCC and IdentD</A></h2><p>
+
+      The use of IRC includes the use of Ident services and DCC. mIRC has a built in IdentD or Ident server. This server listens on port 113 for Ident requests from the IRC server. The server uses this rather old fashioned system (they really should ditch it!) to confirm your identity. The server will ask mIRC, on port 113, to confirm the identity of the user (you). Of course mIRC will say 'Yup, that is okay - let him in!', replying with the system you use (UNIX) and your user ID (username, the first part of your email address). <p>
+
+      DCC is used for file transfers and private chats between IRC users. By default DCC sessions use random port numbers above 1024, up to 5000. <p>
+
+      As you see apart from the server ports (6660-6669) also ports 113 and a random range above 1024 are needed for your full IRC experience!<p>
+
+      <h2 class="topic"><A NAME="section3-0">3.0. IRC through a proxy or firewall.</A></h2><p>
+
+      As stated above a proxy is a central machine (P) in a small network that allows other machines (A and B) in that network to use a shared Internet connection.<p>
+
+      <pre>
+      IRC Server ports 6660-6669
+         |
+        # Internet #
+         |
+        Internet Provider
+         |
+        P - Proxy Server in your network ---------------
+         |   |   |
+         |   |   C (PC)
+         |   B (PC)  *
+         |   *
+         A (PC) IRC Client port 6668
+         *
+        IRC Client port 6667
+      </pre><p>
+
+      As you see the main difference is the proxy in your network. The Proxy server (P) is connected to the Internet (either by modem, DSL, ADSL or cable) and, by a small network to one or more computers (clients) A, B, C,.... The proxy distributes all Internet traffic over the PC's connected to it. <p>
+
+      Our goal is to get IRC working from those computers behind the Proxy. The proxy has to allow your IRC traffic to go to the Internet and to send the proper information back to the proper PC. Normally you have a network setup something like this;<p>
+
+      <pre>
+      Server P the machine running the proxy connecting to the internet
+               IP 10.0.0.1 subnet mask 255.255.255.0
+
+      Client A IP 10.0.0.2 subnet mask 255.255.255.0
+      Client B IP 10.0.0.3 subnet mask 255.255.255.0
+      Client C ......
+      </pre><p>
+
+      Alternative setups (like with ICS) use other IP Addresses like the 192.168.0.X range. What range you use doesnt really matter.<p>
+
+      I assume you have installed the proxy software on the machine connected to the Internet. I really can not help you with this standard setup. Most settings will be done automagically. You might have to fill in some general information like your Internet Providers primary DNS. You should already know most of this info. Look for it in the manual of your Internet Provider. If you get stuck somewhere read the proxy's helpfile and website!<p>
+
+      Test the behaviour of your proxy by browsing the web from (one of) the client machine(s). Hey, give mIRC a try, maybe it already works! Surfing the Web and sending email should all work perfectly from all your machines. As long as this is not the case it makes no sense to work on your IRC access.
+
+      From the server (the machine with the Internet connection) you use of IRC should -always- work. This machine is not bothered by your proxy setup or proxy related problems. If you install mIRC on this machine it should work perfectly, including DCC and Ident thingies. As long as this is not the case it makes no sense to work on your IRC access from the other machines (the clients A, B and C).<p>
+
+      <h2 class="topic"><A NAME="section3-1">3.1. Proxy server setup (machine P) for the use of IRC.</A></h2><p>
+
+      As you know already, the connection between the IRC client (mIRC) and the IRC server uses port 6667 by default. IRC servers normally allow a range of port numbers from 6660 to 6669. Assume you have a Proxy (P) and two machines behind it (A and B). If you want to be able to use IRC on the Clients A and B with all those ports you might have to make Port Mappings for all those ports on the proxy to both of the Client machines (and back). So, in the proxy software map each port (TCP and UDP) for each client machine to the IRC server. Example;<p>
+
+      <pre>
+      PORT 6660 to 10.0.0.2
+      PORT 6660 to 10.0.0.3
+      PORT 6661 to 10.0.0.2
+      PORT 6661 to 10.0.0.3
+      ....
+      ....
+      PORT 6669 to 10.0.0.2
+      PORT 6669 to 10.0.0.3
+      </pre><p>
+
+      Normally spoken the proxy software already did this for you when it was installed. Or your Proxy software might use some automatic thingy doing this on the fly when you start mIRC.
+      Also it might be smarter to map one port to one machine, or ports 6660 to 6664 to PC A (10.0.0.2) and ports 6665 to 6669 to PC B (10.0.0.3). Then make sure your mIRC on those machines is properly configured to use only those port ranges that are available on the PC mIRC runs on! capiche?
+      More information in section 3.3.<p>
+
+      <h2 class="topic"><A NAME="section3-2">3.2. Setup of the clients (machine A, B and C) for the use of IRC. </A></h2><p>
+
+      Now that the Proxy setup is done, lets proceed to the machine running mIRC. We assume you have a working SOCKS4 or 5 compliant proxy. I hope you have a SOCKS5 edition since SOCKS4 support is limited in functionality. The most you will be able to do with a SOCKS4 server is to connect to an IRC server. Better forget about DCC!<p>
+
+      In mIRC open the File/Options/Connect/Firewall/ menu. Mark the "Use SOCKS Firewall" box and select the protocol. Fill in the other options;<br>
+      - Hostname: The machine name of your SOCKS server. This can be either a named address or an IP address. Better set this to the IP Number, not the name, of the proxy server machine; 10.0.0.1 in our example. <br>
+      - User ID: This is the account or user name you have on your proxy system. For most people this will be the User ID portion of their email address (the text before the @ sign). BUT, very often you do not need a login on the proxy at all! Most proxies are 'open' from the inside. Logins and passwords are only needed if only certain users may travel to the Internet. If you dont need (or dont have) a login leave this setting blank.<br>
+      - Password: The password required, in combination with the Login, to access the firewall. Do not fill in anything if no login and password are needed.<br>
+      - Port: This is usually 1080, the default port on which Proxies accept connections.<p>
+
+      Also check the "Initiate DCC's through firewall" option. Well get back to this later!<p>
+
+      Now go to the File/Options/Connect/Local_Info/ menu and set the "On Connect always get" options 'Local host' and 'IP Address' to active. Set the "Lookup method" to Server.<p>
+
+      Then connect to IRC. This should work fine. Once fully connected do a DNS lookup on your self by typing the command /DNS &lt;yournickname>  and write down what the results are. They show up in your Status window. It will look like this;<br>
+      *** Looking up wit399402.student.utwente.nl<br>
+      *** Resolved wit399402.student.utwente.nl to 130.89.236.62<p>
+
+      Go to the File/Options/Connect/Local_Info/ menu again and double check your IP Address and Local Host settings. Make sure the IP Address matches to what the DNS result told you! (The Local Host settings doesn't really matter.) This sometimes does not get set correctly in mIRC. Don't worry, if the IP Address doesn't match simply edit the IP address settings in mIRC to match what you wrote down from the DNS request and all will work!
+      After this editing set the "On Connect always get" options 'Local host' and 'IP Address' to INACTIVE. If the IP Address was okay leave everything as it was. <p>
+
+      Wrong IP Address setting will not block your use of IRC but will mess up DCC Sends and Initiation of DCC Chats. You will almost always be able to recieve files though and accept DCC Chats regardless any wrong settings.<p>
+
+      <h2 class="topic"><A NAME="section3-3">3.3  The Proxy Server setup (machine P) for the use of DCC.</A></h2><p>
+
+      Now here is the tough part. You already have done some preparations above but if you want to get the DCC working properly you have a little more todo. If plain chatting is enough for you for now you could pick up the process here, later. <p>
+
+      Ok, figure out how many client machines may all be on IRC at one time and how many DCC transfers may take place on each machine at one time. You might consider 2 parallel DCC sessions so that you can DCC chat and send 1 file at a time, or send 2 files parallel.<p>
+
+      With your limit set to 2 for this example you need to open ports on the Proxy for the DCC transfers. mIRC by has default uses ports for DCC from 1024 up to 5000. We will limit this to a smaller range later, for instance 1024-1025. In the proxy you have to map ports 1024 and 1025 TCP and UDP to PC A with IP Address 10.0.0.2. Do not use the same ports for more then one PC in your network!<p>
+
+      <h2 class="topic"><A NAME="section3-4">3.4 Setup of the clients (machine A, B and C) for the use of DCC.</A></h2><p>
+
+      As you know DCC is used for file transfers and private chats between IRC users. By default DCC sessions use random port numbers above 1024. See File/Options/DCC/Options/ "DCC Ports Range". If these port numbers are blocked by your proxy you will not be able to exchange files with other IRC users. This is what we dealt with in 3.3.<p>
+
+      In mIRC on PC A go to the File/Options/DCC/Options menu. Remember which ports you set for this machine for DCC? Look at the DCC Ports range. Set the first to the lowest port number (1024) you chose and the last to the highest number (1025). <p>
+
+      Check if you still have the "Initiate DCC's through firewall" option set to active. This will make mIRC to use a passive protocol to establish DCC connections when a client is behind a SOCKS5 firewall. This will not work btw with older versions of mIRC or other brands of IRC clients. <p>
+
+      <h2 class="topic"><A NAME="section4-0">4.0. IRC through a HTTP proxy.</A></h2><p>
+
+      As said, do not mix up the proxies (sharing your Internet Conection) we're talking about in most of this file, with a (caching) web proxy as lots of companies use to speed up your surfing over the web with your web browser. Only recently mIRC 5.81 introduced an option you can use to connect to IRC through a HTTP Proxy. <p>
+
+      Make very sure you really have to use a HTTP proxy to connect to IRC! Are you really in some protected environment without direct and free access to Internet? Are you really sure mIRC will not work without using the last resort solution of using a HTTP proxy? <p>
+
+      When connecting through a HTTP Proxy mIRC first opens a connection to the proxy server, on some port that it has available. HTTP Proxies typically listen on ports 3128, 5865, 8080 eventually even port 80. You can look in your web brower's settings or windows registry file for your local Proxy configuration. On my machine it tells me; proxy.utwente.nl port 5865. This you have to fill in in the File/Options/Connect/Firewall/ Hostname and Port settings.<p>
+
+      Once connected to the Proxy, mIRC will instruct it to open a persistent connection to the IRC server of your choice. Et Voila. Keep in mind that all sorts of other IRC thingies like DCC and Ident will absolutely NOT work through a HTTP Proxy. You're stuck to barebone chatting!<p>
+
+      Lots of default proxy configurations (as in 90% of them) allow you to connect to remote machines on ports in the 6660-6669 range that you need for IRC. Better configured proxies only allow web related remote ports like 80, 443, 8080.... or they entirely block this use of persistent connections. In those cases you're out of luck. Most IRC servers do not yet allow people to connect on port 80, 443 or 8080. You could of course ask the admin of your local IRC server to open up these ports, but little chance...<p>
+
+      <h2 class="topic"><A NAME="section5-0">5.0. Other aspects</A></h2><p>
+
+      Other aspects of the use of IRC include the use of Ident services. mIRC has a built in Ident server. This server listens on port 113 for Ident requests from the IRC server. The server uses this rather old fashioned system (they really should ditch it!) to confirm your identity. If it does not hear something back (when you have disabled the Ident server of when it is blocked by your proxy!) it will not allow you access to IRC. This means you also have to map port 113, which is used for Ident requests, in your proxy to your PC (A) running mIRC. That way Indent request appearing from the net on the proxy will be forwarded to mIRC and answered by mIRC's built in Ident server.<p>
+
+      As you have seen proxies often enable more then one PC to connect to the Internet through a shared Internet connection. This often leads to multiple IRC clients like mIRC trying to connect to one IRC server. Since the proxy will make the server to see multiple clients coming from one address(!) it might refuse some of them access! Servers normally only accept two or three mIRC's from the same address.<p>
+
+      Do not mix up the proxies we have been talking about here with a (caching) web proxy lots of companies use to speed up your surfing over the web with your web browser. All information you see regarding proxies and surfing the web, and settings you might need in your web browser, are USELESS in regard to IRC and mIRC. <p>
+
+      The same goes for HTTPS or Secure HTTP connections. There are techniques that enable programs to use the port 443 used for secure HTTP connections to connect to the 'outside world' from your local network. Sorry but mIRC (and as far as I know no other IRC programs) is not capable of connecting to IRC through such a Secure connection.<p>
+
+      <h2 class="topic"><A NAME="section6-0">6.0. Open Proxies.</A></h2><p>
+
+      You might not be aware of this but other people already on Internet might also be able to connect to your proxy server! A proxy often is not aware of the direction a user is coming from. This opens the possibility for others to connect to your proxy, and from there to an IRC server, thus getting on IRC WITH YOUR ADDRESS! It is easily understandable what mess that could cause. Imagine people harassing others through your proxy! ...or hacking machines, or trading illegal files, ...or whatever. As you see you have to make sure you dont have an Open Proxy.<p>
+
+      Due to the overwhelming (ab)use of malconfigured proxy servers being exploited daily, most IRC networks are checking all users for open and exploitable proxy servers upon connection. You were probably wondering why you are getting connection attempts to port 23 and 1080 on your computer? That is the check for an Open Proxy. If an Open Proxy is found you will NOT be allowed in on IRC.<p>
+
+      <h2 class="topic"><A NAME="section7-0">7.0. Frequently Asked Questions.... and their answers.</A></h2><p>
+
+      7.1. Is it possible to access mIRC if you are behind an HTTPS firewall? At my company, we don't have a SOCKS server.
+
+      A Secure HTTP firewall, often called a proxy, is available in a lot of networks to provide an interface for secure transactions through your web browser. Indeed, technically speaking mIRC could be made to use such a service to connect to an IRC server (on port 443) but at the moment this is NOT possible.<p>
+
+      7.2. I have an Internet cafe with 5 PC's. We are connected to the Net through a Proxy. When some customers are connected to IRC all others are refused access... how can I help that?
+
+      I am a new mirc user, and I have downloaded mIRC recently.
+      Now we are using link network with proxy software, we have 8 computers linked together. But there are only 3 to 4 computers that can connect to irc and the others get the message (ERROR You may not connect a clone), can you please tell me what should i do to make sure all the computers can be connect together to mirc.
+
+      Do not forget IRC Servers only accept up to two connections from the same address. More mIRC's will be regarded as 'clones'. All your users behind the Proxy will have the SAME ADDRESS seen from the perspective of the IRC server they want to use. So the server will see more then 2 people trying to access and thus refuse them!
+      Make sure your customers connect to different IRC servers (probably on the same IRC Network) to solve this problem.<p>
+
+      7.3. The problem was that when I signed on to Mirc, it read my IP as the number that the DSL Provider gave me ..but when I typed /DNS it gave me a completely different number , that conflict was the problem. After hours of useless tech. support I just kept messing with the options on Mirc until it finally worked.
+
+      The solution can be found in the File/Options/Connect/'Local Info' menu. Simply change the 'Lookup Method' to 'server'. That should fix your problem!<p>
+
+      7.4. Does anybody know how I can use mirc behind a firewall?
+
+      Open the firewall for the ports you want to use for mIRC - 6667 for starters.
+      If you want to dcc send, or start dcc chats (receiving files and receiving chat requests does not need this), you'll also want to allow incoming tcp connections (yes, OUTgoing dcc is an INcoming connection) on a small range of ports and set mIRC to use that same range for dcc.
+
+      If you can't change the settings in the firewall (like if it's a school or company firewall), then you can't use mIRC thru it.  Sorry, but there's no way to make mIRC work on ports other than the ones the IRC servers are using. <p>
+    </td>
+  </tr>
+</tbody>
+</table>
+<!-- Content End -->
+
+<!-- Footer Start -->
+    </td>
+    <td class="right"></td>
+  </tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" class="text">
+<tbody>
+  <tr>
+    <td class="left"></td>
+    <td class="middle">
+      <br>
+      <table width="100%" cellpadding="0" cellspacing="0" class="text">
+      <tbody>
+        <tr>
+          <td class="footer">
+            <a href="/privacy.html">Privacy</a>
+            &nbsp;
+            <a href="/contact.html">Contact Us</a>
+            <br>
+            Copyright &copy; mIRC Co. Ltd. 1995-2025. All Rights Reserved.
+          </td>
+        </tr>
+      </tbody>
+      </table>
+      <br>
+    </td>
+    <td class="right"></td>
+  </tr>
+</tbody>
+</table>
+<!-- Footer End -->
+
+</body>
+</html>
