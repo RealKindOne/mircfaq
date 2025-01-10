@@ -194,22 +194,22 @@
 
       Now that the Proxy setup is done, lets proceed to the machine running mIRC. We assume you have a working SOCKS4 or 5 compliant proxy. I hope you have a SOCKS5 edition since SOCKS4 support is limited in functionality. The most you will be able to do with a SOCKS4 server is to connect to an IRC server. Better forget about DCC!<p>
 
-      In mIRC open the File/Options/Connect/Firewall/ menu. Mark the "Use SOCKS Firewall" box and select the protocol. Fill in the other options;<br>
+      In mIRC open the 'Tools/Options/Connect/Proxy' menu. Set the "Connection:" to 'Server' and select the protocol. Fill in the other options;<br>
       - Hostname: The machine name of your SOCKS server. This can be either a named address or an IP address. Better set this to the IP Number, not the name, of the proxy server machine; 10.0.0.1 in our example. <br>
       - User ID: This is the account or user name you have on your proxy system. For most people this will be the User ID portion of their email address (the text before the @ sign). BUT, very often you do not need a login on the proxy at all! Most proxies are 'open' from the inside. Logins and passwords are only needed if only certain users may travel to the Internet. If you don't need (or don't have) a login leave this setting blank.<br>
       - Password: The password required, in combination with the Login, to access the firewall. Do not fill in anything if no login and password are needed.<br>
       - Port: This is usually 1080, the default port on which Proxies accept connections.<p>
 
-      Also check the "Initiate DCC's through firewall" option. Well get back to this later!<p>
+      If you also want to use the Proxy for DCC set the "Connection:" to 'Both'</p>
 
-      Now go to the File/Options/Connect/Local_Info/ menu and set the "On Connect always get" options 'Local host' and 'IP Address' to active. Set the "Lookup method" to Server.<p>
+      Now go to the 'Tools/Options/Connect/Local' dialog and set the "On Connect:" options 'Get host name' and 'Get IP address' to active. Set the "Lookup Method:" to Server.<p>
 
       Then connect to IRC. This should work fine. Once fully connected do a DNS lookup on your self by typing the command /DNS &lt;yournickname>  and write down what the results are. They show up in your Status window. It will look like this;<br>
       *** Looking up wit399402.student.utwente.nl<br>
       *** Resolved wit399402.student.utwente.nl to 130.89.236.62<p>
 
-      Go to the File/Options/Connect/Local_Info/ menu again and double check your IP Address and Local Host settings. Make sure the IP Address matches to what the DNS result told you! (The Local Host settings doesn't really matter.) This sometimes does not get set correctly in mIRC. Don't worry, if the IP Address doesn't match simply edit the IP address settings in mIRC to match what you wrote down from the DNS request and all will work!
-      After this editing set the "On Connect always get" options 'Local host' and 'IP Address' to INACTIVE. If the IP Address was okay leave everything as it was. <p>
+      Go to the 'Tools/Options/Connect/Local' dialog again and double check your IP Address and Local Host settings. Make sure the IP Address matches to what the DNS result told you! (The Local Host settings doesn't really matter.) This sometimes does not get set correctly in mIRC. Don't worry, if the IP Address doesn't match simply edit the IP address settings in mIRC to match what you wrote down from the DNS request and all will work!
+      After this editing set the "On Connect:" options 'Get host name' and 'Get IP address' to INACTIVE. If the IP Address was okay leave everything as it was. <p>
 
       Wrong IP Address setting will not block your use of IRC but will mess up DCC Sends and Initiation of DCC Chats. You will almost always be able to receive files though and accept DCC Chats regardless any wrong settings.<p>
 
@@ -223,11 +223,11 @@
 
       <h2 class="topic"><A NAME="section3-4">3.4 Setup of the clients (machine A, B and C) for the use of DCC.</A></h2><p>
 
-      As you know DCC is used for file transfers and private chats between IRC users. By default DCC sessions use random port numbers above 1024. See File/Options/DCC/Options/ "DCC Ports Range". If these port numbers are blocked by your proxy you will not be able to exchange files with other IRC users. This is what we dealt with in 3.3.<p>
+      As you know DCC is used for file transfers and private chats between IRC users. By default DCC sessions use random port numbers above 1024. See 'Tools/Options/Connect/Options/Ports... "Ports Range:" 'DCC connections'. If these port numbers are blocked by your proxy you will not be able to exchange files with other IRC users. This is what we dealt with in 3.3.<p>
 
-      In mIRC on PC A go to the File/Options/DCC/Options menu. Remember which ports you set for this machine for DCC? Look at the DCC Ports range. Set the first to the lowest port number (1024) you chose and the last to the highest number (1025). <p>
+      In mIRC on PC A go to the 'Tools/Options/Connect/Options/Port...' dialog. Remember which ports you set for this machine for DCC? Look at the DCC Ports range. Set the first to the lowest port number (1024) you chose and the last to the highest number (1025). <p>
 
-      Check if you still have the "Initiate DCC's through firewall" option set to active. This will make mIRC to use a passive protocol to establish DCC connections when a client is behind a SOCKS5 firewall. This will not work btw with older versions of mIRC or other brands of IRC clients. <p>
+      Check if you still have the "Connection:" setting at 'DCC' or 'Both'. This will make mIRC to use a passive protocol to establish DCC connections when a client is behind a SOCKS5 firewall.<p>
 
       <h2 class="topic"><A NAME="section4-0">4.0. IRC through a HTTP proxy.</A></h2><p>
 
@@ -235,7 +235,7 @@
 
       Make very sure you really have to use a HTTP proxy to connect to IRC! Are you really in some protected environment without direct and free access to Internet? Are you really sure mIRC will not work without using the last resort solution of using a HTTP proxy? <p>
 
-      When connecting through a HTTP Proxy mIRC first opens a connection to the proxy server, on some port that it has available. HTTP Proxies typically listen on ports 3128, 5865, 8080 eventually even port 80. You can look in your web brower's settings or windows registry file for your local Proxy configuration. On my machine it tells me; proxy.utwente.nl port 5865. This you have to fill in in the File/Options/Connect/Firewall/ Hostname and Port settings.<p>
+      When connecting through a HTTP Proxy mIRC first opens a connection to the proxy server, on some port that it has available. HTTP Proxies typically listen on ports 3128, 5865, 8080 eventually even port 80. You can look in your web browser's settings or windows registry file for your local Proxy configuration. On my machine it tells me; proxy.utwente.nl port 5865. This you have to fill in in the 'Tools/Options/Connect/Proxy' Hostname and Port settings.<p>
 
       Once connected to the Proxy, mIRC will instruct it to open a persistent connection to the IRC server of your choice. Et Voila. Keep in mind that all sorts of other IRC thingies like DCC and Ident will absolutely NOT work through a HTTP Proxy. You're stuck to barebone chatting!<p>
 
@@ -273,7 +273,7 @@
 
       7.3. The problem was that when I signed on to Mirc, it read my IP as the number that the DSL Provider gave me ..but when I typed /DNS it gave me a completely different number , that conflict was the problem. After hours of useless tech. support I just kept messing with the options on Mirc until it finally worked.
 
-      The solution can be found in the File/Options/Connect/'Local Info' menu. Simply change the 'Lookup Method' to 'server'. That should fix your problem!<p>
+      The solution can be found in the 'Tools/Options/Connect/Local' dialog. Simply change the 'Lookup Method:' to 'Server'. That should fix your problem!<p>
 
       7.4. Does anybody know how I can use mirc behind a firewall?
 
