@@ -63,7 +63,7 @@
     <td>
       <h1 class="title">Proxies and Firewalls</h1><p>
 
-      <h2 class="topic"><A NAME="section0-0">0.0. Introduction</A></h2><p> 
+      <h2 class="topic"><A NAME="section0-0">0.0. Introduction</A></h2><p>
 
       This is a help file on the use of mIRC behind firewalls and proxies. Your firewall or proxy has to be SOCKS compliant. Alternatively you can connect to IRC through a HTTP or HTTPS proxy. <p>
 
@@ -90,19 +90,19 @@
       <li> <A href="proxies.html#section8-0">8.0. Proxy Server Software</A>
       </ul><p>
 
-      <h2 class="topic"><A NAME="section1-0">1.0. What is a Proxy?</A></h2><p> 
+      <h2 class="topic"><A NAME="section1-0">1.0. What is a Proxy?</A></h2><p>
 
       In the context of this file a proxy is a central machine (P) in a small network that allows other machines (A, B and C) in that network to use a shared Internet connection. The software on the central machine is called proxy software. The proxy is also called 'server' or 'gateway'. Most proxy software works perfectly for browsing the Web, sending files with FTP and sending email. Normally proxy software does not understand IRC connections or DCC File transfers by default. Very often this is easily fixed! <p>
 
       Lots of companies use proxies to allow multiple machines access to the Web. There are a lot of proxies (and programs alike) that you can use yourself in a small network to give all your computers access to the internet. <p>
 
-      <h2 class="topic"><A NAME="section1-1">1.1. What is a Firewall?</A></h2><p> 
+      <h2 class="topic"><A NAME="section1-1">1.1. What is a Firewall?</A></h2><p>
 
       A firewall is not that different from a proxy. A firewall again offers Internet access to lots of other computers on a network but is mostly deployed to provide safety or security; control over the information going in and out the network. Firewalls are used in business environments, at schools, universities and the like. Please keep in mind that most proxies and firewalls in use in business situations are there for a reason; to protect your work environment from the evil Internet. If your companies policy is to block IRC then stick to the rules, ok? <p>
 
-      <h2 class="topic"><A NAME="section1-2">1.2. What is a HTTP or HTTPS Proxy?</A></h2><p> 
+      <h2 class="topic"><A NAME="section1-2">1.2. What is a HTTP or HTTPS Proxy?</A></h2><p>
 
-      Do not mix up the proxies (sharing your Internet Conection) we're talking about in most of this file, with a (caching) web proxy as lots of companies use to speed up your surfing over the web with your web browser. Only recently mIRC 5.81 introduced an option you can use to connect to IRC through a HTTP Proxy. In this case mIRC uses a smart method to open a persistent connection to such a HTTP Proxy and from there to the IRC server. <p>
+      Do not mix up the proxies (sharing your Internet Connection) we're talking about in most of this file, with a (caching) web proxy as lots of companies use to speed up your surfing over the web with your web browser. Only recently mIRC 5.81 introduced an option you can use to connect to IRC through a HTTP Proxy. In this case mIRC uses a smart method to open a persistent connection to such a HTTP Proxy and from there to the IRC server. <p>
 
       <h2 class="topic"><A NAME="section2-0">2.0. IRC</A></h2><p>
 
@@ -163,9 +163,9 @@
       Client C ......
       </pre><p>
 
-      Alternative setups (like with ICS) use other IP Addresses like the 192.168.0.X range. What range you use doesnt really matter.<p>
+      Alternative setups (like with ICS) use other IP Addresses like the 192.168.0.X range. What range you use doesn't really matter.<p>
 
-      I assume you have installed the proxy software on the machine connected to the Internet. I really can not help you with this standard setup. Most settings will be done automagically. You might have to fill in some general information like your Internet Providers primary DNS. You should already know most of this info. Look for it in the manual of your Internet Provider. If you get stuck somewhere read the proxy's helpfile and website!<p>
+      I assume you have installed the proxy software on the machine connected to the Internet. I really can not help you with this standard setup. Most settings will be done automatically. You might have to fill in some general information like your Internet Providers primary DNS. You should already know most of this info. Look for it in the manual of your Internet Provider. If you get stuck somewhere read the proxy's helpfile and website!<p>
 
       Test the behaviour of your proxy by browsing the web from (one of) the client machine(s). Hey, give mIRC a try, maybe it already works! Surfing the Web and sending email should all work perfectly from all your machines. As long as this is not the case it makes no sense to work on your IRC access.
 
@@ -196,7 +196,7 @@
 
       In mIRC open the File/Options/Connect/Firewall/ menu. Mark the "Use SOCKS Firewall" box and select the protocol. Fill in the other options;<br>
       - Hostname: The machine name of your SOCKS server. This can be either a named address or an IP address. Better set this to the IP Number, not the name, of the proxy server machine; 10.0.0.1 in our example. <br>
-      - User ID: This is the account or user name you have on your proxy system. For most people this will be the User ID portion of their email address (the text before the @ sign). BUT, very often you do not need a login on the proxy at all! Most proxies are 'open' from the inside. Logins and passwords are only needed if only certain users may travel to the Internet. If you dont need (or dont have) a login leave this setting blank.<br>
+      - User ID: This is the account or user name you have on your proxy system. For most people this will be the User ID portion of their email address (the text before the @ sign). BUT, very often you do not need a login on the proxy at all! Most proxies are 'open' from the inside. Logins and passwords are only needed if only certain users may travel to the Internet. If you don't need (or don't have) a login leave this setting blank.<br>
       - Password: The password required, in combination with the Login, to access the firewall. Do not fill in anything if no login and password are needed.<br>
       - Port: This is usually 1080, the default port on which Proxies accept connections.<p>
 
@@ -211,7 +211,7 @@
       Go to the File/Options/Connect/Local_Info/ menu again and double check your IP Address and Local Host settings. Make sure the IP Address matches to what the DNS result told you! (The Local Host settings doesn't really matter.) This sometimes does not get set correctly in mIRC. Don't worry, if the IP Address doesn't match simply edit the IP address settings in mIRC to match what you wrote down from the DNS request and all will work!
       After this editing set the "On Connect always get" options 'Local host' and 'IP Address' to INACTIVE. If the IP Address was okay leave everything as it was. <p>
 
-      Wrong IP Address setting will not block your use of IRC but will mess up DCC Sends and Initiation of DCC Chats. You will almost always be able to recieve files though and accept DCC Chats regardless any wrong settings.<p>
+      Wrong IP Address setting will not block your use of IRC but will mess up DCC Sends and Initiation of DCC Chats. You will almost always be able to receive files though and accept DCC Chats regardless any wrong settings.<p>
 
       <h2 class="topic"><A NAME="section3-3">3.3  The Proxy Server setup (machine P) for the use of DCC.</A></h2><p>
 
@@ -231,7 +231,7 @@
 
       <h2 class="topic"><A NAME="section4-0">4.0. IRC through a HTTP proxy.</A></h2><p>
 
-      As said, do not mix up the proxies (sharing your Internet Conection) we're talking about in most of this file, with a (caching) web proxy as lots of companies use to speed up your surfing over the web with your web browser. Only recently mIRC 5.81 introduced an option you can use to connect to IRC through a HTTP Proxy. <p>
+      As said, do not mix up the proxies (sharing your Internet Connection) we're talking about in most of this file, with a (caching) web proxy as lots of companies use to speed up your surfing over the web with your web browser. Only recently mIRC 5.81 introduced an option you can use to connect to IRC through a HTTP Proxy. <p>
 
       Make very sure you really have to use a HTTP proxy to connect to IRC! Are you really in some protected environment without direct and free access to Internet? Are you really sure mIRC will not work without using the last resort solution of using a HTTP proxy? <p>
 
@@ -253,7 +253,7 @@
 
       <h2 class="topic"><A NAME="section6-0">6.0. Open Proxies.</A></h2><p>
 
-      You might not be aware of this but other people already on Internet might also be able to connect to your proxy server! A proxy often is not aware of the direction a user is coming from. This opens the possibility for others to connect to your proxy, and from there to an IRC server, thus getting on IRC WITH YOUR ADDRESS! It is easily understandable what mess that could cause. Imagine people harassing others through your proxy! ...or hacking machines, or trading illegal files, ...or whatever. As you see you have to make sure you dont have an Open Proxy.<p>
+      You might not be aware of this but other people already on Internet might also be able to connect to your proxy server! A proxy often is not aware of the direction a user is coming from. This opens the possibility for others to connect to your proxy, and from there to an IRC server, thus getting on IRC WITH YOUR ADDRESS! It is easily understandable what mess that could cause. Imagine people harassing others through your proxy! ...or hacking machines, or trading illegal files, ...or whatever. As you see you have to make sure you don't have an Open Proxy.<p>
 
       Due to the overwhelming (ab)use of malconfigured proxy servers being exploited daily, most IRC networks are checking all users for open and exploitable proxy servers upon connection. You were probably wondering why you are getting connection attempts to port 23 and 1080 on your computer? That is the check for an Open Proxy. If an Open Proxy is found you will NOT be allowed in on IRC.<p>
 
